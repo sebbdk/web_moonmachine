@@ -24,3 +24,7 @@ Here are some stuff i have not thought through yet
     * Will require a book manager and next logic
  * Hook up the cursor keys to go back/forward in the scene
  * Add in most of the scene 2 onclick etc. interactions
+
+
+Use this server for local debugging:
+https://www.npmjs.com/package/http-server
