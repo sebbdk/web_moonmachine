@@ -21,5 +21,6 @@ Here are some stuff i have not thought through yet
 
  * Load and play a sound (fx. the background music)
  * Create a simple library function to play the voice lines
+    * Will require a book manager and next logic
  * Hook up the cursor keys to go back/forward in the scene
  * Add in most of the scene 2 onclick etc. interactions
