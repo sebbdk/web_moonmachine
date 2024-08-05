@@ -28,3 +28,5 @@ Here are some stuff i have not thought through yet
 
 Use this server for local debugging:
 https://www.npmjs.com/package/http-server
+
+bumb
