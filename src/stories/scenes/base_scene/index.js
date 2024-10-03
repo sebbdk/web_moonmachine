@@ -90,6 +90,9 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 		const createjs = window.createjs;
 		const AdobeAn = window.AdobeAn;
 
+		//exportRoot.instance_1.frame_25()
+
+		// Un hackarino, the loaded scene uses this global reference.
 		window.stage = stage;
 
 		//Registers the "tick" event listener.

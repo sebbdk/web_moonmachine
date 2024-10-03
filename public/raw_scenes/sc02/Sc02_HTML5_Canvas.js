@@ -6020,6 +6020,7 @@ if (reversed == null) { reversed = false; }
 	}
 	this.frame_25 = function() {
 		/* repeat(30);*/
+		console.log('Well hello there you ass!!')
 	}
 	this.frame_26 = function() {
 		/* repeatEnd();*/
