@@ -3,7 +3,7 @@ import { AppStage } from '.';
 const Template = (args) => html`Hello fuck you world`;
 
 export default {
-  title: 'Scenes',
+  title: 'Scenes/Scenes',
   component: Template,
   argTypes: {}
 };
