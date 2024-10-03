@@ -3,7 +3,7 @@ import { AppStage } from '.';
 const Template = (args) => html`Hello fuck you world`;
 
 export default {
-  title: 'scenes/00_base',
+  title: 'Scenes',
   component: Template,
   argTypes: {}
 };
@@ -17,9 +17,9 @@ Demo.args = {
   rootFunctionName: "Sc02_canvas_demo"
 };
 
-export const Scene02 = AppStage.bind({});
+export const Scene02OpenDoor = AppStage.bind({});
 
-Scene02.args = {
+Scene02OpenDoor.args = {
   sceneSrc:"raw_scenes/sc02/Sc02_HTML5_Canvas.js",
   composition: "F67B9604FC919F489D182E47F2203F03",
   assetsPath: "raw_scenes/sc02/",
