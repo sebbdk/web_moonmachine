@@ -1,5 +1,6 @@
 import { html } from "htm/preact/index.js";
 import { useRef, useState } from 'preact/hooks'
+import styled from "styled-components";
 
 async function loadScript(path) {
 	console.info(`Loading script: ${path}`)
@@ -60,6 +61,25 @@ async function loadSceneAssets(assetsPath, scene) {
 	})
 }
 
+const StartButtonOverLay = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, 0.5);
+	z-index: 10;
+
+	display: ${props => props.display || "flex"};
+	justify-content: center;
+	align-items: center;
+
+	button {
+		padding: 0.5rem;
+		font-size: 1.5em;
+	}
+`;
+
 export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }) {
 	let [scene, setScene] = useState(null);
 	const [sceneState, setSceneState] = useState("LOADING");
@@ -68,6 +88,7 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 	const canvasRef = useRef(null);
 	const animContainerRef = useRef(null);
 	const domOverlayContainerRef = useRef(null);
+	const startBtnRef = useRef(null);
 
 	async function loadScene() {
 		await loadScript('/createjs.js');
@@ -80,10 +101,27 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 		setLoaded(true);
 		setScene(scene);
 
+		// make sure we have responsive scaling before scene start
+		prepResponsive();
+
 		console.debug(`loaded scene code for (${sceneSrc}) `, AdobeAn.getComposition(composition));
 	}
 
+	function prepResponsive() {
+		AdobeAn.makeResponsive(true,'both',false,1,[ 
+			canvasRef.current,
+			animContainerRef.current,
+			domOverlayContainerRef.current
+		]);
+	}
+
 	function startScene() {
+		if(canvasRef === null || !loaded) {
+			return;
+		}
+
+		setSceneState("STARTED");
+
 		const lib = scene.getLibrary();
 		const exportRoot = new lib[rootFunctionName]();
 		const stage = new lib.Stage(canvasRef.current);
@@ -102,12 +140,8 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 			createjs.Ticker.addEventListener("tick", stage);
 		}
 
-		//Code to support hidpi screens and responsive scaling.
-		AdobeAn.makeResponsive(false,'both',false,1,[ 
-			canvasRef.current,
-			animContainerRef.current,
-			domOverlayContainerRef.current
-		]);
+		// make sure the canvas has responsive scaling after when scene starts
+		prepResponsive();
 
 		AdobeAn.compositionLoaded(lib.properties.id);
 
@@ -118,13 +152,8 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 		loadScene();
 	}
 
-	if(canvasRef !== null && loaded && sceneState === "LOADING") { // start scene if we have assets and a canvas
-		startScene();
-		setSceneState("STARTED");
-	}
-
 	return html`
-		<div ref=${animContainerRef} style="background-color:rgba(204, 204, 204, 1.00); width:2048px; height:1152px">
+		<div ref=${animContainerRef} style="background-color:rgba(204, 204, 204, 1.00); width:2048px; height:1152px; position: relative;">
 			<canvas
 				ref=${canvasRef}
 				width="2048"
@@ -136,6 +165,10 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 				ref=${domOverlayContainerRef}
 				style="pointer-events:none; overflow:hidden; width:2048px; height:1152px; position: absolute; left: 0px; top: 0px; display: block;">
 			</div>
+
+			<${StartButtonOverLay} display=${sceneState === "STARTED" ? "none" : "flex"}>
+				<button ref=${startBtnRef} onClick=${() => startScene()}>Start Scene</button>
+			</${StartButtonOverLay}>
 		</div>
 	`;
 }
