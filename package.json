@@ -1,0 +1,43 @@
+{
+  "name": "web_moonmachine",
+  "version": "1.0.0",
+  "description": "## Migration notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build && touch ./storybook-static/.nojekyll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "createjs": "^1.0.1",
+    "htm": "^3.1.1",
+    "preact": "^10.19.3",
+    "prop-types": "^15.8.1",
+    "styled-components": "^6.1.6",
+    "vite-jsconfig-paths": "^2.0.1",
+    "vite-tsconfig-paths": "^4.2.2"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.7.0",
+    "@storybook/addon-essentials": "^7.6.5",
+    "@storybook/addon-interactions": "^7.6.5",
+    "@storybook/addon-links": "^7.6.5",
+    "@storybook/blocks": "^7.6.5",
+    "@storybook/preact": "^7.6.5",
+    "@storybook/preact-vite": "^7.6.5",
+    "@storybook/test": "^7.6.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}

@@ -1,2 +1,3 @@
 src/animator_scenes/originals/*.fla
 .DS_Store
+node_modules

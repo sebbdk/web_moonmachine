@@ -10,7 +10,7 @@ const BOOK_CONFIG = {
             "actions": {
                 "text": "",
                 "voice": "sofus og maanemaskinen.mp3",
-                "_speech-offset": "3000"
+                "speechOffset": "3000"
             },
             "_id": "0",
             "_bg": "Sc00.jpg",
@@ -96,7 +96,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "Lydene fra vraget gjorde Sofus bange.\\n”Hvad nu hvis det er en kæmpemæssig slange!?\\nHvad gør jeg? Jeg kan ikke la' det ligge.\\nVil du skubbe til det? Jeg tør altså ikke.”",
                     "voice": "sc03.2.mp3",
-                    "_speech-offset": "1000"
+                    "speechOffset": "1000"
                 },
                 {
                     "text": "Ud af vraget pilede et sjovt lille dyr,\\n”Pyha.. det var heldigvis kun en rumpefyr.”\\nSofus grinede lettet, men det blev hurtigt glemt,\\nfor pludselig skete der noget rigtig slemt.”",
@@ -109,7 +109,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "\"Når månen står stille, kan solen ikke lyse,\\nog alle Goyas dyr og planter vil fryse.\\nHvis jeg dog bare ku’ sige: tænd måne, tænd!”\\nSofus sukkede, ”Det blir’ aldrig dag igen...\"",
                     "voice": "sc03.5.mp3",
-                    "_speech-offset": "0300"
+                    "speechOffset": "0300"
                 },
                 {
                     "text": "Flere stykker skrot begyndte da at falde.\\n”Vi må hellere gå ud og samle dem alle!”\\n",
@@ -266,7 +266,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "De rystede masten, så godt de havde lært.\\n\"Vi kan ikke Zum-Zum! Det er simpelthen for svært.\\nVil du hjælpe os med at ryste derude?\\nRyst alt det du kan, ellers er historien ude!\"",
                     "voice": "sc09.2.mp3",
-                    "_speech-offset": "2000"
+                    "speechOffset": "2000"
                 },
                 {
                     "text": "\"Ja, det virker. Bliv ved med at ryste. Bliv ved!\"",
@@ -353,7 +353,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "”Har du nogle gode ideer derude?\\nVi må jo helst ikke få ham til at tude.\\nNu ikke noget med et godmorgenkys.\\nHvad nu hvis vi tænder lidt morgenlys?”",
                     "voice": "sc11.4.mp3",
-                    "_speech-offset": "1200"
+                    "speechOffset": "1200"
                 },
                 {
                     "text": "”Så er der morgenolie og rustne skruer!”\\nMen Kongen blev ved med at snorke og knurre.\\n”Vi kan pumpe en ballon op, så den sprænger? \\nHvor stort et godmorgenbrag mon den bringer?”",
@@ -467,7 +467,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "”Den er låst. Der må være en nøgle et sted.”\\nFind den nøgle, som de kan åbne kisten med.",
                     "voice": "sc14.5.mp3",
-                    "_speech-offset": "1000"
+                    "speechOffset": "1000"
                 },
                 {
                     "text": "”Sådan, godt fundet! Lås kisten op, og lad os se.”",
@@ -500,7 +500,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "\"Jeg ved det, jeg ved det, jeg er vant til at blive prist.\\nNå, skynd jer nu op, så I ikke bliver spist.”\\n”Sp..Spist?!”, stammede Sofus nervøst, ”men hvordan?”\\n ”Tygget og slugt, for eksempel. Af hr. Hugtand.”",
                     "voice": "sc14.13.mp3",
-                    "_speech-offset": "3000"
+                    "speechOffset": "3000"
                 },
                 {
                     "text": "\"Hernede i dybet skal man være lidt rå,\\nher er jo også STORE løver, så pas på!\\nNå, hyggeligt at møde jer!”, og så var Fisk væk.\\n”Zum-Zum, afsted!”, Sofus var ved at dø af skræk.",
@@ -509,7 +509,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "Gnofen og den runde robot hoppede ind.\\n”Er du klar derude? Så drej på den pind.”",
                     "voice": "sc14.15.mp3",
-                    "_speech-offset": "3000"
+                    "speechOffset": "3000"
                 },
                 {
                     "text": "”Zum-Zum, det virker! Det er let som en leg.”\\nMen så begyndte murene at give sig.",
@@ -538,7 +538,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "”Pyha.. det var godt, vi fik gjort kål på den ål.\\nSe Zum-Zum, jeg tror, vi har nået vores mål.\\nJeg vil gerne vædde en hel bimbærtærte,\\nat det dér er månens mekaniske hjerte.”",
                     "voice": "sc15.1.mp3",
-                    "_speech-offset": "3400"
+                    "speechOffset": "3400"
                 },
                 {
                     "text": "”Jeg ku’ ik’ ha’ fundet den uden dig, min ven,\\nog når vi den fikser, bliver det lyst igen.\\nJeg kan se, der er en ledning løs hernede.\\nStik den i maskinen, så den strøm kan lede”",
@@ -579,7 +579,7 @@ const BOOK_CONFIG = {
                 {
                     "text": "”Jeg kommer aldrig hjem igen.”, snøftede han.\\n”Jeg MÅ skaffe den sidste del, men hvordan?\\nKongen ligger jo og snorker oven på den.\\nOg jeg vil ikke tages til fange igen.”",
                     "voice": "sc16.2.mp3",
-                    "_speech-offset": "0500"
+                    "speechOffset": "0500"
                 },
                 {
                     "text": "Zum-Zum trøstede gnofen med et lille trut.\\nKu’ det virkelig passe, at rejsen var slut?\\nMen så begyndte det at buldre rundt om dem.\\n”Nogen er på vej herop Zum-Zum, men hvem?”",

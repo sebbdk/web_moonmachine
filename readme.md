@@ -2,6 +2,12 @@
 
 ## Migration notes
 
+3/10/2024
+
+Working on getting a none prototype setup and loading a scene in react
+
+ - Got the a scene to load in storybook for easier developing
+
 Exported scene is a CreateJS scene, so we can use those API's
 
 Here are some stuff i have not thought through yet
