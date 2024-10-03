@@ -134,5 +134,5 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 				style="pointer-events:none; overflow:hidden; width:2048px; height:1152px; position: absolute; left: 0px; top: 0px; display: block;">
 			</div>
 		</div>
-	`
+	`;
 }

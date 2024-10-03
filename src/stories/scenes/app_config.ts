@@ -16,13 +16,13 @@ export interface BookConfig {
 }
 
 export const BOOK_CONFIG: BookConfig = {
-    "scenes": [
+    scenes: [
         {
-            "actions": [],
+            actions: [],
             "_swf": "logovideo.swf"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "",
                     "voice": "sofus og maanemaskinen.mp3",
@@ -36,7 +36,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "00 - Main Theme.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "",
                     "voice": "kap01.mp3"
@@ -45,7 +45,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter01.swf"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Ikke langt borte på skovplaneten Goya\\nfandtes tusindvis af dyr og søer af soja.\\nKinsipister, raflbølter, munse og æsner.\\nListen ku’ fortsætte med mange små væsner.",
                     "voice": "sc01.1.mp3"
@@ -74,7 +74,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "01 - Goya.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "”Hej med dig”, sagde Sofus, ”har jeg set dig før?” \\n”Vil du ikke være sød at åbne min dør?”",
                     "voice": "sc02.1.mp3"
@@ -107,7 +107,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "02 - Sofus.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "”Wow!”, udbrød Sofus, da han så, hvad der var sket.\\n”Det er nok det største stykke skrot, jeg har set!”\\nI et dybt dybt hul lå årsagen til braget,\\nvar der mon nogen gemt inde i vraget?",
                     "voice": "sc03.1.mp3"
@@ -142,7 +142,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "03 - Crash Site.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Det var bælgmørkt, selvom det var morgen,\\n og måneskrottet lå spredt ud over hele skoven.\\n”Sikke noget rod”, sukkede den lille prop\\n”Vil du hjælpe mig med at samle skrottet op?”",
                     "voice": "sc04.1.mp3"
@@ -155,7 +155,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "04 - Gathering Scrap In The Forest.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Dagene gik og stadig ingen sol.\\nSofus var bekymret for hver en blå viol.\\nUden lys var skoven langsomt ved at dø.\\nIntet kunne overleve dette mørke miljø.",
                     "voice": "sc05.1.mp3"
@@ -180,7 +180,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "05 - Building The Rocket.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Alt var pakket, og Sofus var parat,\\nmed god fart ville han være der snart.\\nRaketten var den flotteste, han havde set,\\ni alle hans år på den lille planet.",
                     "voice": "sc06.1.mp3"
@@ -205,7 +205,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "06 - Blast Off.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "",
                     "voice": "kap02.mp3"
@@ -214,7 +214,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter02.swf"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "I ti døgn havde Sofus fløjet i rummet.\\nHan havde heldigvis medbragt lokummet.\\nAt styre raketten var let som en leg.\\n\"Se der!”, råbte Sofus. ”Månen den nærmer sig.\"",
                     "voice": "sc07.1.mp3"
@@ -239,7 +239,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "07 - Journey Through Space.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Raketten ramte månen med meget høj fart.\\nSofus lå på jorden, det var ikke rart.\\nDe fem raketstykker blev spredt til hver side,\\nhvor længe skulle Sofus ligge og lide?",
                     "voice": "sc08.1.mp3"
@@ -280,7 +280,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "08 - Crashing On The Moonmachine.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     text: ""
                 },
@@ -313,7 +313,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "09 - The Pole.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "De to havde gået i timevis mod nord.\\nDet tog lang tid, men de var på helt rette spor.\\nDe var nået frem ved trappen til kongens slot.\\nVed foden af trappen så de en skør robot.",
                     "voice": "sc10.1.mp3"
@@ -362,7 +362,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "10 - The Hat Robot.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Syv tusinde trappetrin gik Sofus og Zum-Zum,\\nog de var nu kommet til kongens soverum.\\nDe forventede, at kongen var stærk og tapper\\nefter at have gået på alle de trapper.",
                     "voice": "sc11.1.mp3"
@@ -415,7 +415,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "11 - The Robot King.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "",
                     "voice": "kap03.mp3"
@@ -424,7 +424,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter03.swf"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Ude på Rusthavet fra et flydende fængsel\\nkunne Sofus kigge på sin planet i længsel.\\nDen lille fængselscelle var mørk og kold.\\nHvordan sku’ det gå Zum-Zum og den lille knold?",
                     "voice": "sc12.1.mp3"
@@ -464,7 +464,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "12 - Prison Cell.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "”Øh..”, sagde Sofus, ”Jeg tror, vi har et problem.\\nVil du hjælpe os ud af det her rørsystem?”\\nDe to venner sad fast langt under vandkanten.\\nFør dem sikkert igennem rørlabyrinten.",
                     "voice": "sc13.1.mp3"
@@ -476,7 +476,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "13 - The Pipe Labyrinth.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "På rusthavets bund lå én million skruer\\nsamt mange rustne søm og tandhjul fra ure.\\nJa nu var der også en gnof og en robot,\\nmen de var sluppet ud af fængslet, så det var jo godt.",
                     "voice": "sc14.1.mp3"
@@ -563,7 +563,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "14 - The Sea Of Rust.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "”Pyha.. det var godt, vi fik gjort kål på den ål.\\nSe Zum-Zum, jeg tror, vi har nået vores mål.\\nJeg vil gerne vædde en hel bimbærtærte,\\nat det dér er månens mekaniske hjerte.”",
                     "voice": "sc15.1.mp3",
@@ -600,7 +600,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "15 - The Big Machine.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Alle planter og dyr på Goya var reddet,\\nog solmaskinen var nu fuldt opladet.\\n”Vi gjorde det Zum-Zum, vi gjorde det.”\\nSofus smilede men havde svært ved at le.",
                     "voice": "sc16.1.mp3"
@@ -681,7 +681,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "16 - Ambience.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Solmaskinen var rødgylden og flot.\\nRejsen gennem rummet var gået ganske godt.\\nSofus fandt en landingsplads gennem sin kikkert\\nog landede rumraketten blødt og sikkert.",
                     "voice": "sc17.1.mp3"
@@ -693,7 +693,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "17 - Safe Landing.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": "Rejsen var ovre, og eventyret var slut.\\nZum-Zum snorkede saligt gennem sin tut.\\nHan lå ved fodenden af Sofus’ seng\\ni varme blade fra ildskovens eng.",
                     "voice": "sc18.1.mp3"
@@ -717,7 +717,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_music": "18 - Home Again.mp3"
         },
         {
-            "actions": [
+            actions: [
                 {
                     "text": ""
                 }
