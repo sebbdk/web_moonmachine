@@ -1,5 +1,5 @@
 import { html } from "htm/preact/index.js";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 const BottomMenuDiv = styled.div`
@@ -7,8 +7,11 @@ const BottomMenuDiv = styled.div`
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: rgba(0, 123, 0, 0.4);
+	background-color: rgba(0, 123, 123, 0.1);
 	overflow: hidden;
+
+	transition: all 350ms ease-in-out;
+	transform: translateY(${props => props.position}px);
 
 	img {
 		width: 200%;
@@ -71,8 +74,25 @@ const BottomMenuDiv = styled.div`
 	}
 `;
 
-export function BottomMenu() {
-	const [ positionClass, setPositionClass ] = useState("")
+export function BottomMenu(props = {open: false}) {
+	let [ positionClass, setPositionClass ] = useState("")
+	let [ containerPosition, setContainerPosition ] = useState(props.open ? 0 : 2000)
+	const containerRef = useRef(null);
+
+	useEffect(() => {
+		if (containerRef.current) {
+
+			setTimeout(() => {
+				containerPosition = containerRef.open
+				? 0
+				: containerRef.current.offsetHeight * 0.77;
+
+				setContainerPosition(containerPosition)
+			}, 250)
+
+			
+		}
+	}, []);
 
 	function showSceneSelector() {
 		setPositionClass("scene-selector-position")
@@ -83,11 +103,16 @@ export function BottomMenu() {
 	}
 
 	function toggleMenuVisible() {
-		setPositionClass(positionClass === "hidden" ? "" : "hidden")
+		containerPosition = containerPosition === 0
+			? containerRef.current.offsetHeight * 0.77
+			: 0;
+
+		console.log(containerPosition, containerRef.current.offsetHeight)
+		setContainerPosition(containerPosition)
 	}
 
 	return html`
-		<${BottomMenuDiv}>
+		<${BottomMenuDiv} ref=${containerRef} position=${containerPosition}>
 			<div class="position-wrapper ${positionClass}" >
 				<img src="assets/gui/menu_bg.png" />
 				<div class="hidden-btn toggle-menu-btn" onClick=${() => toggleMenuVisible()}></div>

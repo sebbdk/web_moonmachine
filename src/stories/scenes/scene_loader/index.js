@@ -1,6 +1,7 @@
 import { html } from "htm/preact/index.js";
 import { useRef, useState } from 'preact/hooks'
 import styled from "styled-components";
+import { BottomMenu } from "../scene_gui/menu";
 
 async function loadScript(path) {
 	console.info(`Loading script: ${path}`)
@@ -67,7 +68,6 @@ const StartButtonOverLay = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0, 0.5);
 	z-index: 10;
 
 	display: ${props => props.display || "flex"};
@@ -79,6 +79,80 @@ const StartButtonOverLay = styled.div`
 		font-size: 1.5em;
 	}
 `;
+
+const AppStageGUIWrapper = styled.div`
+	width:100vw;
+	height:100vh;
+	overflow: hidden;
+	position: relative;
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+	}
+`;
+
+const AppStageWrapper = styled.div`
+	position: relative;
+	background-color: #222;
+	width:100%;
+	height:80%;
+	overflow: hidden;
+	margin: auto;
+`;
+
+function makeResponsive(isResp, respDim, isScale, scaleType, domContainers, lib) {
+	var lastW, lastH, lastS=1;
+
+	window.addEventListener('resize', resizeCanvas);
+	resizeCanvas();
+
+	function resizeCanvas() {
+		const parentG = domContainers[0].parentElement
+
+		var w = lib.properties.width, h = lib.properties.height;
+		var iw = parentG.offsetWidth, ih=parentG.offsetHeight;
+		var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;
+
+		if(isResp) {
+			if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {
+				sRatio = lastS;
+			}
+			else if(!isScale) {
+				if(iw<w || ih<h)
+					sRatio = Math.min(xRatio, yRatio);
+			}
+			else if(scaleType==1) {
+				sRatio = Math.min(xRatio, yRatio);
+			}
+			else if(scaleType==2) {
+				sRatio = Math.max(xRatio, yRatio);
+			}
+		}
+
+		domContainers[0].width = w * pRatio * sRatio;
+		domContainers[0].height = h * pRatio * sRatio;
+		domContainers.forEach(function(container) {
+			container.style.width = w * sRatio + 'px';
+			container.style.height = h * sRatio + 'px';
+		});
+
+		lastW = iw; lastH = ih; lastS = sRatio;
+
+		if(!window.stage) {
+			return;
+		}
+
+		stage.scaleX = pRatio*sRatio;
+		stage.scaleY = pRatio*sRatio;
+		stage.tickOnUpdate = false;
+		stage.update();
+		stage.tickOnUpdate = true;
+	}
+}
 
 export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }) {
 	let [scene, setScene] = useState(null);
@@ -102,17 +176,18 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 		setScene(scene);
 
 		// make sure we have responsive scaling before scene start
-		prepResponsive();
+		prepResponsive(scene.getLibrary());
 
 		console.debug(`loaded scene code for (${sceneSrc}) `, AdobeAn.getComposition(composition));
 	}
 
-	function prepResponsive() {
-		AdobeAn.makeResponsive(true,'both',false,1,[ 
+	function prepResponsive(lib) {
+		console.log('SHIT BE FUCKING QUETH', lib)
+
+		makeResponsive(true,'both',false,1,[
 			canvasRef.current,
-			animContainerRef.current,
 			domOverlayContainerRef.current
-		]);
+		], lib);
 	}
 
 	function startScene() {
@@ -141,7 +216,9 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 		}
 
 		// make sure the canvas has responsive scaling after when scene starts
-		prepResponsive();
+		// this means we tecknically have two listeners..
+		// @TODO, fix
+		prepResponsive(lib);
 
 		AdobeAn.compositionLoaded(lib.properties.id);
 
@@ -153,22 +230,35 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 	}
 
 	return html`
-		<div ref=${animContainerRef} style="background-color:rgba(204, 204, 204, 1.00); width:2048px; height:1152px; position: relative;">
-			<canvas
-				ref=${canvasRef}
-				width="2048"
-				height="1152"
-				style="position: absolute; display: block; background-color:rgba(204, 204, 204, 1.00);">
-			</canvas>
+		<${AppStageGUIWrapper}>
+			<${AppStageWrapper} ref=${animContainerRef}>
+				<canvas
+					ref=${canvasRef}
+					width="2048"
+					height="1152"
+					style="margin: auto; display: block; background-color:#333;">
+				</canvas>
 
-			<div
-				ref=${domOverlayContainerRef}
-				style="pointer-events:none; overflow:hidden; width:2048px; height:1152px; position: absolute; left: 0px; top: 0px; display: block;">
+				<div
+					ref=${domOverlayContainerRef}
+					style="pointer-events:none; overflow:hidden; width:2048px; height:1152px; position: absolute; left: 0px; top: 0px; display: block;">
+				</div>
+
+				<${StartButtonOverLay} display=${sceneState === "STARTED" ? "none" : "flex"}>
+					<button ref=${startBtnRef} onClick=${() => startScene()}>Start Scene</button>
+				</${StartButtonOverLay}>
+
+				
+			</${AppStageWrapper}>
+			<div class="footer">
+				footer<br />
+				footer<br />
+				footer<br />
+				footer<br />
+				footer<br />
+				footer<br />
+				<${BottomMenu} />
 			</div>
-
-			<${StartButtonOverLay} display=${sceneState === "STARTED" ? "none" : "flex"}>
-				<button ref=${startBtnRef} onClick=${() => startScene()}>Start Scene</button>
-			</${StartButtonOverLay}>
-		</div>
+		</${AppStageGUIWrapper}>
 	`;
 }

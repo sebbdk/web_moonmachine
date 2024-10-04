@@ -12,5 +12,5 @@ export default {
 export const Primary = BottomMenu.bind({});
 
 Primary.args = {
-
+  open:true
 };
