@@ -2,9 +2,21 @@ import { html } from "htm/preact/index.js";
 import { useRef, useState } from 'preact/hooks'
 import styled from "styled-components";
 import { BottomMenu } from "../scene_gui/menu";
+import { StoryTeller } from "../scene_gui/storyteller";
+import { setUpGlobalsForScene } from "./global_functions";
+import { useEffect } from "react";
 
+const loadedScripts = [];
 async function loadScript(path) {
+
+	if(loadedScripts.indexOf(path) > -1) {
+		console.info(`Already loaded script: ${path}, ${loadedScripts.indexOf(path)}`)
+		console.log(loadedScripts)
+		//return;
+	}
+
 	console.info(`Loading script: ${path}`)
+	loadedScripts.push(path);
 
 	return new Promise((resolve, reject) => {
 		const script = document.createElement("script");
@@ -89,10 +101,10 @@ const AppStageGUIWrapper = styled.div`
 	.footer {
 		margin: auto;
 		position: relative;
-		height: 20%;
+		bottom: 8%;
+		height: 23%;
 		width: 100%;
 		z-index: 10;
-		background-color: #999;
 	}
 `;
 
@@ -100,7 +112,7 @@ const AppStageWrapper = styled.div`
 	position: relative;
 	background-color: #222;
 	width:100%;
-	height:80%;
+	height:85%;
 	overflow: hidden;
 	margin: auto;
 `;
@@ -159,10 +171,12 @@ function makeResponsive(isResp, respDim, isScale, scaleType, domContainers, lib)
 	}
 }
 
-export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, showFooter }) {
+export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, showFooter, sceneId }) {
 	let [scene, setScene] = useState(null);
-	const [sceneState, setSceneState] = useState("LOADING");
+	const [sceneState, setSceneState] = useState("INIT");
 	const [loaded, setLoaded] = useState(false);
+	const [globalControls, setGlobalControls] = useState(null);
+	const [storytellerText, setStorytellerText] = useState("");
 
 	const canvasRef = useRef(null);
 	const animContainerRef = useRef(null);
@@ -170,8 +184,28 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, 
 	const startBtnRef = useRef(null);
 
 	async function loadScene() {
+		if(sceneState == "LOADING") {
+			return;
+		}
+
+		if(sceneState == "INIT") {
+			setSceneState("LOADING")
+		}
+
+		console.log('load scene!!!')
 		await loadScript('/createjs.js');
+		await loadScript('/soundjs-0.5.2.min.js');
 		await loadScript(sceneSrc);
+
+		// Setups the next/prev etc. function references in the canvas scenes
+		setGlobalControls(setUpGlobalsForScene(
+			sceneId,
+			(text) =>{
+				console.log()
+				console.log("NEXT FUCKS")
+				setStorytellerText(text);
+			}
+		));
 
 		scene = AdobeAn.getComposition(composition);
 
@@ -186,9 +220,16 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, 
 		console.debug(`loaded scene code for (${sceneSrc}) `, AdobeAn.getComposition(composition));
 	}
 
-	function prepResponsive(lib) {
-		console.log('SHIT BE FUCKING QUETH', lib)
+	// handle component unload
+	useEffect(() => {
+		return () => {
+			console.log('shit...!!'),
+			console.log(globalControls)
+			window.createjs.Sound.stop();
+		};
+	}, []);
 
+	function prepResponsive(lib) {
 		makeResponsive(true,'both',false,1,[
 			canvasRef.current,
 			domOverlayContainerRef.current
@@ -199,6 +240,12 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, 
 		if(canvasRef === null || !loaded) {
 			return;
 		}
+
+		if(sceneState == "STARTED") {
+			return;
+		}
+
+		console.log('WUT!!')
 
 		setSceneState("STARTED");
 
@@ -228,6 +275,7 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, 
 		AdobeAn.compositionLoaded(lib.properties.id);
 
 		fnStartAnimation();
+		globalControls.playTheme();
 	}
 
 	if(!loaded) {
@@ -252,11 +300,10 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, 
 				<${StartButtonOverLay} display=${sceneState === "STARTED" ? "none" : "flex"}>
 					<button ref=${startBtnRef} onClick=${() => startScene()}>Start Scene</button>
 				</${StartButtonOverLay}>
-
-				
 			</${AppStageWrapper}>
 			<div class="footer">
 				<${BottomMenu} />
+				<${StoryTeller} text=${storytellerText} />
 			</div>
 		</${AppStageGUIWrapper}>
 	`;

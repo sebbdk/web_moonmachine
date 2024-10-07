@@ -1,16 +1,16 @@
 import { html } from 'htm/preact';
-
-const Template = (args) => html`Todo story teller...`;
-
+import { StoryTeller, StoryTellerArgs } from '.';
 
 export default {
   title: 'Scenes/GUI/storyteller',
-  component: Template,
+  component: StoryTeller,
   argTypes: {}
 };
 
-export const Primary = Template.bind({});
+export const Primary = StoryTeller.bind({});
 
 Primary.args = {
-
-};
+	onPrev:  () => alert('prev was pressed'),
+	onNext:  () => alert('next was pressed'),
+	text: "Hello world",
+} as StoryTellerArgs;

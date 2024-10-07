@@ -9,6 +9,7 @@ const BottomMenuDiv = styled.div`
 	width: 100%;
 	background-color: rgba(0, 123, 123, 0.1);
 	overflow: hidden;
+	z-index: 2;
 
 	transition: all 350ms ease-in-out;
 	transform: translateY(${props => props.position}px);
@@ -39,6 +40,10 @@ const BottomMenuDiv = styled.div`
 		position: absolute;
 		background-color: rgba(0,0,123, 0.5);
 		cursor: pointer
+	}
+
+	.hidden-btn:hover {
+		background-color: rgba(0,123,0, 0.5);
 	}
 
 	.toggle-menu-btn {

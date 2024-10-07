@@ -107,11 +107,12 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* playSound('Chapter 1.mp3');*/
+		playSound('Chapter 1.mp3');
+		next();
 	}
 	this.frame_55 = function() {
-		/* stop();
-		looping = true;*/
+		props.loop = true;
+		this.stop();
 	}
 
 	// actions tween:

@@ -2,7 +2,7 @@ export interface SceneConfig {
     _id?: string;
     _bg?: string;
     _overlay?: string;
-    _music?: string;
+    music?: string;
     _swf?: string;
     actions: {
         text: string;
@@ -33,9 +33,10 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "Sc00.jpg",
             "_overlay": "overlay1",
             "_swf": "Sc00.swf",
-            "_music": "00 - Main Theme.mp3"
+            music: "00 - Main Theme.mp3"
         },
         {
+            "_id": "chapter1",
             actions: [
                 {
                     "text": "",
@@ -71,7 +72,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "01_PRESENTATION_OF_THE_WORLD_DAY.jpg",
             "_swf": "Sc01.swf",
             "_overlay": "overlay1",
-            "_music": "01 - Goya.mp3"
+            music: "01 - Goya.mp3"
         },
         {
             actions: [
@@ -104,7 +105,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "02_PRESENTATION_OF_GNOME.jpg",
             "_swf": "Sc02.swf",
             "_overlay": "overlay1",
-            "_music": "02 - Sofus.mp3"
+            music: "02 - Sofus.mp3"
         },
         {
             actions: [
@@ -139,7 +140,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "03_THE_CRASH_SITE.jpg",
             "_swf": "Sc03.swf",
             "_overlay": "overlay1",
-            "_music": "03 - Crash Site.mp3"
+            music: "03 - Crash Site.mp3"
         },
         {
             actions: [
@@ -152,7 +153,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "04_GATHERING_PARTS_IN_FOREST.jpg",
             "_swf": "Sc04.swf",
             "_overlay": "overlay1",
-            "_music": "04 - Gathering Scrap In The Forest.mp3"
+            music: "04 - Gathering Scrap In The Forest.mp3"
         },
         {
             actions: [
@@ -177,7 +178,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "05_BUILDING_ROCKET.jpg",
             "_swf": "Sc05.swf",
             "_overlay": "overlay1",
-            "_music": "05 - Building The Rocket.mp3"
+            music: "05 - Building The Rocket.mp3"
         },
         {
             actions: [
@@ -202,7 +203,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "06_BLAST_OFF.jpg",
             "_swf": "Sc06.swf",
             "_overlay": "overlay1",
-            "_music": "06 - Blast Off.mp3"
+            music: "06 - Blast Off.mp3"
         },
         {
             actions: [
@@ -236,7 +237,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "07_JOURNEY_THROUGH_SPACE.jpg",
             "_swf": "Sc07.swf",
             "_overlay": "overlay1",
-            "_music": "07 - Journey Through Space.mp3"
+            music: "07 - Journey Through Space.mp3"
         },
         {
             actions: [
@@ -277,7 +278,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "08_CRASHING_INTO_MOONMACHINE.jpg",
             "_swf": "Sc08.swf",
             "_overlay": "overlay1",
-            "_music": "08 - Crashing On The Moonmachine.mp3"
+            music: "08 - Crashing On The Moonmachine.mp3"
         },
         {
             actions: [
@@ -310,7 +311,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "09_THE_POLE.jpg",
             "_swf": "Sc09.swf",
             "_overlay": "overlay1",
-            "_music": "09 - The Pole.mp3"
+            music: "09 - The Pole.mp3"
         },
         {
             actions: [
@@ -359,7 +360,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_bg": "10_THE_HAT_ROBOT.jpg",
             "_swf": "Sc10.swf",
             "_overlay": "overlay1",
-            "_music": "10 - The Hat Robot.mp3"
+            music: "10 - The Hat Robot.mp3"
         },
         {
             actions: [
@@ -412,7 +413,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "11",
             "_swf": "Sc11.swf",
             "_overlay": "overlay1",
-            "_music": "11 - The Robot King.mp3"
+            music: "11 - The Robot King.mp3"
         },
         {
             actions: [
@@ -461,7 +462,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "12",
             "_swf": "Sc12.swf",
             "_overlay": "overlay1",
-            "_music": "12 - Prison Cell.mp3"
+            music: "12 - Prison Cell.mp3"
         },
         {
             actions: [
@@ -473,7 +474,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "13",
             "_swf": "Sc13.swf",
             "_overlay": "overlay1",
-            "_music": "13 - The Pipe Labyrinth.mp3"
+            music: "13 - The Pipe Labyrinth.mp3"
         },
         {
             actions: [
@@ -560,7 +561,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "14",
             "_swf": "Sc14.swf",
             "_overlay": "overlay1",
-            "_music": "14 - The Sea Of Rust.mp3"
+            music: "14 - The Sea Of Rust.mp3"
         },
         {
             actions: [
@@ -597,7 +598,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "15",
             "_swf": "Sc15.swf",
             "_overlay": "overlay1",
-            "_music": "15 - The Big Machine.mp3"
+            music: "15 - The Big Machine.mp3"
         },
         {
             actions: [
@@ -678,7 +679,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "16",
             "_swf": "Sc16.swf",
             "_overlay": "overlay1",
-            "_music": "16 - Ambience.mp3"
+            music: "16 - Ambience.mp3"
         },
         {
             actions: [
@@ -690,7 +691,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "17",
             "_swf": "Sc17.swf",
             "_overlay": "overlay1",
-            "_music": "17 - Safe Landing.mp3"
+            music: "17 - Safe Landing.mp3"
         },
         {
             actions: [
@@ -714,7 +715,7 @@ export const BOOK_CONFIG: BookConfig = {
             "_id": "18",
             "_swf": "Sc18.swf",
             "_overlay": "overlay1",
-            "_music": "18 - Home Again.mp3"
+            music: "18 - Home Again.mp3"
         },
         {
             actions: [
@@ -723,7 +724,7 @@ export const BOOK_CONFIG: BookConfig = {
                 }
             ],
             "_swf": "credit.swf",
-            "_music": "18 - Home Again.mp3"
+            music: "18 - Home Again.mp3"
         }
     ]
 }
