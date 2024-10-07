@@ -87,13 +87,12 @@ const AppStageGUIWrapper = styled.div`
 	position: relative;
 
 	.footer {
-		position: absolute;
-		bottom: 0;
-		left: 0;
+		margin: auto;
+		position: relative;
 		height: 20%;
 		width: 100%;
 		z-index: 10;
-		background-color: #eee;
+		background-color: #999;
 	}
 `;
 
@@ -142,8 +141,12 @@ function makeResponsive(isResp, respDim, isScale, scaleType, domContainers, lib)
 			container.style.height = h * sRatio + 'px';
 		});
 
+		document.querySelector('.footer').style.width = domContainers[0].width + "px";
+
 		lastW = iw; lastH = ih; lastS = sRatio;
 
+		console.log(domContainers[0].width)
+		//footer
 		if(!window.stage) {
 			return;
 		}
@@ -253,12 +256,6 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, 
 				
 			</${AppStageWrapper}>
 			<div class="footer">
-				footer<br />
-				footer<br />
-				footer<br />
-				footer<br />
-				footer<br />
-				footer<br />
 				<${BottomMenu} />
 			</div>
 		</${AppStageGUIWrapper}>
