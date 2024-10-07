@@ -90,8 +90,10 @@ const AppStageGUIWrapper = styled.div`
 		position: absolute;
 		bottom: 0;
 		left: 0;
+		height: 20%;
 		width: 100%;
 		z-index: 10;
+		background-color: #eee;
 	}
 `;
 
@@ -154,7 +156,7 @@ function makeResponsive(isResp, respDim, isScale, scaleType, domContainers, lib)
 	}
 }
 
-export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }) {
+export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName, showFooter }) {
 	let [scene, setScene] = useState(null);
 	const [sceneState, setSceneState] = useState("LOADING");
 	const [loaded, setLoaded] = useState(false);
@@ -230,7 +232,7 @@ export function AppStage({ sceneSrc, composition, assetsPath, rootFunctionName }
 	}
 
 	return html`
-		<${AppStageGUIWrapper}>
+		<${AppStageGUIWrapper} showFooter=${showFooter}>
 			<${AppStageWrapper} ref=${animContainerRef}>
 				<canvas
 					ref=${canvasRef}
