@@ -1,9 +1,13 @@
 export interface SceneConfig {
-    _id?: string;
+    id: string;
     _bg?: string;
     _overlay?: string;
     music?: string;
     _swf?: string;
+    compositionId: string;
+    sceneSrc: string;
+    assetsPath: string
+    rootFunctionName: string;
     actions: {
         text: string;
         voice?: string;
@@ -18,10 +22,19 @@ export interface BookConfig {
 export const BOOK_CONFIG: BookConfig = {
     scenes: [
         {
+            id: "logo",
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [],
             "_swf": "logovideo.swf"
         },
         {
+            sceneSrc: "raw_scenes/sc00/Sc00_HTML5_Canvas.js",
+            assetsPath: "raw_scenes/sc00/",
+            compositionId: "3A9186C986474A73ACA4A389153EA561",
+            rootFunctionName: "Sc00_HTML5Canvas",
             actions: [
                 {
                     "text": "",
@@ -29,14 +42,18 @@ export const BOOK_CONFIG: BookConfig = {
                     "speechOffset": "3000"
                 }
             ],
-            "_id": "0",
+            id: "0",
             "_bg": "Sc00.jpg",
             "_overlay": "overlay1",
             "_swf": "Sc00.swf",
             music: "00 - Main Theme.mp3"
         },
         {
-            "_id": "chapter1",
+            id: "chapter1",
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "915EC3CCF88D4CA48A7D0A90825BB364",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "",
@@ -46,6 +63,10 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter01.swf"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Ikke langt borte på skovplaneten Goya\\nfandtes tusindvis af dyr og søer af soja.\\nKinsipister, raflbølter, munse og æsner.\\nListen ku’ fortsætte med mange små væsner.",
@@ -68,13 +89,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc01.5.mp3"
                 }
             ],
-            "_id": "1",
+            id: "1",
             "_bg": "01_PRESENTATION_OF_THE_WORLD_DAY.jpg",
             "_swf": "Sc01.swf",
             "_overlay": "overlay1",
             music: "01 - Goya.mp3"
         },
         {
+            sceneSrc:"raw_scenes/sc02/Sc02_HTML5_Canvas.js",
+            compositionId: "F67B9604FC919F489D182E47F2203F03",
+            rootFunctionName: "Sc02_canvas_demo",
+            assetsPath: "raw_scenes/sc02/",
             actions: [
                 {
                     "text": "”Hej med dig”, sagde Sofus, ”har jeg set dig før?” \\n”Vil du ikke være sød at åbne min dør?”",
@@ -101,13 +126,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc02.6.mp3"
                 }
             ],
-            "_id": "2",
+            id: "2",
             "_bg": "02_PRESENTATION_OF_GNOME.jpg",
             "_swf": "Sc02.swf",
             "_overlay": "overlay1",
             music: "02 - Sofus.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "”Wow!”, udbrød Sofus, da han så, hvad der var sket.\\n”Det er nok det største stykke skrot, jeg har set!”\\nI et dybt dybt hul lå årsagen til braget,\\nvar der mon nogen gemt inde i vraget?",
@@ -129,33 +158,41 @@ export const BOOK_CONFIG: BookConfig = {
                 {
                     "text": "\"Når månen står stille, kan solen ikke lyse,\\nog alle Goyas dyr og planter vil fryse.\\nHvis jeg dog bare ku’ sige: tænd måne, tænd!”\\nSofus sukkede, ”Det blir’ aldrig dag igen...\"",
                     "voice": "sc03.5.mp3",
-                    "speechOffset": "0300"
+                    "speechOffset": "300"
                 },
                 {
                     "text": "Flere stykker skrot begyndte da at falde.\\n”Vi må hellere gå ud og samle dem alle!”\\n",
                     "voice": "sc03.6.mp3"
                 }
             ],
-            "_id": "3",
+            id: "3",
             "_bg": "03_THE_CRASH_SITE.jpg",
             "_swf": "Sc03.swf",
             "_overlay": "overlay1",
             music: "03 - Crash Site.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Det var bælgmørkt, selvom det var morgen,\\n og måneskrottet lå spredt ud over hele skoven.\\n”Sikke noget rod”, sukkede den lille prop\\n”Vil du hjælpe mig med at samle skrottet op?”",
                     "voice": "sc04.1.mp3"
                 }
             ],
-            "_id": "4",
+            id: "4",
             "_bg": "04_GATHERING_PARTS_IN_FOREST.jpg",
             "_swf": "Sc04.swf",
             "_overlay": "overlay1",
             music: "04 - Gathering Scrap In The Forest.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Dagene gik og stadig ingen sol.\\nSofus var bekymret for hver en blå viol.\\nUden lys var skoven langsomt ved at dø.\\nIntet kunne overleve dette mørke miljø.",
@@ -174,13 +211,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc05.5.mp3"
                 }
             ],
-            "_id": "5",
+            id: "5",
             "_bg": "05_BUILDING_ROCKET.jpg",
             "_swf": "Sc05.swf",
             "_overlay": "overlay1",
             music: "05 - Building The Rocket.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Alt var pakket, og Sofus var parat,\\nmed god fart ville han være der snart.\\nRaketten var den flotteste, han havde set,\\ni alle hans år på den lille planet.",
@@ -199,13 +240,18 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc06.4.mp3"
                 }
             ],
-            "_id": "6",
+            id: "6",
             "_bg": "06_BLAST_OFF.jpg",
             "_swf": "Sc06.swf",
             "_overlay": "overlay1",
             music: "06 - Blast Off.mp3"
         },
         {
+            id: "chapter02",
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "",
@@ -215,6 +261,10 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter02.swf"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "I ti døgn havde Sofus fløjet i rummet.\\nHan havde heldigvis medbragt lokummet.\\nAt styre raketten var let som en leg.\\n\"Se der!”, råbte Sofus. ”Månen den nærmer sig.\"",
@@ -233,13 +283,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc07.4.mp3"
                 }
             ],
-            "_id": "7",
+            id: "7",
             "_bg": "07_JOURNEY_THROUGH_SPACE.jpg",
             "_swf": "Sc07.swf",
             "_overlay": "overlay1",
             music: "07 - Journey Through Space.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Raketten ramte månen med meget høj fart.\\nSofus lå på jorden, det var ikke rart.\\nDe fem raketstykker blev spredt til hver side,\\nhvor længe skulle Sofus ligge og lide?",
@@ -274,13 +328,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc08.8.mp3"
                 }
             ],
-            "_id": "8",
+            id: "8",
             "_bg": "08_CRASHING_INTO_MOONMACHINE.jpg",
             "_swf": "Sc08.swf",
             "_overlay": "overlay1",
             music: "08 - Crashing On The Moonmachine.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     text: ""
@@ -307,13 +365,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc09.4.mp3"
                 }
             ],
-            "_id": "9",
+            id: "9",
             "_bg": "09_THE_POLE.jpg",
             "_swf": "Sc09.swf",
             "_overlay": "overlay1",
             music: "09 - The Pole.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "De to havde gået i timevis mod nord.\\nDet tog lang tid, men de var på helt rette spor.\\nDe var nået frem ved trappen til kongens slot.\\nVed foden af trappen så de en skør robot.",
@@ -356,13 +418,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc10.10.mp3"
                 }
             ],
-            "_id": "10",
+            id: "10",
             "_bg": "10_THE_HAT_ROBOT.jpg",
             "_swf": "Sc10.swf",
             "_overlay": "overlay1",
             music: "10 - The Hat Robot.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Syv tusinde trappetrin gik Sofus og Zum-Zum,\\nog de var nu kommet til kongens soverum.\\nDe forventede, at kongen var stærk og tapper\\nefter at have gået på alle de trapper.",
@@ -410,12 +476,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc11.11.mp3"
                 }
             ],
-            "_id": "11",
+            id: "11",
             "_swf": "Sc11.swf",
             "_overlay": "overlay1",
             music: "11 - The Robot King.mp3"
         },
         {
+            id: "chapter03",
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "",
@@ -425,6 +496,10 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter03.swf"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Ude på Rusthavet fra et flydende fængsel\\nkunne Sofus kigge på sin planet i længsel.\\nDen lille fængselscelle var mørk og kold.\\nHvordan sku’ det gå Zum-Zum og den lille knold?",
@@ -459,24 +534,32 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc12.8.mp3"
                 }
             ],
-            "_id": "12",
+            id: "12",
             "_swf": "Sc12.swf",
             "_overlay": "overlay1",
             music: "12 - Prison Cell.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "”Øh..”, sagde Sofus, ”Jeg tror, vi har et problem.\\nVil du hjælpe os ud af det her rørsystem?”\\nDe to venner sad fast langt under vandkanten.\\nFør dem sikkert igennem rørlabyrinten.",
                     "voice": "sc13.1.mp3"
                 }
             ],
-            "_id": "13",
+            id: "13",
             "_swf": "Sc13.swf",
             "_overlay": "overlay1",
             music: "13 - The Pipe Labyrinth.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "På rusthavets bund lå én million skruer\\nsamt mange rustne søm og tandhjul fra ure.\\nJa nu var der også en gnof og en robot,\\nmen de var sluppet ud af fængslet, så det var jo godt.",
@@ -558,12 +641,16 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc14.19.mp3"
                 }
             ],
-            "_id": "14",
+            id: "14",
             "_swf": "Sc14.swf",
             "_overlay": "overlay1",
             music: "14 - The Sea Of Rust.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "”Pyha.. det var godt, vi fik gjort kål på den ål.\\nSe Zum-Zum, jeg tror, vi har nået vores mål.\\nJeg vil gerne vædde en hel bimbærtærte,\\nat det dér er månens mekaniske hjerte.”",
@@ -595,12 +682,16 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc15.7.mp3"
                 }
             ],
-            "_id": "15",
+            id: "15",
             "_swf": "Sc15.swf",
             "_overlay": "overlay1",
             music: "15 - The Big Machine.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Alle planter og dyr på Goya var reddet,\\nog solmaskinen var nu fuldt opladet.\\n”Vi gjorde det Zum-Zum, vi gjorde det.”\\nSofus smilede men havde svært ved at le.",
@@ -676,24 +767,32 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc16.18.mp3"
                 }
             ],
-            "_id": "16",
+            id: "16",
             "_swf": "Sc16.swf",
             "_overlay": "overlay1",
             music: "16 - Ambience.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Solmaskinen var rødgylden og flot.\\nRejsen gennem rummet var gået ganske godt.\\nSofus fandt en landingsplads gennem sin kikkert\\nog landede rumraketten blødt og sikkert.",
                     "voice": "sc17.1.mp3"
                 }
             ],
-            "_id": "17",
+            id: "17",
             "_swf": "Sc17.swf",
             "_overlay": "overlay1",
             music: "17 - Safe Landing.mp3"
         },
         {
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": "Rejsen var ovre, og eventyret var slut.\\nZum-Zum snorkede saligt gennem sin tut.\\nHan lå ved fodenden af Sofus’ seng\\ni varme blade fra ildskovens eng.",
@@ -712,12 +811,17 @@ export const BOOK_CONFIG: BookConfig = {
                     "voice": "sc18.4.mp3"
                 }
             ],
-            "_id": "18",
+            id: "18",
             "_swf": "Sc18.swf",
             "_overlay": "overlay1",
             music: "18 - Home Again.mp3"
         },
         {
+            id: "19",
+            sceneSrc: "",
+            assetsPath: "",
+            compositionId: "",
+            rootFunctionName: "",
             actions: [
                 {
                     "text": ""

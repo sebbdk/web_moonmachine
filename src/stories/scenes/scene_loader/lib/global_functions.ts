@@ -1,5 +1,3 @@
-import { BOOK_CONFIG, SceneConfig } from "../app_config";
-
 export interface GlobalControls {
 	next: () => {},
 	playSound: () => {},
@@ -7,18 +5,15 @@ export interface GlobalControls {
 	stopAllSound: () => {}
 }
 
-export function setUpGlobalsForScene(sceneId, onNext): GlobalControls {
+export function setUpGlobalsForScene(currentScene, onNext): GlobalControls {
 	const createjs: any = window.createjs;
 	const windowRef = (window as any);
-
-	const currentScene: SceneConfig = BOOK_CONFIG.scenes.find(scene => scene._id === sceneId) || BOOK_CONFIG.scenes[0];
 
 	createjs.Sound.registerPlugins([createjs.WebAudioPlugin, createjs.FlashAudioPlugin]);
 	createjs.Sound.alternateExtensions = ["mp3"];
 
 	windowRef.playSound = function(name) {
 		const path = `assets/SFX/${name}`
-		console.log(`trying to play sound: ${path}`)
 
 		try {
 			createjs.Sound.loadComplete(path);
@@ -36,11 +31,8 @@ export function setUpGlobalsForScene(sceneId, onNext): GlobalControls {
 	}
 
 	windowRef.playTheme = function() {
-		console.log('playing theme!!!')
-
 		const fileName: any = currentScene?.music;
 		const path = `assets/music/${fileName}`
-		console.log(`trying to play sound: ${path}`)
 
 		try {
 			createjs.Sound.loadComplete(path);
@@ -59,11 +51,9 @@ export function setUpGlobalsForScene(sceneId, onNext): GlobalControls {
 
 	let currentVoiceInstance: any = null
 	function playVoice(name) {
-		const path = `assets/voice/${name}`
-		console.log(`trying to play sound: ${path}`)
+		const path = `assets/voice/${name}`;
 
 		if(currentVoiceInstance) {
-			console.log(currentVoiceInstance)
 			currentVoiceInstance.stop();
 		}
 
@@ -86,10 +76,8 @@ export function setUpGlobalsForScene(sceneId, onNext): GlobalControls {
 
 	let currentAction = -1;
 	windowRef.next = function() {
-		console.log('NEXT!!',  currentAction)
-		currentAction += 1
+		currentAction += 1;
 
-		console.log("next",currentScene.actions[currentAction].text)
 		onNext && onNext(currentScene.actions[currentAction].text);
 		playVoice(currentScene.actions[currentAction].voice)
 	}

@@ -112,7 +112,6 @@ export function BottomMenu(props = {open: false}) {
 			? containerRef.current.offsetHeight * 0.77
 			: 0;
 
-		console.log(containerPosition, containerRef.current.offsetHeight)
 		setContainerPosition(containerPosition)
 	}
 
