@@ -56,8 +56,13 @@ export function AppStage(sceneConfig) {
 		// Add scene methods
 		// instance_1 refers to the scene clip located in the root
 		// @TODO, this could fail, is there are better way?
-		injectStandardSceneMethods(sceneClip.instance_1);
-		sceneClip.instance_1.playTheme();
+		injectStandardSceneMethods(sceneClip);
+		sceneClip.playTheme();
+
+		if(sceneClip.instance_1) { //@TODO hackity hack
+			injectStandardSceneMethods(sceneClip.instance_1);
+			sceneClip.instance_1.playTheme();
+		}
 
 		// Make the canvas responsive
 		makeResponsive(true,'both',false,1,[
@@ -67,7 +72,7 @@ export function AppStage(sceneConfig) {
 
 		// Add sceneClip and start listen for updates in order to render them
 		stage.addChild(sceneClip);
-		createjs.Ticker.framerate = sceneComp.getLibrary().fps;
+		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
 	}
 
