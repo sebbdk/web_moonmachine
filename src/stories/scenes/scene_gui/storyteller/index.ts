@@ -5,14 +5,14 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
 	@font-face {
 		font-family: "obelisque";
-		src: url('/assets/fonts/obelisque.otf'), format("opentype");;
+		src: url('assets/fonts/obelisque.otf'), format("opentype");;
 		font-weight: normal;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: "neucha";
-		src: url('/assets/fonts/neucha.otf'), format("opentype");;
+		src: url('assets/fonts/neucha.otf'), format("opentype");;
 		font-weight: normal;
 		font-style: normal;
 	}
@@ -89,7 +89,7 @@ export function StoryTeller(args: StoryTellerArgs) {
 			<${GlobalStyle} />
 
 			<div>
-				<img class="bg" src="/assets/gui/storyteller_box.png" />
+				<img class="bg" src="assets/gui/storyteller_box.png" />
 				<div class="textarea">
 					<p>
 						${args.text}

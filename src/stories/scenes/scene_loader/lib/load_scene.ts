@@ -3,8 +3,8 @@ import { loadScript } from "./loadscript";
 
 export async function loadScene(sceneConfig: SceneConfig): Promise<void> {
 	// load libraries
-	await loadScript('/createjs.js');
-	await loadScript('/soundjs-0.5.2.min.js');
+	await loadScript('createjs.js');
+	await loadScript('soundjs-0.5.2.min.js');
 
 	// load the scene it self and the assets
 	await loadScript(sceneConfig.sceneSrc);
