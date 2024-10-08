@@ -4,6 +4,7 @@ const { mergeConfig } = require('vite');
 
 const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  staticDirs: ['../public'],
   addons: [
     "@storybook/zaddon-links",
     "@storybook/addon-essentials",
