@@ -16,7 +16,6 @@ jobs:
       # Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
       - name: Install and Build 🔧 
         run: |
-          cd storybook
           npm install
           npm run build-storybook
 
