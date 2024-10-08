@@ -1,14 +1,14 @@
 import{f as o,d as n,h as i}from"./styled-components.browser.esm-d33yEBfK.js";const r=o`
 	@font-face {
 		font-family: "obelisque";
-		src: url('/assets/fonts/obelisque.otf'), format("opentype");;
+		src: url('assets/fonts/obelisque.otf'), format("opentype");;
 		font-weight: normal;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: "neucha";
-		src: url('/assets/fonts/neucha.otf'), format("opentype");;
+		src: url('assets/fonts/neucha.otf'), format("opentype");;
 		font-weight: normal;
 		font-style: normal;
 	}
@@ -74,7 +74,7 @@ import{f as o,d as n,h as i}from"./styled-components.browser.esm-d33yEBfK.js";co
 			<${r} />
 
 			<div>
-				<img class="bg" src="/assets/gui/storyteller_box.png" />
+				<img class="bg" src="assets/gui/storyteller_box.png" />
 				<div class="textarea">
 					<p>
 						${t.text}
