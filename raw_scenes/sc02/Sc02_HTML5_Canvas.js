@@ -6038,17 +6038,17 @@ if (reversed == null) { reversed = false; }
 		import flash.events.Event;
 		*/
 		this.stop();
-		
+
 		var self = this;
-		
+
 		function openDoor() {
 			self.play();
 			self.getChildByName('doorBtn').removeEventListener("click", openDoor);
-		
+
 			next(true);
 			//autoNext();
 		}
-		
+
 		this.getChildByName('doorBtn').addEventListener("click",  openDoor);
 	}
 	this.frame_52 = function() {
