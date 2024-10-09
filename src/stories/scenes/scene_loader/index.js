@@ -56,11 +56,11 @@ export function AppStage(sceneConfig) {
 		// Add scene methods
 		// instance_1 refers to the scene clip located in the root
 		// @TODO, this could fail, is there are better way?
-		injectStandardSceneMethods(sceneClip);
-		sceneClip.playTheme();
+		//injectStandardSceneMethods(sceneClip, sceneConfig);
+		//sceneClip.playTheme();
 
 		if(sceneClip.instance_1) { //@TODO hackity hack
-			injectStandardSceneMethods(sceneClip.instance_1);
+			injectStandardSceneMethods(sceneClip.instance_1, sceneConfig);
 			sceneClip.instance_1.playTheme();
 		}
 

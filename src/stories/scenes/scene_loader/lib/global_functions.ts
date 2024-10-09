@@ -1,3 +1,7 @@
+// THIS WHOLE FILE IS A HACK, DEPRECATED
+// being replaced by the movie clip injection script instead
+// because fuck these kinda globals lol
+
 export interface GlobalControls {
 	next: () => {},
 	playSound: () => {},
@@ -50,7 +54,7 @@ export function setUpGlobalsForScene(currentScene, onNext): GlobalControls {
 	}
 
 	let currentVoiceInstance: any = null
-	function playVoice(name) {
+	function playVoice(name, text) {
 		const path = `assets/voice/${name}`;
 
 		if(currentVoiceInstance) {
@@ -58,7 +62,12 @@ export function setUpGlobalsForScene(currentScene, onNext): GlobalControls {
 		}
 
 		currentVoiceInstance = createjs.Sound.play(path);
+
+		//hacks
+		onNext(text)
 	}
+
+	windowRef.playVoice = playVoice;
 
 	function preload(path) {
 		createjs.Sound.registerSound(path, path);
@@ -79,7 +88,7 @@ export function setUpGlobalsForScene(currentScene, onNext): GlobalControls {
 		currentAction += 1;
 
 		onNext && onNext(currentScene.actions[currentAction].text);
-		playVoice(currentScene.actions[currentAction].voice)
+		playVoice(currentScene.actions[currentAction].voice, "")
 	}
 
 	return {
