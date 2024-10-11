@@ -1,6 +1,5 @@
 import { html } from "htm/preact/index.js";
 import { useRef, useState } from 'preact/hooks'
-import { BottomMenu } from "../scene_gui/menu";
 import { StoryTeller } from "../scene_gui/storyteller";
 import { setUpGlobalsForScene } from "./lib/global_functions";
 import { useEffect } from "react";
@@ -22,7 +21,6 @@ export function AppStage(sceneConfig) {
 
 	const canvasRef = useRef(null);
 	const animContainerRef = useRef(null);
-	const domOverlayContainerRef = useRef(null);
 	const startBtnRef = useRef(null);
 
 	async function prepareScene() {
@@ -64,16 +62,16 @@ export function AppStage(sceneConfig) {
 			sceneClip.instance_1.playTheme();
 		}
 
-		// Make the canvas responsive
-		makeResponsive(true,'both',false,1,[
-			canvasRef.current,
-			domOverlayContainerRef.current
-		], lib, stage);
-
 		// Add sceneClip and start listen for updates in order to render them
 		stage.addChild(sceneClip);
 		createjs.Ticker.framerate = lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
+
+		// Make the canvas responsive
+		console.log('123')
+		makeResponsive(true,'both',false,1,[
+			canvasRef.current
+		], lib, stage);
 	}
 
 	// Component initialize
@@ -87,17 +85,7 @@ export function AppStage(sceneConfig) {
 	return html`
 		<${AppStageGUIWrapper}>
 			<${AppStageWrapper} ref=${animContainerRef}>
-				<canvas
-					ref=${canvasRef}
-					width="2048"
-					height="1152"
-					style="margin: auto; display: block; background-color:#333;">
-				</canvas>
-
-				<div
-					ref=${domOverlayContainerRef}
-					style="pointer-events:none; overflow:hidden; width:2048px; height:1152px; position: absolute; left: 0px; top: 0px; display: block;">
-				</div>
+				<canvas ref=${canvasRef}></canvas>
 
 				<${StartButtonOverLay} display=${sceneState === SCENE_STATES.STARTED ? "none" : "flex"}>
 					<button ref=${startBtnRef} onClick=${() => sceneState == SCENE_STATES.READY && startScene()}>
@@ -108,10 +96,11 @@ export function AppStage(sceneConfig) {
 						}
 					</button>
 				</${StartButtonOverLay}>
+
+				<div class="footer">
+					${sceneState === SCENE_STATES.STARTED && html`<${StoryTeller} text=${storytellerText} />`}
+				</div>
 			</${AppStageWrapper}>
-			<div class="footer">
-				${sceneState === SCENE_STATES.STARTED && html`<${BottomMenu} /><${StoryTeller} text=${storytellerText} />`}
-			</div>
 		</${AppStageGUIWrapper}>
 	`;
 }

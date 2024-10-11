@@ -25,10 +25,8 @@ export const AppStageGUIWrapper = styled.div`
 	position: relative;
 
 	.footer {
-		margin: auto;
 		position: relative;
-		bottom: 8%;
-		height: 23%;
+		top: -3%;
 		width: 100%;
 		z-index: 10;
 	}
@@ -38,7 +36,12 @@ export const AppStageWrapper = styled.div`
 	position: relative;
 	background-color: #222;
 	width:100%;
-	height:85%;
-	overflow: hidden;
+	height:100%;
 	margin: auto;
+
+	display: flex;
+    align-content: flex-start;
+    align-items: center;
+	flex-direction: column;
+	justify-content: center;
 `;

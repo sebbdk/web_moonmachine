@@ -1,6 +1,7 @@
 import { html } from "htm/preact/index.js";
 import styled from "styled-components";
 import { createGlobalStyle } from 'styled-components'
+import { BottomMenu } from "../menu";
 
 export const GlobalStyle = createGlobalStyle`
 	@font-face {
@@ -98,6 +99,8 @@ export function StoryTeller(args: StoryTellerArgs) {
 				<div class="hidden-btn prev-btn" onClick=${() => args.onPrev && args.onPrev()}></div>
 				<div class="hidden-btn next-btn" onClick=${() => args.onNext && args.onNext()}></div>
 			</div>
+
+			<${BottomMenu} />
 		</${StoryTellerDiv}>
 	`;
 }

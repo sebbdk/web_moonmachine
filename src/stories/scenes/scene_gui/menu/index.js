@@ -90,7 +90,7 @@ export function BottomMenu(props = {open: false}) {
 			setTimeout(() => {
 				containerPosition = containerRef.open
 				? 0
-				: containerRef.current.offsetHeight * 0.77;
+				: containerRef.current.offsetHeight * 0.75;
 
 				setContainerPosition(containerPosition)
 			}, 250)
