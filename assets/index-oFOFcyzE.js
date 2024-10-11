@@ -1,4 +1,4 @@
-import{f as o,d as n,h as i}from"./styled-components.browser.esm-ShQv4VVf.js";const r=o`
+import{f as o,d as n,h as i,B as r}from"./index-BnPg558r.js";const a=o`
 	@font-face {
 		font-family: "obelisque";
 		src: url('assets/fonts/obelisque.otf'), format("opentype");;
@@ -69,9 +69,9 @@ import{f as o,d as n,h as i}from"./styled-components.browser.esm-ShQv4VVf.js";co
 		top: 28%;
 		left: 0%;
 	}
-`;function a(t){return i`
+`;function s(t){return i`
 		<${e}>
-			<${r} />
+			<${a} />
 
 			<div>
 				<img class="bg" src="assets/gui/storyteller_box.png" />
@@ -83,5 +83,7 @@ import{f as o,d as n,h as i}from"./styled-components.browser.esm-ShQv4VVf.js";co
 				<div class="hidden-btn prev-btn" onClick=${()=>t.onPrev&&t.onPrev()}></div>
 				<div class="hidden-btn next-btn" onClick=${()=>t.onNext&&t.onNext()}></div>
 			</div>
+
+			<${r} />
 		</${e}>
-	`}export{a as S};
+	`}export{s as S};
