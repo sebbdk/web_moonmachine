@@ -1,4 +1,4 @@
-import{f as o,d as n,h as i,B as r}from"./index-BnPg558r.js";const a=o`
+import{f as o,d as n,h as i,B as r}from"./index-BVc0qHyQ.js";const a=o`
 	@font-face {
 		font-family: "obelisque";
 		src: url('assets/fonts/obelisque.otf'), format("opentype");;
