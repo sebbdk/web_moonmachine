@@ -12,29 +12,86 @@ Meanwhile, feel free to look around.
 The game was originally made in Flash CS and Flex builder and released back around ~2016.
 The aim of this project is to build a web port that can run as a native app on iOS and Android.
 
-Current Milestones:
- - Load scenes in a consistent way
- - Proceed to next scene when scene is done
- - Create a demo with the first 10 scenes (no counting any minigames)
- - Build sound manager (SFX, voice, music theme)
+## Current project status:
 
- - Compile and run as iOS app
- - Compile and run as Android app
- - i18n setup the English voice/text version and a language toggle
- - **Complete Development plan/milestones**
+[See the logs for more details](/docs/logs--docs)
 
-Unplaced milestones:
+## Milestones:
+The currently worked on milestones are marked in <span style="color:blue">blue</span> and completed ones are marked in <span style="color:green">green</span>
+
+The project is split into 3 major milestones
+ - <span style="color:blue">Feature complete (October 2024)</span>
+	- POC / Prototyping
+	- First 10 scenes migrated
+	- Architecture stabilized
+	- Basic closed test release to Android and iOS
+ - Content complete (November 2024)
+	- All scenes complete
+	- All mini games complete
+	- The game should be completable
+	- All UI should be implemented
+	- i18n / basic English language version working
+ - Interaction complete (December 2024)
+	- All the bonus touch interactions and effects should be implemented
+	- Known bugs from November should be fixed
+	- Closed beta test released to iOS
+	- Closed beta test released to Android
+
+This means release is scheduled in January/February 2025 depending on how development goes.
+
+### More detailed milestones:
+Basic scenes:
+ - <span style="color:blue">Create a demo with the first 10 scenes (no counting any minigames) +</span>
+	- Basic non functional demo (without API migration)
+	- API migrations on first 10 scenes
+ - Setup hidden repo with last 10 scenes
  - Fix none essentiel background interactables in scenes
+ - Re-implement Maze game
+ - Re-implement Rocket game
 
-Completed Milestones:
- - Fix scaling layout
- - Setup beta.themoonmachine.org as a link to this site
- - Basic scene manager for walking through normal scene interactions
- - Basic application architecture and technical plan
- - POC, is this even possible???
+Architecture:
+ - <span style="color:blue">Basics +</span>
+	- Sound
+		- Sound manager
+		- SFX
+		- Voice
+		- Music
+	- Load scenes in a consistent way
+	- Simplify scene configuration
+	- Proceed to next scene when scene is done
+	- Mock missing general actions
+ - General actions
+	- Drag & Drop logic
+	- Swipe logic
+ - Architecture review/cleanup
+	- After Basics
+	- After 10 scenes
+	- After general actions
 
-Technical notes:
- - How to grab the right movie clip instance? (instance_1??)
+Misc:
+ - i18n
+	- Find english language files
+	- Implement language selector
+ - <span style="color:blue">POC stuff</span>
+	- Compile and run as iOS app
+	- Compile and run as Android app
+	- Accelerometer test
+	- Test release
+		- Setup iOS store app
+		- Setup Android store app
+		- Release for test
+			- iOS
+			- Android
 
-Known bugs:
+Known Bugs:
+ - <span style="color:blue">How too hide mouse interaction areas (currently createjs ignores invisible click areas)</span>
  - When switching between scenes the sound stops working until you reload the page
+ - <span style="color:blue">How to grab the right movie clip instance? (instance_1??)</span>
+
+### Early completed Milestones:
+
+ - <span style="color:green">Fix scaling layout</span>
+ - <span style="color:green">Setup beta.themoonmachine.org as a link to this site</span>
+ - <span style="color:green">Basic scene manager for walking through normal scene interactions</span>
+ - <span style="color:green">Basic application architecture and technical plan</span>
+ - <span style="color:green">POC, is this even possible???</span>
