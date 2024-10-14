@@ -1,6 +1,6 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-DsW0ni0g.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-Byw7SYtM.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(t,{children:[e(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-ZtmogdyR.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-DAsXwaNl.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(t,{children:[e(c,{title:"Readme"}),`
 `,e(n.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
-`,e(n.p,{children:"If you found this then congrats, you are currently looking at the the restoration project for Sofus & the Moonmachine!"}),`
+`,e(n.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,e(n.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
 Meanwhile, feel free to look around.`}),`
 `,e(n.p,{children:`The game was originally made in Flash CS and Flex builder and released back around ~2016.
@@ -12,7 +12,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.p,{children:"The project is split into 3 major milestones"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[`
-`,e("span",{style:"color:blue",children:"Feature complete (October 2024)"}),`
+`,e("span",{style:"color:blue",children:"Feature complete (October 2024) + "}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"POC / Prototyping"}),`
 `,e(n.li,{children:"First 10 scenes migrated"}),`
@@ -71,7 +71,13 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:"Simplify scene configuration"}),`
 `,e(n.li,{children:"Proceed to next scene when scene is done"}),`
 `,e(n.li,{children:"Mock missing general actions"}),`
-`,e(n.li,{children:"UI / Menu's"}),`
+`,e(n.li,{children:["UI / Menu's",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Animated loading screen"}),`
+`,e(n.li,{children:"Scroll up Menu"}),`
+`,e(n.li,{children:"Scene menu (back/forward etc.)"}),`
+`]}),`
+`]}),`
 `]}),`
 `]}),`
 `,e(n.li,{children:["General actions",`
@@ -97,7 +103,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `]}),`
 `,e(n.li,{children:[`
-`,e("span",{style:"color:blue",children:"POC stuff"}),`
+`,e("span",{style:"color:blue",children:"POC stuff + "}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Compile and run as iOS app"}),`
 `,e(n.li,{children:"Compile and run as Android app"}),`
@@ -126,6 +132,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:blue",children:"How to grab the right movie clip instance? (instance_1??)"}),`
 `]}),`
+`,e(n.li,{children:"The used fonts are not the correct ones everywhere"}),`
 `]}),`
 `,e(n.h3,{id:"early-completed-milestones",children:"Early completed Milestones:"}),`
 `,e(n.ul,{children:[`
