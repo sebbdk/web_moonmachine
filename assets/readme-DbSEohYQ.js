@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-BEFLo1wa.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-D_JpNa97.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(t,{children:[e(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-BHDPL12E.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-CA4w3d2f.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(t,{children:[e(c,{title:"Readme"}),`
 `,e(n.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,e(n.p,{children:"If you found this then congrats, you are currently looking at the the restoration project for Sofus & the Moonmachine!"}),`
 `,e(n.p,{children:`The project is still in the early fases, but a contact email for feedback will be added later.
@@ -6,7 +6,7 @@ Meanwhile, feel free to look around.`}),`
 `,e(n.p,{children:`The game was originally made in Flash CS and Flex builder and released back around ~2016.
 The aim of this project is to build a web port that can run as a native app on iOS and Android.`}),`
 `,e(n.h2,{id:"current-project-status",children:"Current project status:"}),`
-`,e(n.p,{children:e(n.a,{href:"/docs/logs--docs",children:"See the logs for more details"})}),`
+`,e(n.p,{children:["See the milestones ",e(n.a,{href:"/docs/readme-logs--docs",children:"or the dev logs"})," for more details."]}),`
 `,e(n.h2,{id:"milestones",children:"Milestones:"}),`
 `,e(n.p,{children:["The currently worked on milestones are marked in ",e("span",{style:"color:blue",children:"blue"})," and completed ones are marked in ",e("span",{style:"color:green",children:"green"})]}),`
 `,e(n.p,{children:"The project is split into 3 major milestones"}),`
@@ -71,6 +71,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:"Simplify scene configuration"}),`
 `,e(n.li,{children:"Proceed to next scene when scene is done"}),`
 `,e(n.li,{children:"Mock missing general actions"}),`
+`,e(n.li,{children:"UI / Menu's"}),`
 `]}),`
 `]}),`
 `,e(n.li,{children:["General actions",`
@@ -132,7 +133,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e("span",{style:"color:green",children:"Fix scaling layout"}),`
 `]}),`
 `,e(n.li,{children:[`
-`,e("span",{style:"color:green",children:"Setup beta.themoonmachine.org as a link to this site"}),`
+`,e("span",{style:"color:green",children:"Setup beta.themoonmachine.dk as a link to this site"}),`
 `]}),`
 `,e(n.li,{children:[`
 `,e("span",{style:"color:green",children:"Basic scene manager for walking through normal scene interactions"}),`
