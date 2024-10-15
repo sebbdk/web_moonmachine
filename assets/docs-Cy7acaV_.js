@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-D7L3ijoP.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-Dp8zp7hq.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(t,{children:[e(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-Clj-F7Lf.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-CSCPmeO_.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function i(l){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),l.components);return e(o,{children:[e(c,{title:"Readme"}),`
 `,e(n.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,e(n.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,e(n.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -16,7 +16,9 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"POC / Prototyping"}),`
 `,e(n.li,{children:"First 10 scenes migrated"}),`
-`,e(n.li,{children:"Architecture stabilized"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Architecture stabilized"}),`
+`]}),`
 `,e(n.li,{children:"Basic closed test release to Android and iOS"}),`
 `]}),`
 `]}),`
@@ -45,7 +47,9 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:blue",children:"Create a demo with the first 10 scenes (no counting any minigames) +"}),`
 `,e(n.ul,{children:[`
-`,e(n.li,{children:"Basic non functional demo (without API migration)"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Basic non functional demo (without API migration)"}),`
+`]}),`
 `,e(n.li,{children:"API migrations on first 10 scenes"}),`
 `]}),`
 `]}),`
@@ -59,15 +63,22 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:blue",children:"Basics +"}),`
 `,e(n.ul,{children:[`
-`,e(n.li,{children:["Sound",`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Sound"}),`
 `,e(n.ul,{children:[`
-`,e(n.li,{children:"Sound manager"}),`
-`,e(n.li,{children:"SFX"}),`
-`,e(n.li,{children:"Voice"}),`
-`,e(n.li,{children:"Music"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Sound manager"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"SFX"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Voice"}),`
+`]}),`
+`,e(n.li,{children:[e("span",{style:"color: green",children:"Music"}),`
+-`,e("span",{style:"color: green",children:" Load scenes in a consistent way"})]}),`
 `]}),`
 `]}),`
-`,e(n.li,{children:"Load scenes in a consistent way"}),`
 `,e(n.li,{children:"Simplify scene configuration"}),`
 `,e(n.li,{children:"Proceed to next scene when scene is done"}),`
 `,e(n.li,{children:"Mock missing general actions"}),`
@@ -129,9 +140,11 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:blue",children:"How too hide mouse interaction areas (currently createjs ignores invisible click areas)"}),`
 `]}),`
-`,e(n.li,{children:"When switching between scenes the sound stops working until you reload the page"}),`
 `,e(n.li,{children:[`
-`,e("span",{style:"color:blue",children:"How to grab the right movie clip instance? (instance_1??)"}),`
+`,e("span",{style:"color: green",children:"When switching between scenes the sound stops working until you reload the page - Fixed"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color:green",children:"How to grab the right movie clip instance? (instance_1??) - Fixed"}),`
 `]}),`
 `,e(n.li,{children:"The used fonts are not the correct ones everywhere"}),`
 `]}),`
@@ -152,4 +165,4 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:green",children:"POC, is this even possible???"}),`
 `]}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function b(l={}){const{wrapper:n}=Object.assign({},r(),l.components);return n?e(n,Object.assign({},l,{children:e(i,l)})):i(l)}export{b as default};
