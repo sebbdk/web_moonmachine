@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-BcsQHbQU.js";import{useMDXComponents as t}from"./index-GSsdXuhh.js";import{b as r}from"./preact.module-CMRueUcp.js";import"./iframe-L0ITdbBs.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},t(),i.components);return e(r,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-C1dz9lt6.js";import{useMDXComponents as l}from"./index-GSsdXuhh.js";import{b as r}from"./preact.module-CMRueUcp.js";import"./iframe-CscovuTo.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function t(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},l(),i.components);return e(r,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
 `,e(n.h3,{id:"-seb-tuesday-15-october-2024",children:[e("hr",{})," Seb, Tuesday 15. October 2024"]}),`
 `,e(n.ul,{children:[`
@@ -23,6 +23,7 @@ import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYB
 `]}),`
 `]}),`
 `]}),`
+`,e(n.li,{children:"I updated the milestones status and made come clarifications to existing ones"}),`
 `]}),`
 `,e(n.p,{children:"This pretty much completes the goals i made for the week so i'm adding to the scope."}),`
 `,e(n.p,{children:[e(n.strong,{children:"Updated week 3 goals"}),":"]}),`
@@ -50,4 +51,4 @@ import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYB
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},t(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},l(),i.components);return n?e(n,Object.assign({},i,{children:e(t,i)})):t(i)}export{b as default};
