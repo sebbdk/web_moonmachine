@@ -23,7 +23,7 @@ export class AudioManager {
 		createjs.Sound.alternateExtensions = ["mp3"];
 		(window as any).initializedSound = true;
 
-		createjs.Sound.addEventListener("fileload", (evt) => this.loadHandler(evt));
+		createjs.Sound.addEventListener("fileload", (evt) => this.loadHandler());
 	}
 
 	public static getInstance() {
