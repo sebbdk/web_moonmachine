@@ -29,15 +29,15 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_12 = function() {
 	this.initialize(ss["Sc00_HTML5_Canvas_atlas_3"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_3 = function() {
-	this.initialize(img.CachedBmp_3);
+(lib.CachedBmp_11 = function() {
+	this.initialize(img.CachedBmp_11);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2866,192);
 
@@ -542,7 +542,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_4();
+	this.instance = new lib.CachedBmp_12();
 	this.instance.setTransform(1164.15,71.4,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1536,7 +1536,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_3();
+	this.instance = new lib.CachedBmp_11();
 	this.instance.setTransform(-464.3,-138.2,0.4732,0.4732);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -2228,7 +2228,7 @@ p.nominalBounds = new cjs.Rectangle(-65.1,-60.5,2230.5,1299);
 
 
 // stage content:
-(lib.Sc00_HTML5Canvas = function(mode,startPosition,loop,reversed) {
+(lib.Sc00_HTML5_Canvas = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -2353,7 +2353,7 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_3.png", id:"CachedBmp_3"},
+		{src:"images/CachedBmp_11.png", id:"CachedBmp_11"},
 		{src:"images/Sc00_HTML5_Canvas_atlas_1.png", id:"Sc00_HTML5_Canvas_atlas_1"},
 		{src:"images/Sc00_HTML5_Canvas_atlas_2.png", id:"Sc00_HTML5_Canvas_atlas_2"},
 		{src:"images/Sc00_HTML5_Canvas_atlas_3.png", id:"Sc00_HTML5_Canvas_atlas_3"}
