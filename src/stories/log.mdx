@@ -4,13 +4,27 @@ import { Meta } from '@storybook/blocks';
 
 # Dev Logs
 
-### <hr /> Seb, Monday 15. October 2024
+### <hr /> Seb, Tuesday 15. October 2024
 
  * The server managing the website was frozen, it is now functional again.
  * The first 10 scenes and the chapter scenes have been added
 	* They are none functional, but will load and run their animations
  * Implemented an AudioManager and removed the global hacks
+	* This fixes the bug where audio would stop working on navigation.
  * Made the scene music play (the volume needs adjusting)
+ * Loading will take longer now, this is because all the sounds are now preloaded
+	* An optimization later could be to preload only the first few voice lines
+		* This wont matter when this becomes an app.
+
+This pretty much completes the goals i made for the week so i'm adding to the scope.
+
+**Updated week 3 goals**:
+ - <span style="color: green">Migrate first 10 scenes badly (they just need to load basically) - DONE</span>
+ - <span style="color: green">Implement none POC/hacked sound manager for SFX, scene music and Voice. - DONE</span>
+ - <span style="color: green">Fix/generalize how scenes are loaded more better.  - DONE</span>
+ - Implement basic actions for scene 0->10 (excluding mini games)
+ - POC Compile into an iOS app and test on real tablet
+ - Simplify scene configuration
 
 ### <hr /> Seb, Monday 14. October 2024
 
@@ -20,7 +34,7 @@ I also setup this log to document the status of the project.
 
 For now this is mostly for my self and the game designer to reference but this may change in the future.
 
-Week 3 goals:
+**Week 3 goals**:
  - Migrate first 10 scenes badly (they just need to load basically)
  - Implement none POC/hacked sound manager for SFX, scene music and Voice.
  - Fix/generalize how scenes are loaded more better
