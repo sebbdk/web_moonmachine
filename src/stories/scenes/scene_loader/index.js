@@ -29,7 +29,7 @@ export function AppStage(sceneConfig) {
 		await loadScene(sceneConfig, sound)
 
 		sound = AudioManager.getInstance();
-		sound.preloadSceneLoadAudio(sceneConfig);
+		await sound.preloadSceneLoadAudio(sceneConfig);
 
 		setSound(sound);
 		setSceneState(SCENE_STATES.READY);

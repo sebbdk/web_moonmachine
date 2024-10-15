@@ -22,6 +22,8 @@ export class AudioManager {
 		createjs.Sound.registerPlugins([createjs.WebAudioPlugin, createjs.FlashAudioPlugin]);
 		createjs.Sound.alternateExtensions = ["mp3"];
 		(window as any).initializedSound = true;
+
+		createjs.Sound.addEventListener("fileload", (evt) => this.loadHandler(evt));
 	}
 
 	public static getInstance() {
@@ -36,23 +38,29 @@ export class AudioManager {
 		createjs.Sound.stop()
 	}
 
-	public async preloadLoadEffects() {
-		const SFX_PATH = "assets/sfx/";
-		const sfx_paths: string[] = SFX_LIST.map(name => SFX_PATH + name);
-
-		// now load em in that layer...
-	}
-
-	public preloadSceneLoadAudio(sceneConfig: SceneConfig) {
+	public loadCount: number = 0;
+	public async preloadSceneLoadAudio(sceneConfig: SceneConfig) {
 		this.sceneConfig = sceneConfig;
 
 		this.preloadVoices();
 		this.preloadSFX();
 		this.preloadMusic();
-		// Load the background music
+
+		return new Promise<void>((resolve) => {
+			const interval = setInterval(() => {
+				if(this.loadCount === 0) {
+					console.info('Finished preloading sounds.');
+					clearInterval(interval);
+					resolve();
+				}
+			}, 100);
+		});
 	}
 
-	// @TODO, should be async so we can block until they are all loaded
+	public loadHandler() {
+		this.loadCount--;
+	}
+
 	private preloadMusic() {
 		const path = `assets/music/${this.sceneConfig.music}`;
 
@@ -62,10 +70,10 @@ export class AudioManager {
 			}
 		}catch(e){}
 
+		this.loadCount++;
 		createjs.Sound.registerSound(path, path);
 	}
 
-	// @TODO, should be async so we can block until they are all loaded
 	private preloadVoices() {
 		this.sceneConfig.actions.forEach(action => {
 			if(!action.voice) {
@@ -80,11 +88,11 @@ export class AudioManager {
 				}
 			}catch(e){}
 
+			this.loadCount++;
 			createjs.Sound.registerSound(path, path);
 		});
 	}
 
-	// @TODO, should be async so we can block until they are all loaded
 	private preloadSFX() {
 		SFX_LIST.forEach(name => {
 			const path = `assets/sfx/${name}`;
@@ -95,6 +103,7 @@ export class AudioManager {
 				}
 			}catch(e){}
 
+			this.loadCount++;
 			createjs.Sound.registerSound(path, path);
 		});
 	}
