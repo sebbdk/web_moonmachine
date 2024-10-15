@@ -110,7 +110,7 @@ export class AudioManager {
 
 	private currentMusicInstance: any = null;
 	public playTheme() {
-		const path = `assets/voice/${this.sceneConfig.music}`;
+		const path = `assets/music/${this.sceneConfig.music}`;
 
 		if(this.currentMusicInstance !== null) {
 			this.currentMusicInstance.stop();
@@ -121,7 +121,7 @@ export class AudioManager {
 			this.currentMusicInstance = createjs.Sound.play(path);
 			return;
 		} catch(e) {
-			console.error("Error while trying to play voice", path);
+			console.error("Error while trying to play theme", path);
 			console.error(e)
 		}
 	}

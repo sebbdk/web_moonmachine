@@ -124,7 +124,9 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	/**
 	 * Add sound related methods
 	 */
-	sceneClip.playTheme = function() {}
+	sceneClip.playTheme = function() {
+		sound.playTheme();
+	}
 	sceneClip.playSound = function(soundName, loop = 1) {
 		//@TODO, loop is how many times to play said sound
 		sound.playSound(soundName);
