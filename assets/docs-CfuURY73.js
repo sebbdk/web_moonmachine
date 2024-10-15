@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-DySWiTEI.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-CYXq3xEU.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function i(l){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),l.components);return e(o,{children:[e(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-Cfbf__YZ.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-DGxyuatJ.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function i(l){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),l.components);return e(o,{children:[e(c,{title:"Readme"}),`
 `,e(n.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,e(n.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,e(n.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -147,6 +147,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e("span",{style:"color:green",children:"How to grab the right movie clip instance? (instance_1??) - Fixed"}),`
 `]}),`
 `,e(n.li,{children:"The used fonts are not the correct ones everywhere"}),`
+`,e(n.li,{children:"Scene music does not loop"}),`
 `]}),`
 `,e(n.h3,{id:"early-completed-milestones",children:"Early completed Milestones:"}),`
 `,e(n.ul,{children:[`
