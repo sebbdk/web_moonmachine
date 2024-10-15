@@ -52,15 +52,11 @@ export function AppStage(sceneConfig) {
 		AdobeAn.compositionLoaded(lib.properties.id);
 
 		// Add scene methods
-		// instance_1 refers to the scene clip located in the root
-		// @TODO, this could fail, is there are better way?
-		//injectStandardSceneMethods(sceneClip, sceneConfig);
-		//sceneClip.playTheme();
+		// look for the sceneInstance child, otherwise default to the root as the scene
+		const sceneInstance = sceneClip.sceneInstance !== undefined ? sceneClip.sceneInstance : sceneClip;
+		injectStandardSceneMethods(sceneInstance, sceneConfig);
+		sceneInstance.playTheme();
 
-		if(sceneClip.instance_1) { //@TODO hackity hack
-			injectStandardSceneMethods(sceneClip.instance_1, sceneConfig);
-			sceneClip.instance_1.playTheme();
-		}
 
 		// Add sceneClip and start listen for updates in order to render them
 		stage.addChild(sceneClip);
@@ -68,7 +64,6 @@ export function AppStage(sceneConfig) {
 		createjs.Ticker.addEventListener("tick", stage);
 
 		// Make the canvas responsive
-		console.log('123')
 		makeResponsive(true,'both',false,1,[
 			canvasRef.current
 		], lib, stage);

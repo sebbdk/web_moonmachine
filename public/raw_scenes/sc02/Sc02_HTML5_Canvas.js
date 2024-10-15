@@ -31,14 +31,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_10 = function() {
 	this.initialize(ss["Sc02_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
+(lib.CachedBmp_9 = function() {
 	this.initialize(ss["Sc02_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -3877,7 +3877,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.CachedBmp_2();
+	this.instance = new lib.CachedBmp_10();
 	this.instance.setTransform(-60.95,-108.05,0.5,0.5);
 	this.instance._off = true;
 
@@ -6042,11 +6042,8 @@ if (reversed == null) { reversed = false; }
 		var door = self.getChildByName('doorBtn');
 		
 		function openDoor(evt) {
-			console.log("EVT WAS  CALLED!!")
 			self.play();
 			self.continue();
-			
-			console.log("well shit!")
 		}
 		
 		door.removeAllEventListeners("click");
@@ -6321,13 +6318,14 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_1();
+	this.instance = new lib.CachedBmp_9();
 	this.instance.setTransform(1130.25,220.5,0.5,0.5);
 
-	this.instance_1 = new lib.dksebbmoonmachineSc02();
-	this.instance_1.setTransform(1024,359.4,1,1,0,0,0,1024,359.4);
+	this.sceneInstance = new lib.dksebbmoonmachineSc02();
+	this.sceneInstance.name = "sceneInstance";
+	this.sceneInstance.setTransform(1024,359.4,1,1,0,0,0,1024,359.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.sceneInstance},{t:this.instance}]}).wait(1));
 
 	// stageBackground
 	this.shape = new cjs.Shape();

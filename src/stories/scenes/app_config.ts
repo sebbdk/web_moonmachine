@@ -34,7 +34,7 @@ export const BOOK_CONFIG: BookConfig = {
             sceneSrc: "raw_scenes/sc00/Sc00_HTML5_Canvas.js",
             assetsPath: "raw_scenes/sc00/",
             compositionId: "3A9186C986474A73ACA4A389153EA561",
-            rootFunctionName: "Sc00_HTML5Canvas",
+            rootFunctionName: "Sc00_HTML5_Canvas",
             actions: [
                 {
                     "text": "",
@@ -49,11 +49,11 @@ export const BOOK_CONFIG: BookConfig = {
             music: "00 - Main Theme.mp3"
         },
         {
-            id: "chapter1",
-            sceneSrc: "",
-            assetsPath: "",
+            id: "chapter01",
+            sceneSrc: "raw_scenes/chapter01/Chapter_01_HTML5_Canvas.js",
+            assetsPath: "raw_scenes/chapter01/",
             compositionId: "915EC3CCF88D4CA48A7D0A90825BB364",
-            rootFunctionName: "",
+            rootFunctionName: "Chapter_01_HTML5_Canvas",
             actions: [
                 {
                     "text": "",
@@ -63,10 +63,10 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter01.swf"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc: "raw_scenes/sc01/Sc01_HTML5_Canvas.js",
+            assetsPath: "raw_scenes/sc01/",
+            compositionId: "D4CA7E67CC254C98B8B3D402F3C36311",
+            rootFunctionName: "Sc01_HTML5_Canvas",
             actions: [
                 {
                     "text": "Ikke langt borte på skovplaneten Goya\\nfandtes tusindvis af dyr og søer af soja.\\nKinsipister, raflbølter, munse og æsner.\\nListen ku’ fortsætte med mange små væsner.",
@@ -133,10 +133,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "02 - Sofus.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc03/Sc03_HTML5_Canvas.js",
+            compositionId: "91C9D186569C48D8862566F3C94A4310",
+            rootFunctionName: "Sc03_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc03/",
             actions: [
                 {
                     "text": "”Wow!”, udbrød Sofus, da han så, hvad der var sket.\\n”Det er nok det største stykke skrot, jeg har set!”\\nI et dybt dybt hul lå årsagen til braget,\\nvar der mon nogen gemt inde i vraget?",
@@ -172,10 +172,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "03 - Crash Site.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc04/Sc04_HTML5_Canvas.js",
+            compositionId: "EB4E8C1AF6C444D49FDEAF447DC5F53C",
+            rootFunctionName: "Sc04_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc04/",
             actions: [
                 {
                     "text": "Det var bælgmørkt, selvom det var morgen,\\n og måneskrottet lå spredt ud over hele skoven.\\n”Sikke noget rod”, sukkede den lille prop\\n”Vil du hjælpe mig med at samle skrottet op?”",
@@ -189,10 +189,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "04 - Gathering Scrap In The Forest.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc05/Sc05_HTML5_Canvas.js",
+            compositionId: "1BB7CFE78D23456B9157781BC715F089",
+            rootFunctionName: "Sc05_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc05/",
             actions: [
                 {
                     "text": "Dagene gik og stadig ingen sol.\\nSofus var bekymret for hver en blå viol.\\nUden lys var skoven langsomt ved at dø.\\nIntet kunne overleve dette mørke miljø.",
@@ -218,10 +218,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "05 - Building The Rocket.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc06/Sc06_HTML5_Canvas.js",
+            compositionId: "3F148D306DB244DFA71FEC68C5B46699",
+            rootFunctionName: "Sc06_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc06/",
             actions: [
                 {
                     "text": "Alt var pakket, og Sofus var parat,\\nmed god fart ville han være der snart.\\nRaketten var den flotteste, han havde set,\\ni alle hans år på den lille planet.",
@@ -248,10 +248,10 @@ export const BOOK_CONFIG: BookConfig = {
         },
         {
             id: "chapter02",
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc: "raw_scenes/chapter02/Chapter_02_HTML5_Canvas.js",
+            assetsPath: "raw_scenes/chapter02/",
+            compositionId: "17D36802482F41C88471F78594E60BB5",
+            rootFunctionName: "Chapter_02_HTML5_Canvas",
             actions: [
                 {
                     "text": "",
@@ -261,10 +261,10 @@ export const BOOK_CONFIG: BookConfig = {
             "_swf": "chapter02.swf"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc07/Sc07_HTML5_Canvas.js",
+            compositionId: "8923539F51144C5881B4F85F02552646",
+            rootFunctionName: "Sc07_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc07/",
             actions: [
                 {
                     "text": "I ti døgn havde Sofus fløjet i rummet.\\nHan havde heldigvis medbragt lokummet.\\nAt styre raketten var let som en leg.\\n\"Se der!”, råbte Sofus. ”Månen den nærmer sig.\"",
@@ -290,10 +290,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "07 - Journey Through Space.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc08/Sc08_HTML5_Canvas.js",
+            compositionId: "8A649D29F2C4496FA8A297B456137B2F",
+            rootFunctionName: "Sc08_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc08/",
             actions: [
                 {
                     "text": "Raketten ramte månen med meget høj fart.\\nSofus lå på jorden, det var ikke rart.\\nDe fem raketstykker blev spredt til hver side,\\nhvor længe skulle Sofus ligge og lide?",
@@ -335,10 +335,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "08 - Crashing On The Moonmachine.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc09/Sc09_HTML5_Canvas.js",
+            compositionId: "310F394C1253410FBCE9E6913A555C0A",
+            rootFunctionName: "Sc09_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc09/",
             actions: [
                 {
                     text: ""
@@ -372,10 +372,10 @@ export const BOOK_CONFIG: BookConfig = {
             music: "09 - The Pole.mp3"
         },
         {
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc:"raw_scenes/sc10/Sc10_HTML5_Canvas.js",
+            compositionId: "B210CA321575427493147D8C7647731D",
+            rootFunctionName: "Sc10_HTML5_Canvas",
+            assetsPath: "raw_scenes/sc10/",
             actions: [
                 {
                     "text": "De to havde gået i timevis mod nord.\\nDet tog lang tid, men de var på helt rette spor.\\nDe var nået frem ved trappen til kongens slot.\\nVed foden af trappen så de en skør robot.",
@@ -483,10 +483,10 @@ export const BOOK_CONFIG: BookConfig = {
         },
         {
             id: "chapter03",
-            sceneSrc: "",
-            assetsPath: "",
-            compositionId: "",
-            rootFunctionName: "",
+            sceneSrc: "raw_scenes/chapter03/Chapter_03_HTML5_Canvas.js",
+            assetsPath: "raw_scenes/chapter03/",
+            compositionId: "F2D26A86DB8B45A68FF95D23D7BDBD2C",
+            rootFunctionName: "Chapter_03_HTML5_Canvas",
             actions: [
                 {
                     "text": "",
