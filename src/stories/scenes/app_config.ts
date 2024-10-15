@@ -1,3 +1,9 @@
+export interface Step {
+    text: string;
+    voice?: string;
+    speechOffset?: string;
+}
+
 export interface SceneConfig {
     id: string;
     _bg?: string;
@@ -8,11 +14,7 @@ export interface SceneConfig {
     sceneSrc: string;
     assetsPath: string
     rootFunctionName: string;
-    actions: {
-        text: string;
-        voice?: string;
-        speechOffset?: string;
-    }[];
+    actions: Step[];
 }
 
 export interface BookConfig {

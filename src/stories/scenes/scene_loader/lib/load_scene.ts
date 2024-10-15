@@ -1,7 +1,7 @@
 import { SceneConfig } from "../../app_config";
 import { loadScript } from "./loadscript";
 
-export async function loadScene(sceneConfig: SceneConfig): Promise<void> {
+export async function loadScene(sceneConfig: SceneConfig, sound): Promise<void> {
 	// load libraries
 	await loadScript('createjs.js');
 	await loadScript('soundjs-0.5.2.min.js');

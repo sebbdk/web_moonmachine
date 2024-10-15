@@ -1,12 +1,12 @@
 import { html } from "htm/preact/index.js";
 import { useRef, useState } from 'preact/hooks'
 import { StoryTeller } from "../scene_gui/storyteller";
-import { setUpGlobalsForScene } from "./lib/global_functions";
 import { useEffect } from "react";
 import { AppStageGUIWrapper, AppStageWrapper, StartButtonOverLay } from "./index.styles";
 import { makeResponsive } from "./lib/make_responsive";
 import { injectStandardSceneMethods } from "./lib/standard_injections";
 import { loadScene } from "./lib/load_scene";
+import { AudioManager } from "./lib/sound/sound";
 
 const SCENE_STATES = {
 	STARTED: "started",
@@ -18,6 +18,7 @@ const SCENE_STATES = {
 export function AppStage(sceneConfig) {
 	const [sceneState, setSceneState] = useState(SCENE_STATES.INIT);
 	const [storytellerText, setStorytellerText] = useState("");
+	let [sound, setSound] = useState();
 
 	const canvasRef = useRef(null);
 	const animContainerRef = useRef(null);
@@ -25,16 +26,13 @@ export function AppStage(sceneConfig) {
 
 	async function prepareScene() {
 		setSceneState(SCENE_STATES.LOADING)
-		await loadScene(sceneConfig)
-		setSceneState(SCENE_STATES.READY)
+		await loadScene(sceneConfig, sound)
 
-		// Setups the next/prev etc. function references in the canvas scenes
-		setUpGlobalsForScene(
-			sceneConfig,
-			(text) =>{
-				setStorytellerText(text);
-			}
-		);
+		sound = AudioManager.getInstance();
+		sound.preloadSceneLoadAudio(sceneConfig);
+
+		setSound(sound);
+		setSceneState(SCENE_STATES.READY);
 	}
 
 	function startScene() {
@@ -54,7 +52,7 @@ export function AppStage(sceneConfig) {
 		// Add scene methods
 		// look for the sceneInstance child, otherwise default to the root as the scene
 		const sceneInstance = sceneClip.sceneInstance !== undefined ? sceneClip.sceneInstance : sceneClip;
-		injectStandardSceneMethods(sceneInstance, sceneConfig);
+		injectStandardSceneMethods(sceneInstance, sceneConfig, onStep, sound);
 		sceneInstance.playTheme();
 
 
@@ -69,12 +67,17 @@ export function AppStage(sceneConfig) {
 		], lib, stage);
 	}
 
+	function onStep(step) {
+		sound.playVoice(step.voice);
+		setStorytellerText(step.text);
+	}
+
 	// Component initialize
 	useEffect(() => {
 		prepareScene();
 
 		// Make sure to stop sounds when the component is destroyed
-		return () => window.createjs.Sound.stop()
+		return () => sound.stop()
 	}, []);
 
 	return html`

@@ -1,4 +1,4 @@
-import { SceneConfig } from "../../app_config";
+import { SceneConfig, Step } from "../../app_config";
 
 interface step {
 	frame: number;
@@ -6,7 +6,7 @@ interface step {
 	index: number;
 }
 
-export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig) {
+export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, onStep = (step: Step) => console.error('Missing next function'), sound) {
 	/**
 	 * Add repeat functions
 	 *
@@ -125,22 +125,20 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig) {
 	 * Add sound related methods
 	 */
 	sceneClip.playTheme = function() {}
-	sceneClip.playSound = function(soundName, loop = 1) {} // loop is how many times to play said sound
+	sceneClip.playSound = function(soundName, loop = 1) {
+		//@TODO, loop is how many times to play said sound
+		sound.playSound(soundName);
+	}
+
 	sceneClip.playVoice = function() {
 		if(!sceneConfig.actions[sceneClip.currentStep]) {
 			console.error('missing step???');
 			return;
 		}
 
-		// hacky hacks
-		const windowRef = (window as any);
-		windowRef.playVoice(
-			sceneConfig.actions[sceneClip.currentStep].voice,
-			sceneConfig.actions[sceneClip.currentStep].text
-		)
+		onStep(sceneConfig.actions[sceneClip.currentStep]);
 
-		console.log(sceneConfig.actions[sceneClip.currentStep]);
-		// Get offset from sceneConfig... maybe code this into the scene fla instead.
+		// @TODO Get offset from sceneConfig... maybe code this into the scene fla instead.
 		// remember to handle voice offset
 		// see PageContent.as
 	}
