@@ -68,6 +68,10 @@ export class AudioManager {
 	// @TODO, should be async so we can block until they are all loaded
 	private preloadVoices() {
 		this.sceneConfig.actions.forEach(action => {
+			if(!action.voice) {
+				return;
+			}
+
 			const path = `assets/voice/${action.voice}`;
 
 			try {// If registersound is called twice on the same sound SoundJS breaks
