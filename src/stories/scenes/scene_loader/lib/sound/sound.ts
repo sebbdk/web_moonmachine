@@ -132,6 +132,7 @@ export class AudioManager {
 		try {
 			console.log(createjs.Sound.loadComplete(path));
 			this.currentMusicInstance = createjs.Sound.play(path);
+			this.currentMusicInstance.volume = 0.5;
 			return;
 		} catch(e) {
 			console.error("Error while trying to play theme", path);
