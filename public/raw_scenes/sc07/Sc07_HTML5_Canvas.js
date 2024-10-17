@@ -1281,11 +1281,10 @@ if (reversed == null) { reversed = false; }
 		/*  */
 	}
 	this.frame_83 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_84 = function() {
-		/* loopEnd();
-		*/
+		this.loopEnd();
 	}
 	this.frame_86 = function() {
 		/* import flash.display.MovieClip;

@@ -7602,117 +7602,134 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// timeline functions:
+	this.frame_0 = function() {
+		this.step();
+		this.continue();
+	}
 	this.frame_134 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_curious01.mp3");*/
+		this.playSound2("Zum-Zum_curious01.mp3");
 	}
 	this.frame_163 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_164 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_172 = function() {
-		/* repeat(3);*/
+		this.repeat(3);
 	}
 	this.frame_194 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_195 = function() {
-		/* repeat(100);*/
+		this.repeat(100);
 	}
 	this.frame_196 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_197 = function() {
-		/* repeat(3);*/
+		this.repeat(3);
 	}
 	this.frame_220 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_225 = function() {
-		/* repeat(3);*/
+		this.repeat(3);
 	}
 	this.frame_240 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_243 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_244 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_303 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_shakepole.mp3");*/
+		this.playSound2("Zum-Zum_shakepole.mp3");
 	}
 	this.frame_352 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_shakepole.mp3");*/
+		this.playSound2("Zum-Zum_shakepole.mp3");
 	}
 	this.frame_381 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_sad02.mp3");*/
+		this.playSound2("Zum-Zum_sad02.mp3");
 	}
 	this.frame_394 = function() {
-		/* repeat(2)*/
+		this.repeat(2)
 	}
 	this.frame_409 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_451 = function() {
-		/* repeat(5);*/
+		this.repeat(5);
 	}
 	this.frame_478 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_504 = function() {
 		/* stop();
 		shaken = false;*/
+		
+		this.stop();
 	}
 	this.frame_507 = function() {
-		/* playSound('Push_wreck_04.mp3');*/
+		this.playSound('Push_wreck_04.mp3');
 	}
 	this.frame_538 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_happy02.mp3");*/
+		this.playSound2("Zum-Zum_happy02.mp3");
 	}
 	this.frame_591 = function() {
 		/* stop();
 		shaken = false;*/
+		
+		this.stop();
 	}
 	this.frame_594 = function() {
-		/* playSound('Push_wreck_04.mp3');*/
+		this.playSound('Push_wreck_04.mp3');
 	}
 	this.frame_658 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_happy02.mp3");*/
+		this.playSound2("Zum-Zum_happy02.mp3");
 	}
 	this.frame_659 = function() {
 		/* playSound('HitMetal 6095_55_1.mp3');*/
+		this.playSound('HitMetal 6095_55_1.mp3');
 	}
 	this.frame_701 = function() {
 		/* playSound("Part_collected.mp3");*/
+		this.playSound("Part_collected.mp3");
 	}
 	this.frame_708 = function() {
-		/* repeat(4); */
+		this.repeat(4);
 	}
 	this.frame_718 = function() {
-		/* repeatEnd()*/
+		this.repeatEnd();
 	}
 	this.frame_732 = function() {
-		/* repeat(2);*/
+		this.repeat(2);
 	}
 	this.frame_761 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_784 = function() {
 		/* stop();
 		looping = true;*/
+		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(134).call(this.frame_134).wait(29).call(this.frame_163).wait(1).call(this.frame_164).wait(8).call(this.frame_172).wait(22).call(this.frame_194).wait(1).call(this.frame_195).wait(1).call(this.frame_196).wait(1).call(this.frame_197).wait(23).call(this.frame_220).wait(5).call(this.frame_225).wait(15).call(this.frame_240).wait(3).call(this.frame_243).wait(1).call(this.frame_244).wait(59).call(this.frame_303).wait(49).call(this.frame_352).wait(29).call(this.frame_381).wait(13).call(this.frame_394).wait(15).call(this.frame_409).wait(42).call(this.frame_451).wait(27).call(this.frame_478).wait(26).call(this.frame_504).wait(3).call(this.frame_507).wait(31).call(this.frame_538).wait(53).call(this.frame_591).wait(3).call(this.frame_594).wait(64).call(this.frame_658).wait(1).call(this.frame_659).wait(42).call(this.frame_701).wait(7).call(this.frame_708).wait(10).call(this.frame_718).wait(14).call(this.frame_732).wait(29).call(this.frame_761).wait(23).call(this.frame_784).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(134).call(this.frame_134).wait(29).call(this.frame_163).wait(1).call(this.frame_164).wait(8).call(this.frame_172).wait(22).call(this.frame_194).wait(1).call(this.frame_195).wait(1).call(this.frame_196).wait(1).call(this.frame_197).wait(23).call(this.frame_220).wait(5).call(this.frame_225).wait(15).call(this.frame_240).wait(3).call(this.frame_243).wait(1).call(this.frame_244).wait(59).call(this.frame_303).wait(49).call(this.frame_352).wait(29).call(this.frame_381).wait(13).call(this.frame_394).wait(15).call(this.frame_409).wait(42).call(this.frame_451).wait(27).call(this.frame_478).wait(26).call(this.frame_504).wait(3).call(this.frame_507).wait(31).call(this.frame_538).wait(53).call(this.frame_591).wait(3).call(this.frame_594).wait(64).call(this.frame_658).wait(1).call(this.frame_659).wait(42).call(this.frame_701).wait(7).call(this.frame_708).wait(10).call(this.frame_718).wait(14).call(this.frame_732).wait(29).call(this.frame_761).wait(23).call(this.frame_784).wait(1));
 
 	// GUIDES
 	this.instance = new lib.dksebbmoonmachineShakeGuide();
@@ -7905,7 +7922,7 @@ lib.properties = {
 	id: '310F394C1253410FBCE9E6913A555C0A',
 	width: 2048,
 	height: 1152,
-	fps: 120,
+	fps: 30,
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
