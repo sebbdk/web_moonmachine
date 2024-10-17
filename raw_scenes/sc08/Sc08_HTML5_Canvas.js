@@ -34,14 +34,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_19 = function() {
+(lib.CachedBmp_3 = function() {
 	this.initialize(ss["Sc08_HTML5_Canvas_atlas_3"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_18 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["Sc08_HTML5_Canvas_atlas_3"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -7220,10 +7220,10 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(38.3,18.4);
 	this.instance._off = true;
 
-	this.instance_1 = new lib.CachedBmp_18();
+	this.instance_1 = new lib.CachedBmp_2();
 	this.instance_1.setTransform(-64,-179.15,0.4998,0.4998);
 
-	this.instance_2 = new lib.CachedBmp_19();
+	this.instance_2 = new lib.CachedBmp_3();
 	this.instance_2.setTransform(-64,-179.15,0.4998,0.4998);
 
 	this.shape = new cjs.Shape();
@@ -7894,16 +7894,23 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// timeline functions:
+	this.frame_0 = function() {
+		this.step();
+		this.continue();
+	}
 	this.frame_5 = function() {
-		/* playSound('Rocket_Crash.mp3');*/
+		this.playSound('Rocket_Crash.mp3');
 	}
 	this.frame_92 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_93 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_94 = function() {
+		this.stop();
+		this.step();
+		
 		/* import flash.display.MovieClip;
 		import flash.events.MouseEvent;
 		import flash.events.Event;
@@ -7945,133 +7952,139 @@ if (reversed == null) { reversed = false; }
 	this.frame_143 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_sad03.mp3");*/
+		this.playSound2("Zum-Zum_sad03.mp3");
 	}
 	this.frame_286 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_sad02.mp3");*/
+		this.playSound2("Zum-Zum_sad02.mp3");
 	}
 	this.frame_287 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_288 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_289 = function() {
-		/* repeat(5);*/
+		this.repeat(5);
 	}
 	this.frame_316 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_329 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_happy02.mp3");*/
+		this.playSound2("Zum-Zum_happy02.mp3");
 	}
 	this.frame_396 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_397 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_398 = function() {
-		/* repeat(8);*/
+		this.repeat(8);
 	}
 	this.frame_420 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_434 = function() {
-		/* repeat(2);*/
+		this.repeat(2);
 	}
 	this.frame_478 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_491 = function() {
-		/* repeat(40);*/
+		this.repeat(40);
 	}
 	this.frame_493 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_518 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_horn01.mp3");*/
+		this.playSound2("Zum-Zum_horn01.mp3");
 	}
 	this.frame_558 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_559 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_560 = function() {
-		/* repeat(4);*/
+		this.repeat(4);
 	}
 	this.frame_589 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_612 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_laugh03.mp3");*/
+		this.playSound2("Zum-Zum_laugh03.mp3");
 	}
 	this.frame_648 = function() {
-		/* repeat(5);*/
+		this.repeat(5);
 	}
 	this.frame_652 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_704 = function() {
-		/* repeat(5);*/
+		this.repeat(5);
 	}
 	this.frame_731 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_732 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_733 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_734 = function() {
-		/* repeat(14);*/
+		this.repeat(14);
 	}
 	this.frame_757 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_765 = function() {
-		/* loopStart();*/
+		this.loopStart();
 	}
 	this.frame_766 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_767 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
 		PageContent.playSound2("Zum-Zum_happy01.mp3");*/
+		this.playSound2("Zum-Zum_happy01.mp3");
 	}
 	this.frame_888 = function() {
-		/* repeat(2);*/
+		this.repeat(2);
 	}
 	this.frame_895 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_896 = function() {
-		/* repeat(10);*/
+		this.repeat(10);
 	}
 	this.frame_898 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_899 = function() {
-		/* repeat(3);*/
+		this.repeat(3);
 	}
 	this.frame_904 = function() {
-		/* repeatEnd();*/
+		this.repeatEnd();
 	}
 	this.frame_991 = function() {
-		/* loopEnd();*/
+		this.loopEnd();
 	}
 	this.frame_992 = function() {
-		/* stop();
-		this.looping = true;*/
+		this.stop();
+		/*this.looping = true;*/
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(5).call(this.frame_5).wait(87).call(this.frame_92).wait(1).call(this.frame_93).wait(1).call(this.frame_94).wait(49).call(this.frame_143).wait(143).call(this.frame_286).wait(1).call(this.frame_287).wait(1).call(this.frame_288).wait(1).call(this.frame_289).wait(27).call(this.frame_316).wait(13).call(this.frame_329).wait(67).call(this.frame_396).wait(1).call(this.frame_397).wait(1).call(this.frame_398).wait(22).call(this.frame_420).wait(14).call(this.frame_434).wait(44).call(this.frame_478).wait(13).call(this.frame_491).wait(2).call(this.frame_493).wait(25).call(this.frame_518).wait(40).call(this.frame_558).wait(1).call(this.frame_559).wait(1).call(this.frame_560).wait(29).call(this.frame_589).wait(23).call(this.frame_612).wait(36).call(this.frame_648).wait(4).call(this.frame_652).wait(52).call(this.frame_704).wait(27).call(this.frame_731).wait(1).call(this.frame_732).wait(1).call(this.frame_733).wait(1).call(this.frame_734).wait(23).call(this.frame_757).wait(8).call(this.frame_765).wait(1).call(this.frame_766).wait(1).call(this.frame_767).wait(121).call(this.frame_888).wait(7).call(this.frame_895).wait(1).call(this.frame_896).wait(2).call(this.frame_898).wait(1).call(this.frame_899).wait(5).call(this.frame_904).wait(87).call(this.frame_991).wait(1).call(this.frame_992).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(5).call(this.frame_5).wait(87).call(this.frame_92).wait(1).call(this.frame_93).wait(1).call(this.frame_94).wait(49).call(this.frame_143).wait(143).call(this.frame_286).wait(1).call(this.frame_287).wait(1).call(this.frame_288).wait(1).call(this.frame_289).wait(27).call(this.frame_316).wait(13).call(this.frame_329).wait(67).call(this.frame_396).wait(1).call(this.frame_397).wait(1).call(this.frame_398).wait(22).call(this.frame_420).wait(14).call(this.frame_434).wait(44).call(this.frame_478).wait(13).call(this.frame_491).wait(2).call(this.frame_493).wait(25).call(this.frame_518).wait(40).call(this.frame_558).wait(1).call(this.frame_559).wait(1).call(this.frame_560).wait(29).call(this.frame_589).wait(23).call(this.frame_612).wait(36).call(this.frame_648).wait(4).call(this.frame_652).wait(52).call(this.frame_704).wait(27).call(this.frame_731).wait(1).call(this.frame_732).wait(1).call(this.frame_733).wait(1).call(this.frame_734).wait(23).call(this.frame_757).wait(8).call(this.frame_765).wait(1).call(this.frame_766).wait(1).call(this.frame_767).wait(121).call(this.frame_888).wait(7).call(this.frame_895).wait(1).call(this.frame_896).wait(2).call(this.frame_898).wait(1).call(this.frame_899).wait(5).call(this.frame_904).wait(87).call(this.frame_991).wait(1).call(this.frame_992).wait(1));
 
 	// GUIDES
 	this.instance = new lib.SWIPE08();
