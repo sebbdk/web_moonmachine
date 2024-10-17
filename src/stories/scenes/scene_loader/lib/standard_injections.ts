@@ -49,6 +49,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			return;
 		}
 	}
+	sceneClip.step = sceneClip.addStep;
 
 	// @TODO pre-add steps
 	// https://stackoverflow.com/questions/3179861/javascript-get-function-body
@@ -75,6 +76,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			}
 		}
 	}
+	sceneClip.loopStart = sceneClip.addLoopingSteps;
 
 	sceneClip.loopingStepBoundary = function() {
 		const currentStep = this.steps[this.currentStep];
@@ -88,6 +90,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			this.gotoAndPlay(currentStep.frame)
 		}
 	}
+	sceneClip.loopEnd = sceneClip.loopingStepBoundary;
 
 	sceneClip.continue = function() {
 		// Prevent continuing before the step has been added
@@ -131,6 +134,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		//@TODO, loop is how many times to play said sound
 		sound.playSound(soundName);
 	}
+	sceneClip.playSound2 = sceneClip.playSound; // might be needed???
 
 	sceneClip.playVoice = function() {
 		if(!sceneConfig.actions[sceneClip.currentStep]) {
