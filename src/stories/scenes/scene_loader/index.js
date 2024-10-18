@@ -76,6 +76,8 @@ export function AppStage(sceneConfig) {
 	useEffect(() => {
 		prepareScene();
 
+		// @TODO, make sure the canvas is killed
+		// Storybook seems to keep them alive after navigation...
 		// Make sure to stop sounds when the component is destroyed
 		return () => sound.stop()
 	}, []);
