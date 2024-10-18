@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-CIgKzt1D.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-BW8yrdbC.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(o,{children:[e(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-Mne7eGlq.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-BVON5NOf.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function i(l){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),l.components);return e(o,{children:[e(c,{title:"Readme"}),`
 `,e(n.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,e(n.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,e(n.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -47,12 +47,14 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.p,{children:"Basic scenes:"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[`
-`,e("span",{style:"color:blue",children:"Create a demo with the first 10 scenes (no counting any minigames) +"}),`
+`,e("span",{style:"color:green",children:"Create a demo with the first 10 scenes (no counting any minigames) +"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[`
 `,e("span",{style:"color: green",children:"Basic non functional demo (without API migration)"}),`
 `]}),`
-`,e(n.li,{children:"API migrations on first 10 scenes"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"API migrations on first 10 scenes"}),`
+`]}),`
 `]}),`
 `]}),`
 `,e(n.li,{children:"Setup hidden repo with last 10 scenes"}),`
@@ -77,13 +79,19 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color: green",children:"Voice"}),`
 `]}),`
-`,e(n.li,{children:[e("span",{style:"color: green",children:"Music"}),`
--`,e("span",{style:"color: green",children:" Load scenes in a consistent way"})]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Music"}),`
 `]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:" Load scenes in a consistent way"}),`
 `]}),`
 `,e(n.li,{children:"Simplify scene configuration"}),`
 `,e(n.li,{children:"Proceed to next scene when scene is done"}),`
-`,e(n.li,{children:"Mock missing general actions"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color:green",children:"Mock missing general actions"}),`
+`]}),`
 `,e(n.li,{children:["UI / Menu's",`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Animated loading screen"}),`
@@ -96,7 +104,9 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:["General actions",`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Drag & Drop logic"}),`
-`,e(n.li,{children:"Swipe logic"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color:green",children:"Swipe logic"}),`
+`]}),`
 `,e(n.li,{children:"Screen shake"}),`
 `,e(n.li,{children:[`
 `,e("span",{style:"color:green",children:"Click"}),`
@@ -186,4 +196,4 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:green",children:"POC, is this even possible???"}),`
 `]}),`
-`]})]})}function y(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{y as default};
+`]})]})}function y(l={}){const{wrapper:n}=Object.assign({},r(),l.components);return n?e(n,Object.assign({},l,{children:e(i,l)})):i(l)}export{y as default};
