@@ -157,7 +157,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	}
 
 	// Click helper methods
-	sceneClip.addClick = function(btn, width, height, callback) {
+	sceneClip.addClick = function(btn, callback) {
 		const debugHitAreas = true;//@todo, move this somewhere sensible
 
 		if (btn.hitArea === null) {
@@ -166,7 +166,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			}
 
 			var hit = new createjs.Shape();
-			hit.graphics.beginFill("#0000FF").drawRect(0, 0, width, height);
+			hit.graphics.beginFill("#0000FF").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
 			btn.hitArea = hit;
 
 			if(debugHitAreas) { // shows a blue area ontop of the interactable area

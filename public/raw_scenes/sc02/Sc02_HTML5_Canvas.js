@@ -4979,7 +4979,7 @@ if (reversed == null) { reversed = false; }
 		this.showSmoke = false;
 		
 		var btn = this.getChildByName('hiddenBtn');
-		this.parent.addClick(btn, 224, 380, () => {
+		this.parent.addClick(btn, () => {
 			this.showSmoke = !this.showSmoke;
 			if(this.showSmoke) {
 				this.play();
@@ -5042,7 +5042,7 @@ if (reversed == null) { reversed = false; }
 		this.stop();
 		
 		var btn = this.getChildByName('hiddenBtn');
-		this.parent.addClick(btn, 224, 380, () => {
+		this.parent.addClick(btn, () => {
 			this.play();
 		});
 	}
@@ -5916,7 +5916,7 @@ if (reversed == null) { reversed = false; }
 		this.stop();
 		
 		var btn = this.getChildByName('hiddenBtn');
-		this.parent.addClick(btn, 224, 380, () => {
+		this.parent.addClick(btn, () => {
 			this.play();
 		});
 	}
@@ -6072,7 +6072,7 @@ if (reversed == null) { reversed = false; }
 		this.addStep()
 		
 		var btn = this.getChildByName('doorBtn');
-		this.addClick(btn, 224, 380, () => {
+		this.addClick(btn, () => {
 			this.play();
 			this.continue();
 		});
