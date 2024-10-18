@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as t}from"./index-BK_79shM.js";import{useMDXComponents as o}from"./index-GSsdXuhh.js";import{b as r}from"./preact.module-CMRueUcp.js";import"./iframe-BiqADdmP.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},o(),i.components);return e(r,{children:[e(t,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-BUoZVvJY.js";import{useMDXComponents as t}from"./index-GSsdXuhh.js";import{b as r}from"./preact.module-CMRueUcp.js";import"./iframe-VGA0ronI.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},t(),i.components);return e(r,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
 `,e(n.h3,{id:"-seb-friday-18-october-2024",children:[e("hr",{})," Seb, Friday 18. October 2024"]}),`
 `,e(n.p,{children:"Working on the plane on my way to Italy for a short vacation today."}),`
@@ -6,6 +6,7 @@ import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYB
 `,e(n.li,{children:"Finished misc click scene interactions for scene 2"}),`
 `,e(n.li,{children:"Made a generalized method to handle clicks"}),`
 `,e(n.li,{children:"Solved how to make invisible interaction areas"}),`
+`,e(n.li,{children:"Fixed scene 6 click issues and added the rocket swipe"}),`
 `]}),`
 `,e(n.p,{children:`I've left the interactions areas on, the migrated ones will have a blue square on them. The areas can be disabled by disabling debugging later on.
 The green areas are interaction areas not yet migrated.`}),`
@@ -86,4 +87,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},o(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},t(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
