@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-CD5DlgHe.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-BKnbNP1b.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(o,{children:[e(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-i9LGnMZd.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-CqWfREmY.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),i.components);return e(o,{children:[e(c,{title:"Readme"}),`
 `,e(n.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,e(n.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,e(n.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -15,7 +15,9 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e("span",{style:"color:blue",children:"Feature complete (October 2024) + "}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"POC Stuff / Prototyping"}),`
-`,e(n.li,{children:"First 10 scenes migrated (excluding mini games)"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color:green",children:"First 10 scenes migrated (excluding mini games)"}),`
+`]}),`
 `,e(n.li,{children:[`
 `,e("span",{style:"color: green",children:"Architecture stabilized"}),`
 `]}),`
@@ -96,6 +98,9 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:"Drag & Drop logic"}),`
 `,e(n.li,{children:"Swipe logic"}),`
 `,e(n.li,{children:"Screen shake"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color:green",children:"Click"}),`
+`]}),`
 `]}),`
 `]}),`
 `,e(n.li,{children:["Architecture review/cleanup",`
@@ -135,7 +140,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `]}),`
 `]}),`
-`,e(n.p,{children:"Known missing scene interactions:"}),`
+`,e(n.p,{children:"Known missing minigames interactions (all none optional interactions):"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Scene 03 Poke part to shake out bug"}),`
 `,e(n.li,{children:"Scene 04 push parts to pickup"}),`
@@ -145,12 +150,11 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:"Scene 08 Swipe away fire"}),`
 `,e(n.li,{children:"Scene 09 Shake iPad to get part down"}),`
 `,e(n.li,{children:"Scene 10 Fix racer puzzle"}),`
-`,e(n.li,{children:"Click interactions are generally broken right now because of the alpha=0 create js issue"}),`
 `]}),`
 `,e(n.p,{children:"Known Bugs:"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[`
-`,e("span",{style:"color:blue",children:"How too hide mouse interaction areas (currently createjs ignores invisible click areas)"}),`
+`,e("span",{style:"color:green",children:"How to hide mouse interaction areas (currently createjs ignores invisible click areas)- Fixed"}),`
 `]}),`
 `,e(n.li,{children:[`
 `,e("span",{style:"color: green",children:"When switching between scenes the sound stops working until you reload the page - Fixed"}),`
@@ -179,4 +183,4 @@ The aim of this project is to build a web port that can run as a native app on i
 `,e(n.li,{children:[`
 `,e("span",{style:"color:green",children:"POC, is this even possible???"}),`
 `]}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function y(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{y as default};

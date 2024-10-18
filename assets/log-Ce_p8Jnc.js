@@ -1,5 +1,21 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as t}from"./index-CD5DlgHe.js";import{useMDXComponents as o}from"./index-GSsdXuhh.js";import{b as r}from"./preact.module-CMRueUcp.js";import"./iframe-BKnbNP1b.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},o(),i.components);return e(r,{children:[e(t,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as t}from"./index-i9LGnMZd.js";import{useMDXComponents as o}from"./index-GSsdXuhh.js";import{b as r}from"./preact.module-CMRueUcp.js";import"./iframe-CqWfREmY.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},o(),i.components);return e(r,{children:[e(t,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-friday-18-october-2024",children:[e("hr",{})," Seb, Friday 18. October 2024"]}),`
+`,e(n.p,{children:"Working on the plane on my way to Italy for a short vacation today."}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Finished misc click scene interactions for scene 2"}),`
+`,e(n.li,{children:"Made a generalized method to handle clicks"}),`
+`,e(n.li,{children:"Solved how to make invisible interaction areas"}),`
+`]}),`
+`,e(n.p,{children:`I've left the interactions areas on, the migrated ones will have a blue square on them. The areas can be disabled by disabling debugging later on.
+The green areas are interaction areas not yet migrated.`}),`
+`,e(n.p,{children:"I plan to make one for swipe etc. too."}),`
+`,e(n.p,{children:`Ran into a really odd thing, all the green interaction squares are 224x378 in size, despite clearly being different in size.
+Some how whe ni use this number to defined their size the click area is the appropriate size.`}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Found a way to simplify the click helper, the magic number is no longer needed"}),`
+`]}),`
+`,e(n.p,{children:"Adobe black magic fuckery i guess."}),`
 `,e(n.h3,{id:"-seb-thursday-17-october-2024",children:[e("hr",{})," Seb, Thursday 17. October 2024"]}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Finished Migrating generic scene methods for scene 4-10"}),`
@@ -70,4 +86,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function f(i={}){const{wrapper:n}=Object.assign({},o(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{f as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},o(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
