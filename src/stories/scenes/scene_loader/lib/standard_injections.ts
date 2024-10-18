@@ -176,7 +176,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		}
 	}
 
-	// hacks for test
+	// @TODO, use arrow keys instead.. HACKS!! i tells ye
 	document.addEventListener("keypress", function(event) {
 		if (event.key === "Enter") {
 			console.log('CONTINUE!!')
