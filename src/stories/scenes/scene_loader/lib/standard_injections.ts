@@ -156,6 +156,28 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		this.currentStep = 0;
 	}
 
+	// Click helper methods
+	sceneClip.addClick = function(btn, width, height, callback) {
+		const debugHitAreas = true;//@todo, move this somewhere sensible
+
+		if (btn.hitArea === null) {
+			if (btn.children[0]) { // hide the animate debug area if we added one in adobe animate
+				btn.children[0].alpha = 0;
+			}
+
+			var hit = new createjs.Shape();
+			hit.graphics.beginFill("#0000FF").drawRect(0, 0, width, height);
+			btn.hitArea = hit;
+
+			if(debugHitAreas) { // shows a blue area ontop of the interactable area
+				hit.alpha = 0.8;
+				btn.addChild(hit)
+			}
+
+			btn.addEventListener("click", callback.bind(this));
+		}
+	}
+
 	// hacks for test
 	document.addEventListener("keypress", function(event) {
 		if (event.key === "Enter") {

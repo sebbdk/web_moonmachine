@@ -31,14 +31,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_10 = function() {
+(lib.CachedBmp_2 = function() {
 	this.initialize(ss["Sc02_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_9 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["Sc02_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -3877,7 +3877,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.CachedBmp_10();
+	this.instance = new lib.CachedBmp_2();
 	this.instance.setTransform(-60.95,-108.05,0.5,0.5);
 	this.instance._off = true;
 
@@ -4505,7 +4505,7 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(-90.6,-91.6,182,182);
 
 
-(lib.hiddenBtn = function(mode,startPosition,loop,reversed) {
+(lib.ClickAreaA = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -4525,10 +4525,10 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.hiddenBtn, new cjs.Rectangle(0,0,224.1,378.1), null);
+}).prototype = getMCSymbolPrototype(lib.ClickAreaA, new cjs.Rectangle(0,0,224.1,378.1), null);
 
 
-(lib.WallBtn = function(mode,startPosition,loop,reversed) {
+(lib.blibthing = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -4539,77 +4539,14 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// timeline functions:
-	this.frame_0 = function() {
-		this.stop();
-		
-		function lightUp() {
-			this.play();
-		}
-		
-		this.getChildByName('hiddenBtn').removeEventListener("click", lightUp.bind(this));
-		this.getChildByName('hiddenBtn').addEventListener("click", lightUp.bind(this));
-	}
-	this.frame_1 = function() {
-		playSound("Plant_02.mp3");
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(28));
-
-	// btn
-	this.hiddenBtn = new lib.hiddenBtn();
-	this.hiddenBtn.name = "hiddenBtn";
-	this.hiddenBtn.setTransform(1590.35,579.2,3.6957,1.9947,0,0,0,112,189.1);
-	this.hiddenBtn.alpha = 0.2617;
-
-	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).wait(29));
-
-	// _
+	// Layer_1
 	this.instance = new lib._1();
-	this.instance.setTransform(1186,202);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(29));
-
-	// _
-	this.instance_1 = new lib._2();
-	this.instance_1.setTransform(1338,335);
-	this.instance_1._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},27).wait(1));
-
-	// _
-	this.instance_2 = new lib._3();
-	this.instance_2.setTransform(1372,367);
-	this.instance_2._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(2).to({_off:false},0).to({_off:true},25).wait(2));
-
-	// _
-	this.instance_3 = new lib._4();
-	this.instance_3.setTransform(1392,387);
-	this.instance_3._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(3).to({_off:false},0).to({_off:true},23).wait(3));
-
-	// _
-	this.instance_4 = new lib._5();
-	this.instance_4.setTransform(1410,417);
-	this.instance_4._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(4).to({_off:false},0).to({_off:true},20).wait(5));
-
-	// _
-	this.instance_5 = new lib._6();
-	this.instance_5.setTransform(1531,492);
-	this.instance_5._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(5).to({_off:false},0).to({_off:true},18).wait(6));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(1176.5,202,828,759);
+}).prototype = getMCSymbolPrototype(lib.blibthing, new cjs.Rectangle(0,0,803,759), null);
 
 
 (lib.Sofus_Side_Headcomp_Walk = function(mode,startPosition,loop,reversed) {
@@ -4753,7 +4690,7 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(-137.5,-252,275,504);
 
 
-(lib.Hologram = function(mode,startPosition,loop,reversed) {
+(lib.hiddenBtn = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -4764,44 +4701,15 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// timeline functions:
-	this.frame_0 = function() {
-		this.stop();
-		
-		
-		function doSomething() {
-			this.play();
-		}
-		
-		this.getChildByName('hiddenBtn').removeEventListener("click", doSomething.bind(this));
-		this.getChildByName('hiddenBtn').addEventListener("click", doSomething.bind(this));
-	}
-	this.frame_1 = function() {
-		playSound("Hologram.mp3");
-	}
+	// Layer_1
+	this.instance = new lib.ClickAreaA();
+	this.instance.setTransform(112,189.1,1,1,0,0,0,112,189.1);
 
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(29));
-
-	// btn
-	this.hiddenBtn = new lib.hiddenBtn();
-	this.hiddenBtn.name = "hiddenBtn";
-	this.hiddenBtn.setTransform(1256.3,611.15,0.357,0.2063,0,0,0,112,189.1);
-	this.hiddenBtn.alpha = 0.3906;
-
-	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).to({_off:true},2).wait(28));
-
-	// HOLOGRAM
-	this.instance = new lib.Symbol9("synched",0);
-	this.instance.setTransform(1174.5,596.5);
-	this.instance._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).to({regY:0.1,scaleX:1.3158,scaleY:1.3154,rotation:180,y:596.15},13).to({regY:0,scaleX:0.9411,scaleY:0.9411,rotation:224.9993,y:596.5},8).wait(8));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(1090.2,512,206.0999999999999,168.5);
+}).prototype = getMCSymbolPrototype(lib.hiddenBtn, new cjs.Rectangle(0,0,224.1,378.1), null);
 
 
 (lib.Head_Comp_thundergrain = function(mode,startPosition,loop,reversed) {
@@ -5066,24 +4974,19 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* import flash.events.Event;
-		import flash.events.MouseEvent;
-		
 		stop();
 		
-		var showSmoke = false;
+		this.showSmoke = false;
 		
-		function smoke(evt:Event):void {
-			showSmoke = !showSmoke;
-			if(showSmoke) {
-				play();
+		var btn = this.getChildByName('hiddenBtn');
+		this.parent.addClick(btn, 224, 380, () => {
+			this.showSmoke = !this.showSmoke;
+			if(this.showSmoke) {
+				this.play();
 			} else {
-				gotoAndStop(0);
+				this.gotoAndStop(0);
 			}
-		}
-		
-		getChildByName('hiddenBtn').removeEventListener(MouseEvent.CLICK, smoke);
-		getChildByName('hiddenBtn').addEventListener(MouseEvent.CLICK, smoke);*/
+		});
 	}
 
 	// actions tween:
@@ -5092,17 +4995,17 @@ if (reversed == null) { reversed = false; }
 	// btn
 	this.hiddenBtn = new lib.hiddenBtn();
 	this.hiddenBtn.name = "hiddenBtn";
-	this.hiddenBtn.setTransform(294.05,908.25,0.4638,0.2806,0,0,0,112,189.1);
-	this.hiddenBtn.alpha = 0;
+	this.hiddenBtn.setTransform(294.05,865.35,0.4638,0.2806,0,0,0,112,189.1);
+	this.hiddenBtn.alpha = 0.2109;
 
 	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).wait(457));
 
 	// Smoke_MASK (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	var mask_graphics_1 = new cjs.Graphics().p("AtinMIbFBFIpDNMQgohrh+gRQj9gligCpg");
+	var mask_graphics_1 = new cjs.Graphics().p("AtinMIbFBGIpDNLQgohrh+gRQj9gmigCqg");
 
-	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(1).to({graphics:mask_graphics_1,x:298.475,y:31.7}).wait(456));
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(1).to({graphics:mask_graphics_1,x:296.875,y:-15.7}).wait(456));
 
 	// Smoke
 	this.instance = new lib.roeg("synched",0);
@@ -5120,7 +5023,89 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(211.8,-14.4,173.39999999999998,975.6999999999999);
+p.nominalBounds = new cjs.Rectangle(210.2,-61.8,173.40000000000003,980.1999999999999);
+
+
+(lib.WallBtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+		
+		var btn = this.getChildByName('hiddenBtn');
+		this.parent.addClick(btn, 224, 380, () => {
+			this.play();
+		});
+	}
+	this.frame_1 = function() {
+		this.parent.playSound("Plant_02.mp3");
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(28));
+
+	// btn
+	this.hiddenBtn = new lib.hiddenBtn("synched",0);
+	this.hiddenBtn.name = "hiddenBtn";
+	this.hiddenBtn.setTransform(1574.9,579.2,3.6957,1.9947,0,0,0,112,189.1);
+	this.hiddenBtn.alpha = 0.2617;
+
+	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).wait(29));
+
+	// _
+	this.instance = new lib.blibthing("synched",0);
+	this.instance.setTransform(1587.5,581.5,1,1,0,0,0,401.5,379.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(29));
+
+	// _
+	this.instance_1 = new lib._2();
+	this.instance_1.setTransform(1338,335);
+	this.instance_1._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},27).wait(1));
+
+	// _
+	this.instance_2 = new lib._3();
+	this.instance_2.setTransform(1372,367);
+	this.instance_2._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(2).to({_off:false},0).to({_off:true},25).wait(2));
+
+	// _
+	this.instance_3 = new lib._4();
+	this.instance_3.setTransform(1392,387);
+	this.instance_3._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(3).to({_off:false},0).to({_off:true},23).wait(3));
+
+	// _
+	this.instance_4 = new lib._5();
+	this.instance_4.setTransform(1410,417);
+	this.instance_4._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(4).to({_off:false},0).to({_off:true},20).wait(5));
+
+	// _
+	this.instance_5 = new lib._6();
+	this.instance_5.setTransform(1531,492);
+	this.instance_5._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(5).to({_off:false},0).to({_off:true},18).wait(6));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(1161,202,828,759);
 
 
 (lib.Sofus_Side_Rig_Walk = function(mode,startPosition,loop,reversed) {
@@ -5915,6 +5900,54 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(252.2,-151.8,221.10000000000002,465);
 
 
+(lib.Hologram = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+		
+		var btn = this.getChildByName('hiddenBtn');
+		this.parent.addClick(btn, 224, 380, () => {
+			this.play();
+		});
+	}
+	this.frame_1 = function() {
+		this.parent.playSound("Hologram.mp3");
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(29));
+
+	// btn
+	this.hiddenBtn = new lib.hiddenBtn();
+	this.hiddenBtn.name = "hiddenBtn";
+	this.hiddenBtn.setTransform(1256.3,611.15,0.357,0.2063,0,0,0,112,189.1);
+	this.hiddenBtn.alpha = 0.3906;
+
+	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).to({_off:true},2).wait(28));
+
+	// HOLOGRAM
+	this.instance = new lib.Symbol9("synched",0);
+	this.instance.setTransform(1174.5,596.5);
+	this.instance._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).to({regY:0.1,scaleX:1.3158,scaleY:1.3154,rotation:180,y:596.15},13).to({regY:0,scaleX:0.9411,scaleY:0.9411,rotation:224.9993,y:596.5},8).wait(8));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(1090.2,512,206.0999999999999,168.5);
+
+
 (lib.WORRIED_BLINKLOOP = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -6038,16 +6071,11 @@ if (reversed == null) { reversed = false; }
 		this.stop();
 		this.addStep()
 		
-		var self = this;
-		var door = self.getChildByName('doorBtn');
-		
-		function openDoor(evt) {
-			self.play();
-			self.continue();
-		}
-		
-		door.removeAllEventListeners("click");
-		door.addEventListener("click",  openDoor);
+		var btn = this.getChildByName('doorBtn');
+		this.addClick(btn, 224, 380, () => {
+			this.play();
+			this.continue();
+		});
 	}
 	this.frame_52 = function() {
 		this.playSound('DoorWood 6083_49_1.mp3');
@@ -6151,7 +6179,7 @@ if (reversed == null) { reversed = false; }
 	// door_btn
 	this.doorBtn = new lib.hiddenBtn();
 	this.doorBtn.name = "doorBtn";
-	this.doorBtn.setTransform(916.2,737.2,1,1,0,0,0,112,189.1);
+	this.doorBtn.setTransform(916,737.1,1,1,0,0,0,111.8,189);
 	this.doorBtn.alpha = 0.2813;
 	this.doorBtn._off = true;
 
@@ -6159,7 +6187,7 @@ if (reversed == null) { reversed = false; }
 
 	// Smoke
 	this.instance_3 = new lib.ChimneySmoke();
-	this.instance_3.setTransform(324.8,-433.2,1,1,0,0,0,324.8,-433.2);
+	this.instance_3.setTransform(324.8,-386.15,1,1,0,0,0,324.8,-433.2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(25).to({y:-384.2},0).to({_off:true},601).wait(1));
 
@@ -6318,7 +6346,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_9();
+	this.instance = new lib.CachedBmp_1();
 	this.instance.setTransform(1130.25,220.5,0.5,0.5);
 
 	this.sceneInstance = new lib.dksebbmoonmachineSc02();
