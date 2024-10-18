@@ -155,11 +155,12 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	}
 
 	// Click helper methods
+	const debugHitAreas = true;//@todo, move this somewhere sensible
 	sceneClip.addClick = function(btn, callback) {
-		const debugHitAreas = true;//@todo, move this somewhere sensible
-
 		if (btn.hitArea === null) {
-			if (btn.children[0]) { // hide the animate debug area if we added one in adobe animate
+
+			 // hide the animate debug area if we added one in adobe animate
+			if (btn.children[0] && btn.children[0].alpha !== 1) {
 				btn.children[0].alpha = 0;
 			}
 
@@ -174,6 +175,49 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 			btn.addEventListener("click", callback.bind(this));
 		}
+	}
+
+	sceneClip.addSwipe = function(btn, callback, distanceToSwipe = 90) {
+		if (btn.hitArea !== null) {
+			return;
+		}
+
+		var hit = new createjs.Shape();
+		hit.graphics.beginFill("#0000FF").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
+		btn.hitArea = hit;
+
+		if(debugHitAreas) { // shows a blue area ontop of the interactable area
+			hit.alpha = 0.8;
+			btn.addChild(hit)
+		}
+
+		function getDistance(p1, p2) {
+			var a = p1.x - p2.x;
+			var b = p1.y - p2.y;
+
+			return Math.sqrt( a*a + b*b );
+		}
+
+		var startPos;
+		var stage = this.stage;
+
+		function onMouseUp():void {
+			if(startPos) {
+				var endPos = {x:stage.mouseX, y:stage.mouseY};
+				var distance = Math.abs(getDistance(startPos, endPos));
+
+				if(distance > distanceToSwipe) {
+					callback();
+				}
+			}
+		}
+
+		function onMouseDown(evt:MouseEvent):void {
+			startPos = {x: stage.mouseX, y: stage.mouseY};
+		}
+
+		btn.addEventListener("pressup", onMouseUp);
+		btn.addEventListener("mousedown", onMouseDown);
 	}
 
 	// @TODO, use arrow keys instead.. HACKS!! i tells ye

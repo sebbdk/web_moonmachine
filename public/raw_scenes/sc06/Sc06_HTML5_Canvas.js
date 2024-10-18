@@ -3433,40 +3433,31 @@ if (reversed == null) { reversed = false; }
 		this.repeatEnd();
 	}
 	this.frame_49 = function() {
-		var self = this;
-		
-		var btn = this.getChildByName('hatchBtn');
-		
-		function con() {
-			self.play();
-			btn.getEventListeners().click.forEach((e)=>{e.remove()})
-		}
-		
 		this.stop();
 		
-		btn.addEventListener("click", con);
+		var btn = this.getChildByName('hatchBtn');
+		this.addClick(btn, () => {
+			this.play();
+		});
 	}
 	this.frame_50 = function() {
-		playSound('DoorMetal 6105_35_3.mp3');
+		this.playSound('DoorMetal 6105_35_3.mp3');
 	}
 	this.frame_127 = function() {
 		this.playSound('DoorMetal 6105_35_2.mp3');
 	}
 	this.frame_171 = function() {
-		var self = this;
-		var btn = this.getChildByName('fuseBtn');
 		this.stop();
 		
-		btn.addEventListener("click", () => {
-			self.play();
-			self.step();
-			self.continue();
-		
-			btn.getEventListeners().click.forEach((e)=>{e.remove()})
+		var btn = this.getChildByName('fuseBtn');
+		this.addClick(btn, () => {
+			this.play();
+			this.step();
+			this.continue();
 		});
 	}
 	this.frame_173 = function() {
-		/* playSound('Fuse_01.mp3');*/
+		this.playSound('Fuse_01.mp3');
 	}
 	this.frame_307 = function() {
 		/* import flash.display.MovieClip;
@@ -3477,53 +3468,16 @@ if (reversed == null) { reversed = false; }
 			clip.play();
 		}, 15000)*/
 		this.stop();
-		this.step();
-		this.continue();
 		
-		
-		/* import flash.display.MovieClip;
-		import flash.events.MouseEvent;
-		import flash.events.Event;
-		import flash.geom.Point;
-		
-		stop();
-		
-		(function():void {
-			var btn:MovieClip = getChildByName('rocketBtn') as MovieClip;
-			var startPos:Point;
-			
-			function onMouseUp(evt:MouseEvent):void {
-				if(startPos) {
-					trace('UP!!');
-					
-					var endPos:Point = new Point(stage.mouseX, stage.mouseY);
-					var distance:Number = Math.abs(Point.distance(startPos, endPos));
-					
-					if(distance > 90) {
-						play();
-						next(true)
-						autoNext();
-						stage.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
-						btn.removeEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
-					}
-				}
-			}
-			
-			function onMouseDown(evt:MouseEvent):void {
-				trace('DOWN!');
-				startPos = new Point(stage.mouseX, stage.mouseY)
-			}
-			
-			stage.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
-			btn.removeEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
-			
-			stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
-			btn.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
-		})();
-		*/
+		var btn = this.getChildByName('rocketBtn');
+		this.addSwipe(btn, () => {
+			this.play();
+			this.step();
+			this.continue();
+		});
 	}
 	this.frame_308 = function() {
-		/* playSound('Rocket 6096_72.mp3');*/
+		this.playSound('Rocket 6096_72.mp3');
 	}
 	this.frame_356 = function() {
 		this.stop();
@@ -3548,17 +3502,17 @@ if (reversed == null) { reversed = false; }
 	this.hatchBtn = new lib.HiddenBtn();
 	this.hatchBtn.name = "hatchBtn";
 	this.hatchBtn.setTransform(388.5,892.45,1,1,0,0,0,85.5,96.5);
-	this.hatchBtn.alpha = 0;
+	this.hatchBtn.alpha = 0.7813;
 
 	this.fuseBtn = new lib.HiddenBtn();
 	this.fuseBtn.name = "fuseBtn";
 	this.fuseBtn.setTransform(304.05,974.95,1,1,0,0,0,85.5,96.5);
-	this.fuseBtn.alpha = 0;
+	this.fuseBtn.alpha = 0.6016;
 
 	this.rocketBtn = new lib.HiddenBtn();
 	this.rocketBtn.name = "rocketBtn";
 	this.rocketBtn.setTransform(693.8,733.85,9.8063,3.6666,-27.7024,0,0,85.5,96.4);
-	this.rocketBtn.alpha = 0;
+	this.rocketBtn.alpha = 0.6719;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.hatchBtn}]},48).to({state:[]},2).to({state:[{t:this.fuseBtn}]},121).to({state:[]},2).to({state:[{t:this.rocketBtn}]},132).to({state:[]},3).wait(49));
 
