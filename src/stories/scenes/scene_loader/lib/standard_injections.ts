@@ -61,7 +61,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 		// Only registre step the first time we enter this frame
 		if(!this.stepsExistsAtFrame(this.currentFrame)) {
-			console.log('Adding loop step', {count, frame: this.currentFrame})
+			console.info('Adding loop step', {count, frame: this.currentFrame})
 
 			for(let i = 0; i < count; i++) {
 				const nextStep: number = this.currentStep+i;
@@ -71,8 +71,6 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 					looping: true,
 					seen: true
 				};
-
-				console.log('added step', nextStep)
 			}
 		}
 	}
@@ -95,7 +93,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	sceneClip.continue = function() {
 		// Prevent continuing before the step has been added
 		if(sceneClip.steps[sceneClip.currentStep] == undefined) {
-			console.log('blocked input!')
+			console.info('blocked input!')
 			return;
 		}
 
@@ -104,7 +102,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		// the behavior here is also inconsistent with the looping step type
 		// one way could be to wait for the dialog to finish?
 		if(sceneClip.steps[sceneClip.currentStep].frame > this.currentFrame) {
-			console.log('blocked input! waiting to arrive at new step first')
+			console.info('blocked input! waiting to arrive at new step first')
 			return;
 		}
 
@@ -117,7 +115,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 		this.currentStep += 1;
 
-		console.log("Next step is:", this.currentStep)
+		console.info("Next step is:", this.currentStep)
 	}
 
 	sceneClip.stepsExistsAtFrame = function(frame) {
@@ -181,7 +179,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	// hacks for test
 	document.addEventListener("keypress", function(event) {
 		if (event.key === "Enter") {
-			console.info('CONTINUE!!')
+			console.log('CONTINUE!!')
 			sceneClip.continue();
 		}
 	});
