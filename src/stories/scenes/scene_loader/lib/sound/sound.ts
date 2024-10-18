@@ -1,5 +1,4 @@
 import { SceneConfig } from "../../../app_config";
-import { getScene } from "../get_scene";
 import { SFX_LIST } from "./sfx_list";
 
 // Some hacks to make CreateJS play nice with Typescript
