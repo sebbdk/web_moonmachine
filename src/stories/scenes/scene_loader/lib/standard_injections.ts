@@ -1,4 +1,5 @@
 import { SceneConfig, Step } from "../../app_config";
+import { injectScene4Drag } from "./sc5_injection";
 
 interface step {
 	frame: number;
@@ -159,7 +160,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	sceneClip.addClick = function(btn, callback) {
 		if (btn.hitArea === null) {
 
-			 // hide the animate debug area if we added one in adobe animate
+			// hide the animate debug area if we added one in adobe animate
 			if (btn.children[0] && btn.children[0].alpha !== 1) {
 				btn.children[0].alpha = 0;
 			}
@@ -227,4 +228,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			sceneClip.continue();
 		}
 	});
+
+	// scene specific injections
+	injectScene4Drag(sceneClip, sceneConfig)
 }
