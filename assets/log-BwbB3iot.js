@@ -1,5 +1,13 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as r}from"./index-B16QiZjf.js";import{useMDXComponents as t}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-KHXyfDyT.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},t(),i.components);return e(o,{children:[e(r,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-BRgwrs5p.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as l}from"./preact.module-CMRueUcp.js";import"./iframe-CSqBDByD.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function t(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(l,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-wednesday-23-october-2024",children:[e("hr",{})," Seb, Wednesday 23. October 2024"]}),`
+`,e(n.p,{children:"Back from vacation and working on scene 5 continued from the work i did in the Airport this Monday."}),`
+`,e(n.p,{children:"The hitTest and drag and drop is being tedious to get working since the API i am supposed to use for it is unclear."}),`
+`,e(n.p,{children:"Got the basics working, hitTest is finicky but the way it works should be re-usable for the maze scene which is good news."}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Got drag the assemble rocket minigame working, the scene still needs work."}),`
+`,e(n.li,{children:"Found a way to get the Maze scene working as before by hit detection"}),`
+`]}),`
 `,e(n.h3,{id:"-seb-saturday-19-october-2024",children:[e("hr",{})," Seb, Saturday 19. October 2024"]}),`
 `,e(n.p,{children:"Taking a break at the hotel and working a bit."}),`
 `,e(n.ul,{children:[`
@@ -97,4 +105,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},t(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(t,i)})):t(i)}export{b as default};
