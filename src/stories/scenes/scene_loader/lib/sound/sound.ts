@@ -1,4 +1,4 @@
-import { SceneConfig } from "../../../app_config";
+import { BOOK_CONFIG, SceneConfig } from "../../../app_config";
 import { SFX_LIST } from "./sfx_list";
 
 // Some hacks to make CreateJS play nice with Typescript
@@ -108,6 +108,11 @@ export class AudioManager {
 	}
 
 	public playSound(name) {
+		if(BOOK_CONFIG.disableSound) {
+			console.warn('!!playSound IS DISABLED BY BOOK_CONFIG!!');
+			return;
+		}
+
 		const path = `assets/sfx/${name}`;
 
 		try {
@@ -122,6 +127,11 @@ export class AudioManager {
 
 	private currentMusicInstance: any = null;
 	public playTheme() {
+		if(BOOK_CONFIG.disableSound) {
+			console.warn('!!playTheme IS DISABLED BY BOOK_CONFIG!!');
+			return;
+		}
+
 		const path = `assets/music/${this.sceneConfig.music}`;
 
 		if(this.currentMusicInstance !== null) {
@@ -141,6 +151,11 @@ export class AudioManager {
 
 	private currentVoiceInstance: any = null;
 	public playVoice(name) {
+		if(BOOK_CONFIG.disableSound) {
+			console.warn('!!playVoice IS DISABLED BY BOOK_CONFIG!!');
+			return;
+		}
+
 		const path = `assets/voice/${name}`;
 
 		if(this.currentVoiceInstance !== null) {

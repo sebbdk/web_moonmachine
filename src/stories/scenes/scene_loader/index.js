@@ -7,6 +7,7 @@ import { makeResponsive } from "./lib/make_responsive";
 import { injectStandardSceneMethods } from "./lib/standard_injections";
 import { loadScene } from "./lib/load_scene";
 import { AudioManager } from "./lib/sound/sound";
+import { BOOK_CONFIG } from "../app_config";
 
 const SCENE_STATES = {
 	STARTED: "started",
@@ -33,10 +34,19 @@ export function AppStage(sceneConfig) {
 
 		setSound(sound);
 		setSceneState(SCENE_STATES.READY);
+
+		if(BOOK_CONFIG.disableSound) {
+			startScene();
+			console.warn('!!AUTO STARTING SCENE, since sound is disabled in BOOK_CONFIG!!');
+		}
 	}
 
 	function startScene() {
 		setSceneState(SCENE_STATES.STARTED);
+
+		if(BOOK_CONFIG.debug) {
+			console.warn('!!DEBUGGING IS ENABLED!!');
+		}
 
 		const AdobeAn = window.AdobeAn;
 		const createjs = window.createjs;
@@ -58,7 +68,7 @@ export function AppStage(sceneConfig) {
 
 		// Add sceneClip and start listen for updates in order to render them
 		stage.addChild(sceneClip);
-		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.framerate = BOOK_CONFIG.debug === true ? 180 : lib.properties.fps;
 		createjs.Ticker.addEventListener("tick", stage);
 
 		// Make the canvas responsive

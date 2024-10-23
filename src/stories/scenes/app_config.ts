@@ -18,10 +18,14 @@ export interface SceneConfig {
 }
 
 export interface BookConfig {
+    debug: boolean;
+    disableSound: boolean;
     scenes: SceneConfig[]
 }
 
 export const BOOK_CONFIG: BookConfig = {
+    debug: true,
+    disableSound: true,
     scenes: [
         {
             id: "logo",
