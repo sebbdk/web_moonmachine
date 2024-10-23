@@ -24,8 +24,8 @@ export interface BookConfig {
 }
 
 export const BOOK_CONFIG: BookConfig = {
-    debug: true,
-    disableSound: true,
+    debug: window.location.hostname === "localhost" ? true : false,
+    disableSound: window.location.hostname === "localhost" ? true : false,
     scenes: [
         {
             id: "logo",
