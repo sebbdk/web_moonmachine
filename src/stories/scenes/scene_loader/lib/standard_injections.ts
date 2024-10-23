@@ -1,4 +1,4 @@
-import { SceneConfig, Step } from "../../app_config";
+import { BOOK_CONFIG, SceneConfig, Step } from "../../app_config";
 import { injectScene4Drag } from "./sc5_injection";
 
 interface step {
@@ -156,17 +156,17 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	}
 
 	// Click helper methods
-	const debugHitAreas = true;//@todo, move this somewhere sensible
+	const debugHitAreas = BOOK_CONFIG.debug;//@todo, move this somewhere sensible
 	sceneClip.addClick = function(btn, callback) {
 		if (btn.hitArea === null) {
 
 			// hide the animate debug area if we added one in adobe animate
-			if (btn.children[0] && btn.children[0].alpha !== 1) {
+			if (btn.children[0] && btn.alpha !== 1) {
 				btn.children[0].alpha = 0;
 			}
 
 			var hit = new createjs.Shape();
-			hit.graphics.beginFill("#0000FF").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
+			hit.graphics.beginFill("#FFFF00").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
 			btn.hitArea = hit;
 
 			if(debugHitAreas) { // shows a blue area ontop of the interactable area
@@ -184,7 +184,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		}
 
 		var hit = new createjs.Shape();
-		hit.graphics.beginFill("#0000FF").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
+		hit.graphics.beginFill("#FFFF00").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
 		btn.hitArea = hit;
 
 		if(debugHitAreas) { // shows a blue area ontop of the interactable area
