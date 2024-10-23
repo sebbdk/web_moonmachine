@@ -4143,8 +4143,7 @@ if (reversed == null) { reversed = false; }
 		removeEventListener(MouseEvent.CLICK, toggle);
 		addEventListener(MouseEvent.CLICK, toggle);*/
 		
-		this.parent.addClick(this, (evt) => {
-			console.info('pushed fly', evt);
+		this.parent.addClick(this, () => {
 			this.parent.playSound2('Fly_buzz_short.mp3');
 			this.parent.step();
 			this.parent.continue();
@@ -6157,7 +6156,7 @@ if (reversed == null) { reversed = false; }
 
 	// TEXTURE
 	this.instance_1 = new lib.TEXTURE();
-	this.instance_1.setTransform(-181.7,1331.05,1,1,0,0,0,1024,576);
+	this.instance_1.setTransform(1024,576,1,1,0,0,0,1024,576);
 	this.instance_1.alpha = 0.3008;
 	this.instance_1.compositeOperation = "overlay";
 
@@ -6307,7 +6306,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-1205.7,-120.5,3759.5,2027.6);
+p.nominalBounds = new cjs.Rectangle(-381.6,-120.5,2935.4,1884.3);
 
 
 // stage content:
@@ -6343,7 +6342,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-181.7,565,2240.7,1342.1);
+p.nominalBounds = new cjs.Rectangle(1013,565,1046,598);
 // library properties:
 lib.properties = {
 	id: '1BB7CFE78D23456B9157781BC715F089',
