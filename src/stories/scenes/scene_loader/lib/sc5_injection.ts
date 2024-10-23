@@ -36,8 +36,11 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 				var bubble = sceneClip.getChildByName('bubble');
 				var partInside = bubble.getChildByName(activePart.name);
 
-				console.log(partInside, activePart, evt, evt.localX, evt.localY, evt.localX-partInside.x, evt.localY-partInside.y)
-				if(partInside.hitTest(evt.localX-partInside.x+partInside.regX, evt.localY-partInside.y+partInside.regY)) {
+				var pos = { x:evt.localX-partInside.x+partInside.regX, y: evt.localY-partInside.y+partInside.regY}
+
+				// we need to reference the hit area directly
+				// otherwise it wont work for some reason...
+				if(partInside.hitArea.hitTest(pos.x, pos.y)) {
 					console.log('IT IS THE THING!!!')
 					sceneClip.playSound2("Rocketpart_place.mp3");
 
@@ -93,15 +96,16 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 				hit.alpha = 1;
 				hit.x = partInside.regX;
 				hit.y = partInside.regY;
-
 				partInside.hitArea = hit;
 				partInside.alpha = 1;
 				partInside.children[0].alpha = 0;
 
 				if(BOOK_CONFIG.debug) {
-					hit.alpha = 0.5;
+					hit.alpha = 0.1;
 					partInside.addChild(hit)
 				}
+
+				this.stage.update(); 
 			}
 		})
 	}
