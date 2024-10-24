@@ -1112,6 +1112,30 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(-53.8,-12.8,107.6,26.8);
 
 
+(lib.SOFUS_BTN = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#00CC00").s().p("ABnd2IkWgkQhlgIiyABQjHAChRgEQlRgTi8iTQiNhthVjIQhBiYgojlQhNm4AVmdQAWm+CImFQASgzAGgWQALgpgBghQgCgkgQgtQgJgbgWg0QhVjjBhj1QBij1DahrQCGhBDAgPQBhgID1AGQFhAHFegYQDzgQBcADQC8AFCHA4QCGA2BlBsQBmBtAuCIQAuCIAADoQgCB+ABA/QABBtAKBOQALBSAcBlQAQA6AnB5ICeHhQA9C9AWBmQAiClgOCFQgXDMiLCmQiKCnjFA7QhIAWgIADQgtARgYAbQgUAVgOAlQgIAVgOAsQg7CpiiByQibBti9ASQglAEgrAAQhXAAhvgOg");
+	this.shape.setTransform(165.1907,192.3831);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,330.4,384.8);
+
+
 (lib.Sofus_34Back_R_up_leg = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -2146,13 +2170,21 @@ if (reversed == null) { reversed = false; }
 		
 		this.hasPlayed = true;
 		
-		this.parent.addClick(this.getChildByName("SofusGraphic"), () => {
+		this.parent.addClick(this.getChildByName("SOFUS_BTN"), () => {
 			this.play();
-		}, true);
+		});
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(79));
+
+	// SOFUS_BTN
+	this.SOFUS_BTN = new lib.SOFUS_BTN("synched",0);
+	this.SOFUS_BTN.name = "SOFUS_BTN";
+	this.SOFUS_BTN.setTransform(-459.05,92.4,1,1,0,0,0,165.2,192.3);
+	this.SOFUS_BTN.alpha = 0.3711;
+
+	this.timeline.addTween(cjs.Tween.get(this.SOFUS_BTN).wait(79));
 
 	// Sofus__MASK (mask)
 	var mask = new cjs.Shape();
@@ -2189,7 +2221,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-572.4,-242.6,217.7,435.2);
+p.nominalBounds = new cjs.Rectangle(-624.2,-242.6,330.40000000000003,527.5);
 
 
 (lib.dksebbmoonmachineStartPageContent = function(mode,startPosition,loop,reversed) {
