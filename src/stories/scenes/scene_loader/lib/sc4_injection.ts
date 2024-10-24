@@ -17,7 +17,7 @@ export function injectScene4CollectGame(sceneClip, sceneConfig:SceneConfig) {
 			"window"
 		];
 
-		var collectCount = 0;
+		this.collectCount = 0;
 		this.canCollect = true;
 
 		var partBox = this.getChildByName('partBox');
@@ -51,6 +51,13 @@ export function injectScene4CollectGame(sceneClip, sceneConfig:SceneConfig) {
 								createjs.Tween
 									.get(partBox)
 									.to({ x: partBox.originalX }, 300)
+									.call(() => {
+										this.collectCount++;
+
+										if (this.collectCount == 4) {
+											console.error('insert the scene transition here!!');
+										}
+									})
 							})
 					})
 /*
