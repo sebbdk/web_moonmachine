@@ -157,11 +157,11 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 	// Click helper methods
 	const debugHitAreas = BOOK_CONFIG.debug;//@todo, move this somewhere sensible
-	sceneClip.addClick = function(btn, callback) {
+	sceneClip.addClick = function(btn, callback, noHide=false) {
 		if (btn.hitArea === null) {
 
 			// hide the animate debug area if we added one in adobe animate
-			if (btn.children[0] && btn.alpha !== 1) {
+			if (btn.children[0] && btn.alpha !== 1 && noHide == false) {
 				btn.children[0].alpha = 0;
 			}
 
