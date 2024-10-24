@@ -1,6 +1,6 @@
 import { BOOK_CONFIG, SceneConfig } from "../../app_config";
 
-export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
+export function injectScene5Drag(sceneClip, sceneConfig:SceneConfig) {
 	const parts = [
 		'top',
 		'bottom',

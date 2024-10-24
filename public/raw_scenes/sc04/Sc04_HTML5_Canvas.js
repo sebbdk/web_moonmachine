@@ -2618,6 +2618,14 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
+	// timeline functions:
+	this.frame_0 = function() {
+		this.mouseChildren = false;
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(70));
+
 	// Layer_1
 	this.instance = new lib.Push_11();
 	this.instance.setTransform(-90.65,-91.65);
@@ -3563,14 +3571,13 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Part_collected.mp3");*/
+		this.parent.playSound2("Part_collected.mp3");
 	}
 	this.frame_32 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -3630,14 +3637,13 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Part_collected.mp3");*/
+		this.parent.playSound2("Part_collected.mp3");
 	}
 	this.frame_32 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -3895,14 +3901,13 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Part_collected.mp3");*/
+		this.parent.playSound2("Part_collected.mp3");
 	}
 	this.frame_32 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -4328,14 +4333,13 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Part_collected.mp3");*/
+		this.parent.playSound2("Part_collected.mp3");
 	}
 	this.frame_32 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -4642,17 +4646,20 @@ if (reversed == null) { reversed = false; }
 		
 		getChildByName('stdBtn').removeEventListener(MouseEvent.CLICK, toggle);
 		getChildByName('stdBtn').addEventListener(MouseEvent.CLICK, toggle);*/
+		
+		this.stop();
+		this.parent.parent.addClick(this.getChildByName('stdBtn'), () => {
+			this.play();
+		})
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_C_open.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_C_open.mp3");
 	}
 	this.frame_34 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_35 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_C_close.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_C_close.mp3");
 	}
 
 	// actions tween:
@@ -4705,17 +4712,20 @@ if (reversed == null) { reversed = false; }
 		
 		getChildByName('stdBtn').removeEventListener(MouseEvent.CLICK, toggle);
 		getChildByName('stdBtn').addEventListener(MouseEvent.CLICK, toggle);*/
+		
+		this.stop();
+		this.parent.parent.addClick(this.getChildByName('stdBtn'), () => {
+			this.play();
+		})
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_E_open.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_E_open.mp3");
 	}
 	this.frame_34 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_35 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_E_close.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_E_close.mp3");
 	}
 
 	// actions tween:
@@ -4762,17 +4772,20 @@ if (reversed == null) { reversed = false; }
 		
 		getChildByName('stdBtn').removeEventListener(MouseEvent.CLICK, toggle);
 		getChildByName('stdBtn').addEventListener(MouseEvent.CLICK, toggle);*/
+		
+		this.stop();
+		this.parent.parent.addClick(this.getChildByName('stdBtn'), () => {
+			this.play();
+		})
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_D_open.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_D_open.mp3");
 	}
 	this.frame_34 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_35 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_D_close.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_D_close.mp3");
 	}
 
 	// actions tween:
@@ -4819,17 +4832,20 @@ if (reversed == null) { reversed = false; }
 		
 		getChildByName('stdBtn').removeEventListener(MouseEvent.CLICK, toggle);
 		getChildByName('stdBtn').addEventListener(MouseEvent.CLICK, toggle);*/
+		
+		this.stop();
+		this.parent.parent.addClick(this.getChildByName('stdBtn'), () => {
+			this.play();
+		})
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_A_open.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_A_open.mp3");
 	}
 	this.frame_34 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_35 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_A_close.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_A_close.mp3");
 	}
 
 	// actions tween:
@@ -4877,17 +4893,20 @@ if (reversed == null) { reversed = false; }
 		
 		getChildByName('stdBtn').removeEventListener(MouseEvent.CLICK, toggle);
 		getChildByName('stdBtn').addEventListener(MouseEvent.CLICK, toggle);*/
+		
+		this.stop();
+		this.parent.parent.addClick(this.getChildByName('stdBtn'), () => {
+			this.play();
+		})
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_B_open.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_B_open.mp3");
 	}
 	this.frame_34 = function() {
-		/* stop();*/
+		this.stop();
 	}
 	this.frame_35 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plant_twist_B_close.mp3");*/
+		this.parent.parent.playSound2("Plant_twist_B_close.mp3");
 	}
 
 	// actions tween:
@@ -5029,7 +5048,7 @@ if (reversed == null) { reversed = false; }
 		this.repeatEnd();
 	}
 	this.frame_151 = function() {
-		this.stop();
+		this.startCollectionGame();
 		
 		/* import flash.events.MouseEvent;
 		import flash.events.Event;
@@ -5175,62 +5194,58 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(152));
 
 	// MIDDLE
-	this.middle = new lib.Middlepart();
+	this.instance_9 = new lib.Middlepart();
+	this.instance_9.setTransform(1435.45,697.55);
+
+	this.middle = new lib.MiddleAnim();
 	this.middle.name = "middle";
-	this.middle.setTransform(1435.45,697.55);
+	this.middle.setTransform(1435.45,696.05,1,1,0,0,0,411.4,121.5);
 
-	this.middle_1 = new lib.MiddleAnim();
-	this.middle_1.name = "middle_1";
-	this.middle_1.setTransform(1435.45,696.05,1,1,0,0,0,411.4,121.5);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.middle}]}).to({state:[{t:this.middle_1}]},151).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_9}]}).to({state:[{t:this.middle}]},151).wait(1));
 
 	// Spire
-	this.spire = new lib.Spirepart();
+	this.instance_10 = new lib.Spirepart();
+	this.instance_10.setTransform(1113.25,627.75);
+
+	this.spire = new lib.SpireAnime();
 	this.spire.name = "spire";
-	this.spire.setTransform(1113.25,627.75);
+	this.spire.setTransform(1113.95,627.25,1,1,0,0,0,89.2,51.8);
 
-	this.spire_1 = new lib.SpireAnime();
-	this.spire_1.name = "spire_1";
-	this.spire_1.setTransform(1113.95,627.25,1,1,0,0,0,89.2,51.8);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.spire}]}).to({state:[{t:this.spire_1}]},151).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_10}]}).to({state:[{t:this.spire}]},151).wait(1));
 
 	// BOTTOM
-	this.bottom = new lib.Bottompart();
+	this.instance_11 = new lib.Bottompart();
+	this.instance_11.setTransform(464.7,806.7);
+
+	this.instance_12 = new lib.SpireAnime();
+	this.instance_12.setTransform(2385.55,567.6,1,1,0,0,0,89.2,51.8);
+
+	this.bottom = new lib.BottomAnim();
 	this.bottom.name = "bottom";
-	this.bottom.setTransform(464.7,806.7);
+	this.bottom.setTransform(464.55,807.15,1,1,0,0,0,-559.3,230.7);
 
-	this.instance_9 = new lib.SpireAnime();
-	this.instance_9.setTransform(2385.55,567.6,1,1,0,0,0,89.2,51.8);
-
-	this.bottom_1 = new lib.BottomAnim();
-	this.bottom_1.name = "bottom_1";
-	this.bottom_1.setTransform(464.55,807.15,1,1,0,0,0,-559.3,230.7);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.bottom}]}).to({state:[{t:this.bottom_1},{t:this.instance_9}]},151).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_11}]}).to({state:[{t:this.bottom},{t:this.instance_12}]},151).wait(1));
 
 	// Window_copy
-	this.window = new lib.Window();
+	this.instance_13 = new lib.Window();
+	this.instance_13.setTransform(1898.5,828.9);
+
+	this.window = new lib.WindowAnim();
 	this.window.name = "window";
-	this.window.setTransform(1898.5,828.9);
+	this.window.setTransform(1898.5,828.9,1,1,0,0,0,874.5,252.9);
 
-	this.window_1 = new lib.WindowAnim();
-	this.window_1.name = "window_1";
-	this.window_1.setTransform(1898.5,828.9,1,1,0,0,0,874.5,252.9);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.window}]}).to({state:[{t:this.window_1}]},151).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_13}]}).to({state:[{t:this.window}]},151).wait(1));
 
 	// flowers
-	this.instance_10 = new lib.FlowerBtns();
-	this.instance_10.setTransform(548.1,727.8,1,1,0,0,0,548.1,727.8);
+	this.instance_14 = new lib.FlowerBtns();
+	this.instance_14.setTransform(548.1,727.8,1,1,0,0,0,548.1,727.8);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(152));
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(152));
 
 	// BG
-	this.instance_11 = new lib.BG();
+	this.instance_15 = new lib.BG();
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(152));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(152));
 
 	this._renderFirstFrame();
 

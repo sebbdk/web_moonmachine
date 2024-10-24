@@ -1,5 +1,6 @@
 import { BOOK_CONFIG, SceneConfig, Step } from "../../app_config";
-import { injectScene4Drag } from "./sc5_injection";
+import { injectScene4CollectGame } from "./sc4_injection";
+import { injectScene5Drag } from "./sc5_injection";
 
 interface step {
 	frame: number;
@@ -157,8 +158,9 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 	// Click helper methods
 	const debugHitAreas = BOOK_CONFIG.debug;//@todo, move this somewhere sensible
-	sceneClip.addClick = function(btn, callback, noHide=false) {
-		if (btn.hitArea === null) {
+	sceneClip.addClick = function(btn, callback, noHide=false, color="#FFFF00") {
+		if (btn.hitArea === null && !btn.addedClick) {
+			btn.addedClick = true;
 
 			// hide the animate debug area if we added one in adobe animate
 			if (btn.children[0] && btn.alpha !== 1 && noHide == false) {
@@ -166,10 +168,14 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			}
 
 			var hit = new createjs.Shape();
-			hit.graphics.beginFill("#FFFF00").drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
-			btn.hitArea = hit;
+			hit.graphics.beginFill(color).drawRect(0, 0, btn.nominalBounds.width, btn.nominalBounds.height);
 
-			if(debugHitAreas) { // shows a blue area ontop of the interactable area
+			// We do not need a custom hit area for things with alpha !== 0
+			if(noHide == false) {
+				btn.hitArea = hit;
+			}
+
+			if(debugHitAreas && !noHide) { // shows a blue area ontop of the interactable area
 				hit.alpha = 0.8;
 				btn.addChild(hit)
 			}
@@ -230,5 +236,6 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	});
 
 	// scene specific injections
-	injectScene4Drag(sceneClip, sceneConfig)
+	injectScene4CollectGame(sceneClip, sceneConfig);
+	injectScene5Drag(sceneClip, sceneConfig);
 }
