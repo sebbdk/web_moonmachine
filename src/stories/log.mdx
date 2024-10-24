@@ -4,6 +4,45 @@ import { Meta } from '@storybook/blocks';
 
 # Dev Logs
 
+### <hr /> Seb, Thursday 24. October 2024
+
+ * Fixed touch interactions on mobile
+ * Added missing tween animation when item is dropped in scene 5
+ * Solved how hitArea and hit detection can be done simpler
+
+Finally satisfied with the drag & drop for scene 5, i added the missing tween and also made sure touch interactions now work properly.
+
+Scene status:
+ - Scene 1-10 interactions
+	- Scene 0 - Untouched
+	- <span style="color: orange">Scene 1 - Mostly done</span>
+		- Can forward to early?
+		- Missing background interactables
+	- <span style="color: green">Scene 2 - Done</span>
+	- Scene 3 - Untouched
+	- Scene 4 - Untouched
+	- <span style="color: orange">Scene 5 - Mostly Done</span>
+		- Can next too much on Finally
+		- The fly animation does not execute properly when exported
+	- <span style="color: orange">Scene 6 - Mostly done</span>
+		- Animation error, lit fuse light does not follow the fuse
+		- Animation error, Sofus flies out of the rocket when in flies
+	- Scene 7 - Untouched
+	- <span style="color: orange">Scene 8 - Mostly done</span>
+		- The background city light animations only show when debug is enabled
+		- There is a playSound error in terminal when scene is run
+	- Scene 9 - Untouched
+		- There is an animation error when the scene starts (possibly a loop code issue?)
+		- Needs a POC of the accelerometer access (R&D says it should be possible)
+	- Scene 10 - Untouched
+		- There are some loopFrom related errors in the terminal when run
+ - GUI
+	- Back & forward buttons
+	- Better/dynamic scaling
+	- Storyteller text formatting
+	- Use Arrow key shortcuts instead of enter for back/forward
+ - Scene transition/continue/load next scene when scene completes
+
 ### <hr /> Seb, Wednesday 23. October 2024
 
 Back from vacation and working on scene 5 continued from the work i did in the Airport this Monday.
