@@ -29,15 +29,15 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_5 = function() {
+(lib.CachedBmp_11 = function() {
 	this.initialize(ss["Sc00_HTML5_Canvas_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_4 = function() {
-	this.initialize(img.CachedBmp_4);
+(lib.CachedBmp_10 = function() {
+	this.initialize(img.CachedBmp_10);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2866,192);
 
@@ -542,7 +542,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_5();
+	this.instance = new lib.CachedBmp_11();
 	this.instance.setTransform(1164.15,71.4,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1548,6 +1548,30 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.Big_plant_light, new cjs.Rectangle(-181,-182,362,364), null);
 
 
+(lib.BIG_PLANT_BTN = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#00CC00").s().p("EgEPAg2QnbgeoLkKQkBiDitiVQjSi2hhjXQhEiYgXjHQgRiUAEjbQAJmvBBlwQBKmiCUleQCel3DdjNQDWjGFChdQEXhRFUADQDmACGDAxQHGA4CjAKQEaARA1AHQC7AZB/BDQC3BhBhDGQBgDFgkDMQgFAegNA8QgIA0AFAlQAGAnAYAyIArBVQApBZAOCDQAJBMAICZQAEA4ATCbQAQCGAEBNQAMDzhQCdQg0Bnh1BvQiMB6hDA+QhtBkiACYIjaEOQiCCjhgBiQiCCGiBBZQjTCPkKBAQjDAvjNAAQg8AAg8gEg");
+	this.shape.setTransform(211.1822,210.566);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,422.4,421.2);
+
+
 (lib.BEGYNDDINREJSE = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -1560,7 +1584,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_4();
+	this.instance = new lib.CachedBmp_10();
 	this.instance.setTransform(-464.3,-138.2,0.4732,0.4732);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1760,7 +1784,7 @@ if (reversed == null) { reversed = false; }
 	this.theBtn = new lib.FlowerBtn2();
 	this.theBtn.name = "theBtn";
 	this.theBtn.setTransform(-199.5,-69,1,1,0,0,0,117.5,118);
-	this.theBtn.alpha = 0.0781;
+	this.theBtn.alpha = 0.3711;
 
 	this.timeline.addTween(cjs.Tween.get(this.theBtn).wait(25));
 
@@ -1885,9 +1909,9 @@ if (reversed == null) { reversed = false; }
 	// timeline functions:
 	this.frame_0 = function() {
 		this.stop();
-		this.parent.addClick(this.getChildByName("PlantGraphic"), () => {
+		this.parent.addClick(this.getChildByName("BIG_PLANT_BTN"), () => {
 			this.play();
-		}, true);
+		});
 	}
 	this.frame_1 = function() {
 		this.parent.playSound2("Plant_00_Big.mp3");
@@ -1895,6 +1919,14 @@ if (reversed == null) { reversed = false; }
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(24));
+
+	// BIG_PLANT_BTN
+	this.BIG_PLANT_BTN = new lib.BIG_PLANT_BTN("synched",0);
+	this.BIG_PLANT_BTN.name = "BIG_PLANT_BTN";
+	this.BIG_PLANT_BTN.setTransform(343.8,269.05,1,1,0,0,0,211.2,210.6);
+	this.BIG_PLANT_BTN.alpha = 0.2891;
+
+	this.timeline.addTween(cjs.Tween.get(this.BIG_PLANT_BTN).wait(25));
 
 	// BIG_PLANT_LIGHT
 	this.PlantGraphic = new lib.LargeFlowerButton();
@@ -1911,7 +1943,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(187,88,362,364);
+p.nominalBounds = new cjs.Rectangle(132.6,58.5,422.4,421.1);
 
 
 (lib.BEGYND_REJSEN_SYMBOL = function(mode,startPosition,loop,reversed) {
@@ -2392,7 +2424,7 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_4.png", id:"CachedBmp_4"},
+		{src:"images/CachedBmp_10.png", id:"CachedBmp_10"},
 		{src:"images/Sc00_HTML5_Canvas_atlas_1.png", id:"Sc00_HTML5_Canvas_atlas_1"},
 		{src:"images/Sc00_HTML5_Canvas_atlas_2.png", id:"Sc00_HTML5_Canvas_atlas_2"},
 		{src:"images/Sc00_HTML5_Canvas_atlas_3.png", id:"Sc00_HTML5_Canvas_atlas_3"}
