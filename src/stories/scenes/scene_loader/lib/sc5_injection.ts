@@ -10,7 +10,7 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 	];
 
 	sceneClip.assembleRocket = function() {
-		console.log('tryign to assemble rocket!!')
+		console.info('Trying to assemble rocket!!')
 
 		if(sceneClip.initializedRocketGame === true) {
 			return;
@@ -21,7 +21,6 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 		let placeCount = 0;
 
 		const moveStart = function(evt){
-			console.log('start', evt, evt.target)
 			var part = evt.target.parent;
 			part.startPosX = evt.target.regX;
 			part.startPosY = evt.target.regY;
@@ -30,15 +29,13 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 		}
 
 		const moveStop = (evt) => {
-			console.log('stop')
+			console.info('Dropped the item')
 			if(activePart) {
-				//hit test
 				var bubble = sceneClip.getChildByName('bubble');
 				var partInside = bubble.getChildByName(activePart.name);
 				var pos = partInside.globalToLocal(evt.stageX, evt.stageY);
 
 				if(partInside.hitTest(pos.x, pos.y)) {
-					console.log('IT IS THE THING!!!')
 					sceneClip.playSound2("Rocketpart_place.mp3");
 
 					partInside.children[0].alpha = 1;
@@ -55,7 +52,7 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 					return;
 				}
 
-				//if no hits, clean up
+				//If no hits, clean up
 				activePart.gotoAndStop(0);
 
 				createjs.Tween
@@ -79,7 +76,6 @@ export function injectScene4Drag(sceneClip, sceneConfig:SceneConfig) {
 
 		parts.forEach((partName, index) => {
 			var part = this.getChildByName(partName);
-			console.log("part", partName, part)
 			part.startX = part.x;
 			part.startY = part.y;
 			part.addEventListener("mousedown", moveStart);
