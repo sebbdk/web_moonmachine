@@ -1,5 +1,74 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-C3im1CQ5.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as l}from"./preact.module-CMRueUcp.js";import"./iframe-DhspRzQp.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function t(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(l,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-BrkoZ_9C.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-DvkUK6YT.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-thursday-24-october-2024",children:[e("hr",{})," Seb, Thursday 24. October 2024"]}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Fixed touch interactions on mobile"}),`
+`,e(n.li,{children:"Added missing tween animation when item is dropped in scene 5"}),`
+`,e(n.li,{children:"Solved how hitArea and hit detection can be done simpler"}),`
+`]}),`
+`,e(n.p,{children:"Finally satisfied with the drag & drop for scene 5, i added the missing tween and also made sure touch interactions now work properly."}),`
+`,e(n.p,{children:"Scene status:"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:["Scene 1-10 interactions",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Scene 0 - Untouched"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 1 - Mostly done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Can forward to early?"}),`
+`,e(n.li,{children:"Missing background interactables"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Scene 2 - Done"}),`
+`]}),`
+`,e(n.li,{children:"Scene 3 - Untouched"}),`
+`,e(n.li,{children:"Scene 4 - Untouched"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 5 - Mostly Done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Can next too much on Finally"}),`
+`,e(n.li,{children:"The fly animation does not execute properly when exported"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 6 - Mostly done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Animation error, lit fuse light does not follow the fuse"}),`
+`,e(n.li,{children:"Animation error, Sofus flies out of the rocket when in flies"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"Scene 7 - Untouched"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 8 - Mostly done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"The background city light animations only show when debug is enabled"}),`
+`,e(n.li,{children:"There is a playSound error in terminal when scene is run"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["Scene 9 - Untouched",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"There is an animation error when the scene starts (possibly a loop code issue?)"}),`
+`,e(n.li,{children:"Needs a POC of the accelerometer access (R&D says it should be possible)"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["Scene 10 - Untouched",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"There are some loopFrom related errors in the terminal when run"}),`
+`]}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["GUI",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Back & forward buttons"}),`
+`,e(n.li,{children:"Better/dynamic scaling"}),`
+`,e(n.li,{children:"Storyteller text formatting"}),`
+`,e(n.li,{children:"Use Arrow key shortcuts instead of enter for back/forward"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"Scene transition/continue/load next scene when scene completes"}),`
+`]}),`
 `,e(n.h3,{id:"-seb-wednesday-23-october-2024",children:[e("hr",{})," Seb, Wednesday 23. October 2024"]}),`
 `,e(n.p,{children:"Back from vacation and working on scene 5 continued from the work i did in the Airport this Monday."}),`
 `,e(n.p,{children:"The hitTest and drag and drop is being tedious to get working since the API i am supposed to use for it is unclear."}),`
@@ -105,4 +174,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(t,i)})):t(i)}export{b as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
