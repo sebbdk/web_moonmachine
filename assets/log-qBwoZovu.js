@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-vF6Iv58U.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-kYeT7Dy3.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-BN4lFo8w.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-BdDZq4Us.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
 `,e(n.h3,{id:"-seb-thursday-24-october-2024",children:[e("hr",{})," Seb, Thursday 24. October 2024"]}),`
 `,e(n.ul,{children:[`
@@ -12,7 +12,7 @@ import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYB
 `]}),`
 `,e(n.p,{children:"Finally satisfied with the drag & drop for scene 5, i added the missing tween and also made sure touch interactions now work properly."}),`
 `,e(n.p,{children:"Got a lot of scenes to playable today, the last simpler scene in this batch is the racer assembly game."}),`
-`,e(n.p,{children:"Scene status:"}),`
+`,e(n.p,{children:e(n.strong,{children:"Scene status / stuff i'm working on:"})}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:["Scene 1-10 interactions",`
 `,e(n.ul,{children:[`
