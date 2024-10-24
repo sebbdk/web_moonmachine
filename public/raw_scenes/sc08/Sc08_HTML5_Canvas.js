@@ -3159,6 +3159,30 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(0,0,518,807);
 
 
+(lib.TRON_C_BTN = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#00CC00").s().p("Egb8BEVQiXgBh2g+Qi4hghmjuQhJipgtkeQj24yA/3tQALjyAgiOQAujQBuiEQBziKC5g9QCyg6C6AdQCwAcClBkQCZBdB/CRQECnDI1lsQB5hPBcgrQB6g5BtgRQB/gUB2AhQB/AkBNBZIAG4lQABmBAWjHQAjlCBpjsQB+kYDviuQECi6EVAbQEIAZDiDXQDDC6CCEeQC1GNAfHAQAeG9h8GmQgVBJhdEJQhJDQgcCFQg/EqAoGKQAOCUAiDJQATB0ApDlQEDXmhyU/QgUDwgsCSQg+DOh+B2Qh/B3jRAwQiWAijtADQjDADnRgKQmpgKjrAHQr5AVn8DUIkAB1QibBHhrAgQiNAriBAAIgJAAg");
+	this.shape.setTransform(265.7678,437.3567);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,531.6,874.7);
+
+
 (lib.TRON_B_SYMBOL = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -3181,6 +3205,30 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(0,0,722,634);
 
 
+(lib.TRON_B_BTN = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#00CC00").s().p("EAJpAzVQh9gXjLhTQithHhSglQiLg/hqg9Qhkg5jViTQjHiJh0g/QhQgriJg9QirhNgwgXQj/h8iBiSQhbhohHidQgshihAjDQhHjUgchyQgui4gBiXQgBk1C2luQBCiFBvi1IC/kzQBlimDClSQCwklCci5QBnh6DhjpQDCjTBWivQAqhXAqiAIBFjdQBXkPBxiGQBnh6CZhAQCYhACfAKQAbACCCATQBgAOA9gFQA6gFBkgeQBugiAvgHQDNgfDECGQC2B7BfDPQBRCuAaDvQARCTABEeMAAOA/MQABDJgIBpQgNCpgsCBQg0CZhmBuQhwB5iOAkQg3AOiNAJQh+AHhDAZQg0AThUA2QhaA7gsASQhYAmhrAAQg/AAhFgNg");
+	this.shape.setTransform(207.5547,329.8526);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,415.1,659.7);
+
+
 (lib.TRON_A_SYMBOL = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -3201,6 +3249,30 @@ if (reversed == null) { reversed = false; }
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,666,275);
+
+
+(lib.TRON_A_BTN = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#00CC00").s().p("EglDAXpQgZgGh7gqQhagfg8gGQg5gGhRALQhcAOguAFQjZAYjDhUQjQhZhfixQhfiwAjjkQAfjMB7jBQBYiKCwi/QDqj/Awg8QhTjHASjPQAUjeCEiTQCbitEigwQC9ggFWARQHdAYJVAGQFmAELLgCQBdAAAxgDQBPgFA9gOQBDgQBkgrQCGg6AfgLQC3hCD9gHQBqgCFYAQQHyAXH6gkQDNgOBTACQChAEB1AuQClBABvCaQBsCWATC0QATCuhCCwQhACpiACDQCuBdBSDLQBODDgpDNQglC9iBCuQh1CciwB8QmHESpiBIQjrAck7AEQhzABmzgEQi6gCm/ACQmWACjhgEQrcgNoLhcQhogTgugDQhVgFg/AVQguAPg7AnQhBAugiAUQhwBFiGAUQgyAIgyAAQhSAAhPgVg");
+	this.shape.setTransform(373.0959,153.3402);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,746.2,306.7);
 
 
 (lib.top = function(mode,startPosition,loop,reversed) {
@@ -7038,7 +7110,7 @@ if (reversed == null) { reversed = false; }
 	this.frame_0 = function() {
 		this.stop();
 		
-		var btn = this.getChildByName("activateMe");
+		var btn = this.getChildByName("TRON_C_BTN");
 		this.parent.addClick(btn, () => {
 			this.play();
 		});
@@ -7065,6 +7137,14 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(44));
 
+	// TRON_C_BTN
+	this.TRON_C_BTN = new lib.TRON_C_BTN("synched",0);
+	this.TRON_C_BTN.name = "TRON_C_BTN";
+	this.TRON_C_BTN.setTransform(1768.05,496.2,1,1,0,0,0,265.8,437.4);
+	this.TRON_C_BTN.alpha = 0.2891;
+
+	this.timeline.addTween(cjs.Tween.get(this.TRON_C_BTN).wait(45));
+
 	// TRON_C
 	this.activateMe = new lib.TRON_C_SYMBOL("synched",0);
 	this.activateMe.name = "activateMe";
@@ -7076,7 +7156,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(1530,111.7,518,807);
+p.nominalBounds = new cjs.Rectangle(1502.3,58.8,545.7,874.7);
 
 
 (lib.TRON_B = function(mode,startPosition,loop,reversed) {
@@ -7094,23 +7174,10 @@ if (reversed == null) { reversed = false; }
 	this.frame_0 = function() {
 		this.stop();
 		
-		var btn = this.getChildByName("activateMe");
+		var btn = this.getChildByName("tron_b_btn");
 		this.parent.addClick(btn, () => {
 			this.play();
 		});
-		
-		/* import flash.events.MouseEvent;
-		import flash.events.Event;
-		import dk.sebb.moonmachine.PageContent;
-		
-		stop();
-		
-		function toggle(evt:Event):void {
-			play();
-		}
-		
-		removeEventListener(MouseEvent.CLICK, toggle);
-		addEventListener(MouseEvent.CLICK, toggle);*/
 	}
 	this.frame_1 = function() {
 		/* import dk.sebb.moonmachine.PageContent;
@@ -7120,6 +7187,14 @@ if (reversed == null) { reversed = false; }
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(44));
+
+	// TRON_B_BTN
+	this.tron_b_btn = new lib.TRON_B_BTN("synched",0);
+	this.tron_b_btn.name = "tron_b_btn";
+	this.tron_b_btn.setTransform(1190.45,764.95,1,1,0,0,0,207.6,329.9);
+	this.tron_b_btn.alpha = 0.2891;
+
+	this.timeline.addTween(cjs.Tween.get(this.tron_b_btn).wait(45));
 
 	// TRON_B
 	this.activateMe = new lib.TRON_B_SYMBOL("synched",0);
@@ -7132,7 +7207,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(1007.4,465,722.0000000000001,634);
+p.nominalBounds = new cjs.Rectangle(982.9,435.1,746.5000000000001,663.9);
 
 
 (lib.TRON_A = function(mode,startPosition,loop,reversed) {
@@ -7150,7 +7225,7 @@ if (reversed == null) { reversed = false; }
 	this.frame_0 = function() {
 		this.stop();
 		
-		var btn = this.getChildByName("activateMe");
+		var btn = this.getChildByName("TRON_A_BTN");
 		this.parent.addClick(btn, () => {
 			this.play();
 		});
@@ -7177,6 +7252,14 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(44));
 
+	// TRON_A_BTN
+	this.TRON_A_BTN = new lib.TRON_A_BTN("synched",0);
+	this.TRON_A_BTN.name = "TRON_A_BTN";
+	this.TRON_A_BTN.setTransform(1727.3,1036.3,1,1,0,0,0,373.1,153.3);
+	this.TRON_A_BTN.alpha = 0.2891;
+
+	this.timeline.addTween(cjs.Tween.get(this.TRON_A_BTN).wait(45));
+
 	// TRON_A
 	this.activateMe = new lib.TRON_A_SYMBOL("synched",0);
 	this.activateMe.name = "activateMe";
@@ -7188,7 +7271,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(1382,877,666,275);
+p.nominalBounds = new cjs.Rectangle(1354.2,877,746.2,312.70000000000005);
 
 
 (lib.Sofus_Side_Headcomp_run = function(mode,startPosition,loop,reversed) {
@@ -8511,7 +8594,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(1013,565,1079,598);
+p.nominalBounds = new cjs.Rectangle(1013,565,1087.4,624.7);
 // library properties:
 lib.properties = {
 	id: '8A649D29F2C4496FA8A297B456137B2F',
