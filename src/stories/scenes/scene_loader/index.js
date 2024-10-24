@@ -55,6 +55,9 @@ export function AppStage(sceneConfig) {
 		const sceneClip = new lib[sceneConfig.rootFunctionName]();
 		const stage = new lib.Stage(canvasRef.current);
 
+		//Enable touch for mobile/tablet
+		createjs.Touch.enable(stage);
+
 		// Let the library know stuff was loaded???
 		// Stuff still seems to work if i do not call this
 		AdobeAn.compositionLoaded(lib.properties.id);
