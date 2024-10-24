@@ -33,14 +33,14 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_26 = function() {
+(lib.CachedBmp_7 = function() {
 	this.initialize(ss["Sc03_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_25 = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["Sc03_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
@@ -1312,8 +1312,8 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
-		/* this.mouseEnabled = false;
-		this.mouseChildren = false;*/
+		this.mouseEnabled = false;
+		this.mouseChildren = false;
 	}
 
 	// actions tween:
@@ -5764,10 +5764,10 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(38.3,18.4);
 	this.instance._off = true;
 
-	this.instance_1 = new lib.CachedBmp_25();
+	this.instance_1 = new lib.CachedBmp_6();
 	this.instance_1.setTransform(-64.05,-179.2,0.5,0.5);
 
-	this.instance_2 = new lib.CachedBmp_26();
+	this.instance_2 = new lib.CachedBmp_7();
 	this.instance_2.setTransform(-64.05,-179.2,0.5,0.5);
 
 	this.shape = new cjs.Shape();
@@ -5862,12 +5862,12 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_224 = function() {
-		/* if(!this.broken) {
-			gotoAndPlay(1);
-		}*/
+		if(!this.broken) {
+			this.gotoAndPlay(1);
+		}
 	}
 	this.frame_294 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7511,14 +7511,13 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_398 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Critter_Chant.mp3");*/
+		this.parent.playSound2("Critter_Chant.mp3");
 	}
 	this.frame_539 = function() {
-		/* gotoAndPlay("startchantloop");*/
+		this.gotoAndPlay("startchantloop");
 	}
 	this.frame_769 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7838,22 +7837,10 @@ if (reversed == null) { reversed = false; }
 		this.stop();
 		this.addStep();
 		
-		/* import flash.events.MouseEvent;
-		import flash.events.Event;
-		
-		stop();
-		
-		trace('PUSH!!');
-		
-		function shake(evt:Event):void {
-			play();
-			next(true);
-			autoNext();
-		}
-		
-		getChildByName('partBtn').removeEventListener(MouseEvent.CLICK, shake);
-		getChildByName('partBtn').addEventListener(MouseEvent.CLICK, shake);
-		*/
+		this.addClick(this.getChildByName('partBtn'), () => {
+			this.addStep();
+			this.continue();
+		});
 	}
 	this.frame_182 = function() {
 		this.playSound('Push_wreck_04.mp3');
@@ -7876,9 +7863,7 @@ if (reversed == null) { reversed = false; }
 		this.loopingStepBoundary();
 	}
 	this.frame_444 = function() {
-		/* import flash.display.MovieClip;
-		
-		MovieClip(getChildByName('moonMachine')).broken = true;*/
+		this.getChildByName('moonMachine').broken = true;
 		this.playSound('Moonmachine_shutdown.mp3');
 	}
 	this.frame_470 = function() {
@@ -7952,7 +7937,7 @@ if (reversed == null) { reversed = false; }
 	this.partBtn = new lib.hiddenBtn();
 	this.partBtn.name = "partBtn";
 	this.partBtn.setTransform(544.05,467.1,1,1,0,0,0,640.1,479.1);
-	this.partBtn.alpha = 0;
+	this.partBtn.alpha = 0.1992;
 	this.partBtn._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.partBtn).wait(181).to({_off:false},0).to({_off:true},2).wait(632));
