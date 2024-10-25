@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-OFG-ImDC.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as c}from"./preact.module-CMRueUcp.js";import"./iframe-CkShi98w.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},r(),i.components);return e(c,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-DSHj_X1y.js";import{useMDXComponents as l}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-DA30YhQZ.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
 `,e(n.h3,{id:"-seb-friday-25-october-2024",children:[e("hr",{})," Seb, Friday 25. October 2024"]}),`
 `,e(n.ul,{children:[`
@@ -7,6 +7,7 @@ import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYB
 `,e(n.li,{children:"Added the laser scene interactions in scene 10"}),`
 `,e(n.li,{children:"Added missing background interactables to scene 1"}),`
 `]}),`
+`,e(n.p,{children:"I think there is a general bug on animations using paths. Some initial googling suggests it might be a createjs rounding error."}),`
 `,e(n.p,{children:e(n.strong,{children:"Scene status / stuff i'm working on:"})}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:["Scene 1-10 interactions",`
@@ -281,4 +282,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},l(),i.components);return n?e(n,Object.assign({},i,{children:e(r,i)})):r(i)}export{b as default};
