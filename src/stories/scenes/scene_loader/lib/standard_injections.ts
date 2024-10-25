@@ -1,4 +1,5 @@
 import { BOOK_CONFIG, SceneConfig, Step } from "../../app_config";
+import { injectScene10CollectGame } from "./sc10_injection";
 import { injectScene4CollectGame } from "./sc4_injection";
 import { injectScene5Drag } from "./sc5_injection";
 
@@ -238,4 +239,5 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	// scene specific injections
 	injectScene4CollectGame(sceneClip, sceneConfig);
 	injectScene5Drag(sceneClip, sceneConfig);
+	injectScene10CollectGame(sceneClip, sceneConfig);
 }

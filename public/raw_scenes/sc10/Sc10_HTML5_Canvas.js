@@ -30,7 +30,7 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_1 = function() {
 	this.initialize(ss["Sc10_HTML5_Canvas_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -1915,8 +1915,8 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
-		/* this.mouseEnabled = false;
-		this.mouseChildren = false;*/
+		this.mouseEnabled = false;
+		this.mouseChildren = false;
 	}
 
 	// actions tween:
@@ -5983,7 +5983,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.CachedBmp_4();
+	this.instance = new lib.CachedBmp_1();
 	this.instance.setTransform(-60.95,-108.05,0.5,0.5);
 	this.instance._off = true;
 
@@ -7170,11 +7170,10 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* trace('WUT?!');
-		stop();*/
+		this.stop();
 	}
 	this.frame_33 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7269,7 +7268,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7308,7 +7307,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7347,7 +7346,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7386,7 +7385,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -7426,7 +7425,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -8283,7 +8282,7 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* stop();*/
+		this.stop();
 	}
 
 	// actions tween:
@@ -9489,6 +9488,21 @@ if (reversed == null) { reversed = false; }
 	this.frame_0 = function() {
 		this.step();
 		this.continue();
+		const lazorNames = [
+			"lbtna",
+			"lbtnb",
+			"lbtnc",
+			"lbtnd",
+			"lbtne"
+		];
+		
+		lazorNames.forEach(name => {
+			const btn = this.getChildByName(name);
+			this.addClick(btn, () => {
+				this.getChildByName(name + 'l').play();
+				this.playSound2('Lazer_' + name.substr(-1, 1).toUpperCase() + '.mp3');
+			});
+		})
 	}
 	this.frame_1 = function() {
 		/* Sc10.allowHint10 = false;
@@ -9502,7 +9516,7 @@ if (reversed == null) { reversed = false; }
 		this.repeatEnd();
 	}
 	this.frame_112 = function() {
-		this.loopFrom();
+		this.loopStart();
 	}
 	this.frame_113 = function() {
 		this.loopEnd();
@@ -9657,6 +9671,7 @@ if (reversed == null) { reversed = false; }
 		import flash.events.MouseEvent;
 		
 		fixPuzzle();*/
+		this.buildSpeeder();
 		this.stop();
 		this.step();
 	}
