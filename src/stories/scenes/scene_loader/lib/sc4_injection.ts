@@ -3,6 +3,8 @@ import { BOOK_CONFIG, SceneConfig } from "../../app_config";
 export function injectScene4CollectGame(sceneClip, sceneConfig:SceneConfig) {
 
 	sceneClip.startCollectionGame = function() {
+		const createjs = (window as any).createjs;
+
 		if(this.initializedCollectionGame === true) {
 			return;
 		}
@@ -60,17 +62,6 @@ export function injectScene4CollectGame(sceneClip, sceneConfig:SceneConfig) {
 									})
 							})
 					})
-/*
-			TweenLite.to(partBox, 0.5, { x:0, onComplete:function():void {
-				trace('SHOW ME!');
-				//fade in part
-				TweenLite.to(partBoxPart, 0.5, { alpha:1, onComplete:function():void {
-					trace('HIDE ME!');
-					//roll out box
-					TweenLite.to(partBox, 0.5, {x:910});
-					canCollect = true;
-				}});
-			}});*/
 		}
 
 		partBox.originalX = partBox.x;
