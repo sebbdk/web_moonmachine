@@ -655,8 +655,8 @@ if (reversed == null) { reversed = false; }
 		if(this.totalFrames == 1) {
 			this.isSingleFrame = true;
 		}
-		/* this.mouseEnabled = false;
-		this.mouseChildren = false;*/
+		this.mouseEnabled = false;
+		this.mouseChildren = false;
 	}
 
 	// actions tween:
@@ -2302,7 +2302,7 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AtRL4IAA3vIajAAIAAXvg");
+	this.shape.graphics.f("#00FF66").s().p("AtRL4IAA3vIajAAIAAXvg");
 	this.shape.setTransform(85.025,76.025);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
@@ -2487,23 +2487,13 @@ if (reversed == null) { reversed = false; }
 
 	// timeline functions:
 	this.frame_0 = function() {
-		/* import flash.events.MouseEvent;
-		import flash.events.Event;
-		
-		stop();
-		
-		function show(evt:Event):void {
-			play();
-		}
-		
-		getChildByName('hiddenBtn').removeEventListener(MouseEvent.CLICK, show);
-		getChildByName('hiddenBtn').addEventListener(MouseEvent.CLICK, show);
-		
-		*/
+		this.stop();
+		this.parent.addClick(this.getChildByName('hiddenBtn'), () => {
+			this.play();
+		});
 	}
 	this.frame_1 = function() {
-		/* import dk.sebb.moonmachine.PageContent;
-		PageContent.playSound2("Plants_01.mp3");*/
+		this.parent.playSound2("Plants_01.mp3");
 	}
 
 	// actions tween:
@@ -2513,7 +2503,7 @@ if (reversed == null) { reversed = false; }
 	this.hiddenBtn = new lib.hiddenBtn();
 	this.hiddenBtn.name = "hiddenBtn";
 	this.hiddenBtn.setTransform(1714.4,937.65,4.2222,2.4212,0,0,0,85,75.9);
-	this.hiddenBtn.alpha = 0;
+	this.hiddenBtn.alpha = 0.2813;
 
 	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).wait(24));
 
@@ -2664,12 +2654,18 @@ if (reversed == null) { reversed = false; }
 			play();
 		}
 		
-		mouseEnabled = false;
+		
 		
 		getChildByName('hiddenBtn').removeEventListener(MouseEvent.CLICK, show);
 		getChildByName('hiddenBtn').addEventListener(MouseEvent.CLICK, show);
 		
 		*/
+		
+		this.stop();
+		//this.mouseEnabled = false;
+		this.parent.addClick(this.getChildByName('hiddenBtn'), () => {
+			this.play();
+		})
 	}
 
 	// actions tween:
@@ -2679,7 +2675,7 @@ if (reversed == null) { reversed = false; }
 	this.hiddenBtn = new lib.hiddenBtn();
 	this.hiddenBtn.name = "hiddenBtn";
 	this.hiddenBtn.setTransform(1558.55,977.9,0.6893,0.6423,0,0,0,85,76);
-	this.hiddenBtn.alpha = 0;
+	this.hiddenBtn.alpha = 0.3711;
 
 	this.timeline.addTween(cjs.Tween.get(this.hiddenBtn).to({_off:true},1).wait(47));
 
@@ -2940,10 +2936,14 @@ if (reversed == null) { reversed = false; }
 		getChildByName('hiddenBtn').addEventListener(MouseEvent.CLICK, show);
 		
 		*/
+		
+		this.parent.addClick(this.getChildByName('hiddenBtn'), () => {
+			this.gotoAndPlay('moveout');
+		})
 	}
 	this.frame_83 = function() {
-		/* stop();
-		gotoAndPlay(1);*/
+		this.stop();
+		this.gotoAndPlay(1);
 	}
 
 	// actions tween:
