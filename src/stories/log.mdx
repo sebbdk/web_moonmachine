@@ -4,6 +4,47 @@ import { Meta } from '@storybook/blocks';
 
 # Dev Logs
 
+### <hr /> Seb, Friday 25. October 2024
+
+ - Fixed some minor Typescript warnings
+ - Fixed scene 10 speeder build game
+ - Added the laser scene interactions in scene 10
+ - Added missing background interactables to scene 1
+
+**Scene status / stuff i'm working on:**
+ - Scene 1-10 interactions
+	- <span style="color: green">Scene 0 - Done</span>
+	- <span style="color: orange">Scene 1 - Mostly done</span>
+		- Can forward to early?
+		- The flyer background interactable animation is broken on export
+		- <span style="color: green">Missing background interactables</span>
+	- <span style="color: green">Scene 2 - Done</span>
+	- <span style="color: orange">Scene 3 - Mostly Done</span>
+		- Animation error, Sofus glitches for a second when he turns towards the end of the scene
+	- <span style="color: green">Scene 4 - Done</span>
+	- <span style="color: orange">Scene 5 - Mostly Done</span>
+		- Can next too much on Fly
+		- The fly animation does not execute properly when exported
+	- <span style="color: orange">Scene 6 - Mostly done</span>
+		- Animation error, lit fuse light does not follow the fuse
+		- Animation error, Sofus flies out of the rocket when in flies
+	- Scene 7 - Untouched (rocket game)
+	- <span style="color: green">Scene 8 - done</span>
+		- <span style="color: green">The background city light animations only show when debug is enabled - FIXED</span>
+		- <span style="color: green">There is a playSound error in terminal when scene is run - FIXED</span>
+	- Scene 9 - Untouched (shake tablet)
+		- There is an animation error when the scene starts (possibly a loop code issue?)
+		- Needs a POC of the accelerometer access (R&D says it should be possible)
+	- <span style="color: orange">Scene 10 - Mostly Done (assemble racer)</span>
+		- <span style="color: green">There are some loopFrom related errors in the terminal when run</span>
+		- Animation Error, the hat transfer animation towards the end freezes
+ - GUI
+	- Back & forward buttons
+	- Better/dynamic scaling
+	- Storyteller text formatting
+	- Use Arrow key shortcuts instead of enter for back/forward
+ - Scene transition/continue/load next scene when scene completes
+
 ### <hr /> Seb, Thursday 24. October 2024
 
  - Fixed touch interactions on mobile
