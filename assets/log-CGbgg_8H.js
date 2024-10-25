@@ -1,5 +1,94 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-BN4lFo8w.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-BdDZq4Us.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-OFG-ImDC.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as c}from"./preact.module-CMRueUcp.js";import"./iframe-CkShi98w.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",p:"p",strong:"strong"},r(),i.components);return e(c,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-friday-25-october-2024",children:[e("hr",{})," Seb, Friday 25. October 2024"]}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Fixed some minor Typescript warnings"}),`
+`,e(n.li,{children:"Fixed scene 10 speeder build game"}),`
+`,e(n.li,{children:"Added the laser scene interactions in scene 10"}),`
+`,e(n.li,{children:"Added missing background interactables to scene 1"}),`
+`]}),`
+`,e(n.p,{children:e(n.strong,{children:"Scene status / stuff i'm working on:"})}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:["Scene 1-10 interactions",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Scene 0 - Done"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 1 - Mostly done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Can forward to early?"}),`
+`,e(n.li,{children:"The flyer background interactable animation is broken on export"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Missing background interactables"}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Scene 2 - Done"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 3 - Mostly Done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Animation error, Sofus glitches for a second when he turns towards the end of the scene"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Scene 4 - Done"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 5 - Mostly Done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Can next too much on Fly"}),`
+`,e(n.li,{children:"The fly animation does not execute properly when exported"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 6 - Mostly done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Animation error, lit fuse light does not follow the fuse"}),`
+`,e(n.li,{children:"Animation error, Sofus flies out of the rocket when in flies"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"Scene 7 - Untouched (rocket game)"}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"Scene 8 - done"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"The background city light animations only show when debug is enabled - FIXED"}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"There is a playSound error in terminal when scene is run - FIXED"}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["Scene 9 - Untouched (shake tablet)",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"There is an animation error when the scene starts (possibly a loop code issue?)"}),`
+`,e(n.li,{children:"Needs a POC of the accelerometer access (R&D says it should be possible)"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: orange",children:"Scene 10 - Mostly Done (assemble racer)"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:[`
+`,e("span",{style:"color: green",children:"There are some loopFrom related errors in the terminal when run"}),`
+`]}),`
+`,e(n.li,{children:"Animation Error, the hat transfer animation towards the end freezes"}),`
+`]}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["GUI",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Back & forward buttons"}),`
+`,e(n.li,{children:"Better/dynamic scaling"}),`
+`,e(n.li,{children:"Storyteller text formatting"}),`
+`,e(n.li,{children:"Use Arrow key shortcuts instead of enter for back/forward"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"Scene transition/continue/load next scene when scene completes"}),`
+`]}),`
 `,e(n.h3,{id:"-seb-thursday-24-october-2024",children:[e("hr",{})," Seb, Thursday 24. October 2024"]}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Fixed touch interactions on mobile"}),`
@@ -57,10 +146,10 @@ import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYB
 `,e("span",{style:"color: green",children:"Scene 8 - done"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[`
-`,e("span",{style:"color: green",children:"The background city light animations only show when debug is enabled"}),`
+`,e("span",{style:"color: green",children:"The background city light animations only show when debug is enabled - FIXED"}),`
 `]}),`
 `,e(n.li,{children:[`
-`,e("span",{style:"color: green",children:"There is a playSound error in terminal when scene is run"}),`
+`,e("span",{style:"color: green",children:"There is a playSound error in terminal when scene is run - FIXED"}),`
 `]}),`
 `]}),`
 `]}),`
