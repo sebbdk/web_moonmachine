@@ -17,25 +17,26 @@ The aim of this project is to build a web port that can run as a native app on i
 See the milestones [or the dev logs](/docs/readme-logs--docs) for more details.
 
 ## Milestones:
-The currently worked on milestones are marked in <span style="color:blue">blue</span> and completed ones are marked in <span style="color:green">green</span>
+The currently worked on milestones are marked in <span style="color:blue">blue</span>, completed ones are marked in <span style="color:green">green</span> and done but may need more work are <span style="color:orange">orange</span>.
 
 The project is split into 3 major milestones
  - <span style="color:blue">Feature complete (October 2024) + </span>
 	- POC Stuff / Prototyping
 	- <span style="color:green">First 10 scenes migrated (excluding mini games)</span>
 	- <span style="color: green">Architecture stabilized</span>
-	- Basic closed test release to Android and iOS
+	- <span style="color: green">iOS And Android building with Capacitor</span>
  - Content complete (November 2024)
 	- All scenes complete
 	- All mini games complete
 	- The game should be completable
 	- All UI should be implemented
 	- i18n / basic English language version working
+	- Closed alpha release to Android and iOS (moved from October, requires some administrative work from)
  - Interaction complete (December 2024)
 	- All the bonus touch interactions and effects should be implemented
 	- Known bugs from November should be fixed
-	- Closed beta test released to iOS
-	- Closed beta test released to Android
+	- Closed beta release to iOS
+	- Closed beta release to Android
 
 This means release is scheduled in January/February 2025 depending on how development goes.
 
@@ -65,7 +66,7 @@ Architecture:
 		- Scroll up Menu
 		- Scene menu (back/forward etc.)
  - General actions
-	- Drag & Drop logic
+	- <span style="color:orange">Drag & Drop logic (got it, but it's not generalized)</span>
 	- <span style="color:green">Swipe logic</span>
 	- Screen shake
 	- <span style="color:green">Click</span>
@@ -79,15 +80,17 @@ Misc:
 	- Find english language files
 	- Implement language selector
  - <span style="color:blue">POC stuff + </span>
-	- Compile and run as iOS app
-	- Compile and run as Android app
+	- <span style="color: green">Compile and run as iOS app</span>
+	- <span style="color: green">Compile and run as Android app</span>
 	- Accelerometer test
-	- Test release
-		- Setup iOS store app
-		- Setup Android store app
-		- Release for test
-			- iOS
-			- Android
+		- iOS
+		- Android
+ - Test release
+	- Setup iOS store app
+	- Setup Android store app
+	- Release for test
+		- iOS
+		- Android
 
 Known missing minigames interactions (all none optional interactions):
  - <span style="color:green">Scene 03 Poke part to shake out bug</span>
@@ -97,7 +100,7 @@ Known missing minigames interactions (all none optional interactions):
  - Scene 07 Rocket game
  - <span style="color:green">Scene 08 Swipe away fire</span>
  - Scene 09 Shake iPad to get part down
- - Scene 10 Fix racer puzzle
+ - <span style="color:green">Scene 10 Fix racer puzzle</span>
 
 Known Bugs:
  - <span style="color:green">How to hide mouse interaction areas (currently createjs ignores invisible click areas)- Fixed</span>
@@ -107,6 +110,7 @@ Known Bugs:
  - Scene music does not loop
  - What is up with playSound2? (second channel to avoid overlap??)
  - In scene 6 it looks like Sofus is falling out of the rocket when it is launched (probably a broken tween)
+ - Multiple scenes seem to have problem with animation paths once exported to canvas (probably a createjs issue...)
 
 ### Early completed Milestones:
 
