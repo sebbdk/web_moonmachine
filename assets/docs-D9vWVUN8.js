@@ -1,4 +1,4 @@
-import"./compat.module-BUAWlI2n.js";import{u as n}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-DdLzyLbu.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./iframe-DBpz6Tkt.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function i(l){const e=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",ul:"ul",li:"li",h3:"h3"},r(),l.components);return n(o,{children:[n(c,{title:"Readme"}),`
+import"./compat.module-BUAWlI2n.js";import{u as n}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-CXLUCsO3.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as c}from"./preact.module-CMRueUcp.js";import"./iframe-BOjN2gxa.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function i(l){const e=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",strong:"strong",ul:"ul",li:"li",h3:"h3"},r(),l.components);return n(c,{children:[n(o,{title:"Readme"}),`
 `,n(e.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,n(e.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,n(e.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -9,12 +9,14 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.p,{children:["See the milestones ",n(e.a,{href:"/docs/readme-logs--docs",children:"or the dev logs"})," for more details."]}),`
 `,n(e.h2,{id:"milestones",children:"Milestones:"}),`
 `,n(e.p,{children:["The currently worked on milestones are marked in ",n("span",{style:"color:blue",children:"blue"}),", completed ones are marked in ",n("span",{style:"color:green",children:"green"})," and done but may need more work are ",n("span",{style:"color:orange",children:"orange"}),"."]}),`
-`,n(e.p,{children:"The project is split into 3 major milestones"}),`
+`,n(e.p,{children:n(e.strong,{children:"The project is split into 3 major milestones"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
-`,n("span",{style:"color:blue",children:"Feature complete (October 2024) + "}),`
+`,n("span",{style:"color:blue",children:"Feature complete (October 2024)"}),`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:"POC Stuff / Prototyping"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"POC Stuff / Prototyping"}),`
+`]}),`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"First 10 scenes migrated (excluding mini games)"}),`
 `]}),`
@@ -47,7 +49,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `,n(e.p,{children:"This means release is scheduled in January/February 2025 depending on how development goes."}),`
 `,n(e.h3,{id:"more-detailed-milestones",children:"More detailed milestones:"}),`
-`,n(e.p,{children:"Basic scenes:"}),`
+`,n(e.p,{children:n(e.strong,{children:"Basic scenes:"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"Create a demo with the first 10 scenes (no counting any minigames) +"}),`
@@ -65,7 +67,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.li,{children:"Re-implement Maze game"}),`
 `,n(e.li,{children:"Re-implement Rocket game"}),`
 `]}),`
-`,n(e.p,{children:"Architecture:"}),`
+`,n(e.p,{children:n(e.strong,{children:"Architecture:"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:blue",children:"Basics +"}),`
@@ -126,7 +128,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `]}),`
 `]}),`
-`,n(e.p,{children:"Misc:"}),`
+`,n(e.p,{children:n(e.strong,{children:"Misc:"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:["i18n",`
 `,n(e.ul,{children:[`
@@ -164,7 +166,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `]}),`
 `]}),`
-`,n(e.p,{children:"Known missing minigames interactions (all none optional interactions):"}),`
+`,n(e.p,{children:n(e.strong,{children:"Known missing minigames interactions (all none optional interactions):"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"Scene 03 Poke part to shake out bug"}),`
@@ -187,7 +189,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n("span",{style:"color:green",children:"Scene 10 Fix racer puzzle"}),`
 `]}),`
 `]}),`
-`,n(e.p,{children:"Known Bugs:"}),`
+`,n(e.p,{children:n(e.strong,{children:"Known Bugs:"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"How to hide mouse interaction areas (currently createjs ignores invisible click areas)- Fixed"}),`
@@ -204,7 +206,76 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.li,{children:"In scene 6 it looks like Sofus is falling out of the rocket when it is launched (probably a broken tween)"}),`
 `,n(e.li,{children:"Multiple scenes seem to have problem with animation paths once exported to canvas (probably a createjs issue...)"}),`
 `]}),`
-`,n(e.h3,{id:"early-completed-milestones",children:"Early completed Milestones:"}),`
+`,n(e.p,{children:n(e.strong,{children:"Scene 1-10 status:"})}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"Scene 0 - Done"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: orange",children:"Scene 1 - Mostly done"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"Can forward to early?"}),`
+`,n(e.li,{children:"The flyer background interactable animation is broken on export"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"Missing background interactables"}),`
+`]}),`
+`]}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"Scene 2 - Done"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: orange",children:"Scene 3 - Mostly Done"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"Animation error, Sofus glitches for a second when he turns towards the end of the scene"}),`
+`]}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"Scene 4 - Done"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: orange",children:"Scene 5 - Mostly Done"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"Can next too much on Fly"}),`
+`,n(e.li,{children:"The fly animation does not execute properly when exported"}),`
+`]}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: orange",children:"Scene 6 - Mostly done"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"Animation error, lit fuse light does not follow the fuse"}),`
+`,n(e.li,{children:"Animation error, Sofus flies out of the rocket when in flies"}),`
+`]}),`
+`]}),`
+`,n(e.li,{children:"Scene 7 - Untouched (rocket game)"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"Scene 8 - done"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"The background city light animations only show when debug is enabled - FIXED"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"There is a playSound error in terminal when scene is run - FIXED"}),`
+`]}),`
+`]}),`
+`]}),`
+`,n(e.li,{children:["Scene 9 - Untouched (shake tablet)",`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"There is an animation error when the scene starts (possibly a loop code issue?)"}),`
+`,n(e.li,{children:"Needs a POC of the accelerometer access (R&D says it should be possible)"}),`
+`]}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: orange",children:"Scene 10 - Mostly Done (assemble racer)"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"There are some loopFrom related errors in the terminal when run"}),`
+`]}),`
+`,n(e.li,{children:"Animation Error, the hat transfer animation towards the end freezes"}),`
+`]}),`
+`]}),`
+`]}),`
+`,n(e.h3,{id:"early-completed-milestones-stuff-from-before-proper-planning",children:"Early completed Milestones (stuff from before proper planning):"}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"Fix scaling layout"}),`
