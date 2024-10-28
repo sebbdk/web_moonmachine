@@ -19,9 +19,9 @@ See the milestones [or the dev logs](/docs/readme-logs--docs) for more details.
 ## Milestones:
 The currently worked on milestones are marked in <span style="color:blue">blue</span>, completed ones are marked in <span style="color:green">green</span> and done but may need more work are <span style="color:orange">orange</span>.
 
-The project is split into 3 major milestones
- - <span style="color:blue">Feature complete (October 2024) + </span>
-	- POC Stuff / Prototyping
+**The project is split into 3 major milestones**
+ - <span style="color:blue">Feature complete (October 2024)</span>
+	- <span style="color: blue">POC Stuff / Prototyping</span>
 	- <span style="color:green">First 10 scenes migrated (excluding mini games)</span>
 	- <span style="color: green">Architecture stabilized</span>
 	- <span style="color: green">iOS And Android building with Capacitor</span>
@@ -41,7 +41,7 @@ The project is split into 3 major milestones
 This means release is scheduled in January/February 2025 depending on how development goes.
 
 ### More detailed milestones:
-Basic scenes:
+**Basic scenes:**
  - <span style="color:green">Create a demo with the first 10 scenes (no counting any minigames) +</span>
 	- <span style="color: green">Basic non functional demo (without API migration)</span>
 	- <span style="color: green">API migrations on first 10 scenes</span>
@@ -50,7 +50,7 @@ Basic scenes:
  - Re-implement Maze game
  - Re-implement Rocket game
 
-Architecture:
+**Architecture:**
  - <span style="color:blue">Basics +</span>
 	- <span style="color: green">Sound</span>
 		- <span style="color: green">Sound manager</span>
@@ -75,7 +75,7 @@ Architecture:
 	- After 10 scenes
 	- After general actions
 
-Misc:
+**Misc:**
  - i18n
 	- Find english language files
 	- Implement language selector
@@ -92,7 +92,7 @@ Misc:
 		- iOS
 		- Android
 
-Known missing minigames interactions (all none optional interactions):
+**Known missing minigames interactions (all none optional interactions):**
  - <span style="color:green">Scene 03 Poke part to shake out bug</span>
  - <span style="color:green">Scene 04 push parts to pickup</span>
  - <span style="color:green">Scene 05 Drag parts to build rocket</span>
@@ -102,7 +102,7 @@ Known missing minigames interactions (all none optional interactions):
  - Scene 09 Shake iPad to get part down
  - <span style="color:green">Scene 10 Fix racer puzzle</span>
 
-Known Bugs:
+**Known Bugs:**
  - <span style="color:green">How to hide mouse interaction areas (currently createjs ignores invisible click areas)- Fixed</span>
  - <span style="color: green">When switching between scenes the sound stops working until you reload the page - Fixed</span>
  - <span style="color:green">How to grab the right movie clip instance? (instance_1??) - Fixed</span>
@@ -112,7 +112,34 @@ Known Bugs:
  - In scene 6 it looks like Sofus is falling out of the rocket when it is launched (probably a broken tween)
  - Multiple scenes seem to have problem with animation paths once exported to canvas (probably a createjs issue...)
 
-### Early completed Milestones:
+**Scene 1-10 status:**
+	- <span style="color: green">Scene 0 - Done</span>
+	- <span style="color: orange">Scene 1 - Mostly done</span>
+		- Can forward to early?
+		- The flyer background interactable animation is broken on export
+		- <span style="color: green">Missing background interactables</span>
+	- <span style="color: green">Scene 2 - Done</span>
+	- <span style="color: orange">Scene 3 - Mostly Done</span>
+		- Animation error, Sofus glitches for a second when he turns towards the end of the scene
+	- <span style="color: green">Scene 4 - Done</span>
+	- <span style="color: orange">Scene 5 - Mostly Done</span>
+		- Can next too much on Fly
+		- The fly animation does not execute properly when exported
+	- <span style="color: orange">Scene 6 - Mostly done</span>
+		- Animation error, lit fuse light does not follow the fuse
+		- Animation error, Sofus flies out of the rocket when in flies
+	- Scene 7 - Untouched (rocket game)
+	- <span style="color: green">Scene 8 - done</span>
+		- <span style="color: green">The background city light animations only show when debug is enabled - FIXED</span>
+		- <span style="color: green">There is a playSound error in terminal when scene is run - FIXED</span>
+	- Scene 9 - Untouched (shake tablet)
+		- There is an animation error when the scene starts (possibly a loop code issue?)
+		- Needs a POC of the accelerometer access (R&D says it should be possible)
+	- <span style="color: orange">Scene 10 - Mostly Done (assemble racer)</span>
+		- <span style="color: green">There are some loopFrom related errors in the terminal when run</span>
+		- Animation Error, the hat transfer animation towards the end freezes
+
+### Early completed Milestones (stuff from before proper planning):
 
  - <span style="color:green">Fix scaling layout</span>
  - <span style="color:green">Setup beta.themoonmachine.dk as a link to this site</span>
