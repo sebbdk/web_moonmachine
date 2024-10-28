@@ -6,11 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build && touch ./storybook-static/.nojekyll"
+    "build-storybook": "storybook build && touch ./storybook-static/.nojekyll",
+    "build": "npm run build-storybook",
+    "sync": "cap sync",
+    "android": "cap run android",
+    "ios": "cap run ios",
+    "makeIcons": "capacitor-assets generate",
+    "rebuild": "rm -rf android && rm -rf ios && cap add android && cap add ios && npm run makeIcons && npm run build && npm run sync",
+    "xcode": "cap open ios",
+    "androidStudio": "cap open ios"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
+    "@ionic/cli": "^7.2.0",
     "createjs": "^1.0.1",
     "htm": "^3.1.1",
     "preact": "^10.19.3",
@@ -26,6 +38,8 @@
     "@rollup/rollup-linux-x64-gnu": "4.9.1"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^6.1.2",
     "@preact/preset-vite": "^2.7.0",
     "@storybook/addon-essentials": "^7.6.5",
     "@storybook/addon-interactions": "^7.6.5",
