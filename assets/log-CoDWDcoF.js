@@ -1,11 +1,11 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-CkcZLFGR.js";import{useMDXComponents as r}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-BcEfMOgP.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-DdLzyLbu.js";import{useMDXComponents as l}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-DBpz6Tkt.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
 `,e(n.h3,{id:"-seb-monday-28-october-2024",children:[e("hr",{})," Seb, Monday 28. October 2024"]}),`
 `,e(n.p,{children:"Time to focus on getting things running on mobile/tablet to meet the planned monthly milestones."}),`
 `,e(n.p,{children:"Plan for today:"}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:[`
-`,e("span",{style:"color: green",children:"Setup mobile web build"}),`
+`,e("span",{style:"color: green",children:"Setup mobile web build for ios/android"}),`
 `]}),`
 `,e(n.li,{children:"Setup ios store with a testflight build - postponed"}),`
 `,e(n.li,{children:"Setup android app store with a test build - postponed"}),`
@@ -16,6 +16,7 @@ I'm choosing to use Capacitor, which is a replacement for Cordova made by the Io
 So should be barebones enough to avoid all the modern framework trash while still being actively maintained.`}),`
 `,e(n.p,{children:`I got both iOS and android building and serving the storybook site, next step is getting the Google play and AppStore connect setup for beta testing.
 That will happen sometime during this month, we gotta figure out the practicals with our game designer first.`}),`
+`,e(n.p,{children:"For now this is good, next up is accelerometer testing tomorrow and then the months milestones will have been met."}),`
 `,e(n.h3,{id:"-seb-friday-25-october-2024",children:[e("hr",{})," Seb, Friday 25. October 2024"]}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Fixed some minor Typescript warnings"}),`
@@ -298,4 +299,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{b as default};
+`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},l(),i.components);return n?e(n,Object.assign({},i,{children:e(r,i)})):r(i)}export{b as default};
