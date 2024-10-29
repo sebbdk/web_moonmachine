@@ -1,5 +1,13 @@
-import"./compat.module-BUAWlI2n.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-CXLUCsO3.js";import{useMDXComponents as l}from"./index-GSsdXuhh.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./iframe-BOjN2gxa.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-B493LSdS.js";import{useMDXComponents as l}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-AE1rdjzy.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-monday-29-october-2024",children:[e("hr",{})," Seb, Monday 29. October 2024"]}),`
+`,e(n.p,{children:"Working on Gyroscope and Accelerometer demoing today."}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Made a demo of Gyroscope for the rocket game and figured out how to do it"}),`
+`,e(n.li,{children:"Made a demo of Accelerometer for shaking the tablet in scene 9 and figured out how to do it"}),`
+`]}),`
+`,e(n.p,{children:"Took a bit of time to do, debugging takes a while since i need to deploy to my phone every time i test."}),`
+`,e(n.p,{children:"I only tested on iOS for now, i need to test this on my Android tablet, but i forgot it at home. So i will do this later."}),`
 `,e(n.h3,{id:"-seb-monday-28-october-2024",children:[e("hr",{})," Seb, Monday 28. October 2024"]}),`
 `,e(n.p,{children:"Time to focus on getting things running on mobile/tablet to meet the planned monthly milestones."}),`
 `,e(n.p,{children:"Plan for today:"}),`
@@ -299,4 +307,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function b(i={}){const{wrapper:n}=Object.assign({},l(),i.components);return n?e(n,Object.assign({},i,{children:e(r,i)})):r(i)}export{b as default};
+`]})]})}function y(i={}){const{wrapper:n}=Object.assign({},l(),i.components);return n?e(n,Object.assign({},i,{children:e(r,i)})):r(i)}export{y as default};

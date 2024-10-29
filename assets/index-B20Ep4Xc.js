@@ -1,4 +1,4 @@
-import{f as o,d as n,h as i,B as r}from"./index-BVc0qHyQ.js";const a=o`
+import{h as o}from"./index-DRElefvR.js";import{f as n,d as i,B as r}from"./index-BHUpNa43.js";const a=n`
 	@font-face {
 		font-family: "obelisque";
 		src: url('assets/fonts/obelisque.otf'), format("opentype");;
@@ -12,7 +12,7 @@ import{f as o,d as n,h as i,B as r}from"./index-BVc0qHyQ.js";const a=o`
 		font-weight: normal;
 		font-style: normal;
 	}
-`,e=n.div`
+`,e=i.div`
 	width: 100%;
 	position: relative;
 
@@ -69,7 +69,7 @@ import{f as o,d as n,h as i,B as r}from"./index-BVc0qHyQ.js";const a=o`
 		top: 28%;
 		left: 0%;
 	}
-`;function s(t){return i`
+`;function d(t){return o`
 		<${e}>
 			<${a} />
 
@@ -86,4 +86,4 @@ import{f as o,d as n,h as i,B as r}from"./index-BVc0qHyQ.js";const a=o`
 
 			<${r} />
 		</${e}>
-	`}export{s as S};
+	`}export{d as S};
