@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'dk.sebb.moonmachine',
-  appName: 'Sofus & the Moonmachine',
+  appName: 'The Moonmachine',
   webDir: 'storybook-static'
 };
 
