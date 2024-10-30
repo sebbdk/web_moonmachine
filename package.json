@@ -14,7 +14,7 @@
     "makeIcons": "capacitor-assets generate",
     "rebuild": "rm -rf android && rm -rf ios && cap add android && cap add ios && npm run makeIcons && npm run build && npm run sync",
     "xcode": "cap open ios",
-    "androidStudio": "cap open ios"
+    "androidStudio": "cap open android"
   },
   "author": "",
   "license": "ISC",
