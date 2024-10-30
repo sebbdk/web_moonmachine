@@ -1,6 +1,63 @@
-import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-RWIltgjJ.js";import{useMDXComponents as l}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-C0BFhu7y.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-xo-dYbtn.js";import{useMDXComponents as l}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-BW77MChf.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",strong:"strong",p:"p"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
-`,e(n.h3,{id:"-seb-monday-29-october-2024",children:[e("hr",{})," Seb, Monday 29. October 2024"]}),`
+`,e(n.h3,{id:"-seb-wednesday-30-october-2024",children:[e("hr",{})," Seb, Wednesday 30. October 2024"]}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Tested Gyroscope and Accelerometer code on Android tablet"}),`
+`,e(n.li,{children:e(n.strong,{children:"Finished major October milestone - huzzah!"})}),`
+`]}),`
+`,e(n.p,{children:"The POC code on Android worked without any issue and seemingly gave the same numbers as my iPhone did."}),`
+`,e(n.p,{children:"This completes the October milestone, so time for a short retrospective."}),`
+`,e(n.p,{children:"So far everything has gone as expected, but some highlights/noteworthy things are:"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Migration of scene scripts better than expected"}),`
+`,e(n.li,{children:"Performance seems more than adequate and this is without looking into performance optimization."}),`
+`,e(n.li,{children:["Animations that use guides seem to have broken on export",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"It's probably a CreateJS issue, might be fixable, since i have the source"}),`
+`,e(n.li,{children:["If it's not fixable, then the animations can probably be recreated without the guides",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"This is time consuming busywork, but i hope could be done in ~1 week if the bug cannot be fixed."}),`
+`]}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"Gyroscope and Accelerometer were easy to access"}),`
+`,e(n.li,{children:"The original Actionscript API's are mostly consistent with CrateJS making code migrations pretty easy"}),`
+`,e(n.li,{children:["Storybook creates some performance issues that will not occur outside of storybook",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Mitigation has been implemented but it's still not perfect"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["Future support concerns",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"CreateJS is kinda old and not really maintained anymore from what i can see"}),`
+`,e(n.li,{children:"We cannot rely on Adobe Animate forever"}),`
+`,e(n.li,{children:["Optimally we would find a way to get the scenes in a data format instead of the generated javascript that Adobe Animate produces",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:["The exported scene scripts include a bunch of variables describing the scene and animations for CreateJS",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"A tool could be made that converts this into a more generic data format"}),`
+`,e(n.li,{children:"Alterntively, an extension ofr Adobe Animate could be made"}),`
+`]}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["Given how stable JS has been the past 10 years",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"I expect the current build would be able to run for the next 10 years without much modification"}),`
+`,e(n.li,{children:["The risky/change-susceptible features are mainly related to",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"canvas drawing API (fixable since we have the CreateJS source)"}),`
+`,e(n.li,{children:"Gyroscope/Accelerometer related code (API's are stil relatively new, fixes should be easy)"}),`
+`]}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"All in all, my oppinion is that the game is stable for the next 10 years after completion"}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.h3,{id:"-seb-tuesday-29-october-2024",children:[e("hr",{})," Seb, Tuesday 29. October 2024"]}),`
 `,e(n.p,{children:"Working on Gyroscope and Accelerometer demoing today."}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Made a demo of Gyroscope for the rocket game and figured out how to do it"}),`

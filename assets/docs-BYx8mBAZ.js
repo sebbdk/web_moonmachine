@@ -1,4 +1,4 @@
-import"./compat.module-406MNTy2.js";import{u as n}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-RWIltgjJ.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as c}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-C0BFhu7y.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function i(l){const e=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",strong:"strong",ul:"ul",li:"li",h3:"h3"},r(),l.components);return n(c,{children:[n(o,{title:"Readme"}),`
+import"./compat.module-406MNTy2.js";import{u as n}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-xo-dYbtn.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as c}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-BW77MChf.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function i(l){const e=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",strong:"strong",ul:"ul",li:"li",h3:"h3"},r(),l.components);return n(c,{children:[n(o,{title:"Readme"}),`
 `,n(e.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,n(e.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,n(e.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -12,13 +12,13 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.p,{children:n(e.strong,{children:"The project is split into 3 major milestones"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
-`,n("span",{style:"color:blue",children:"Feature complete (October 2024)"}),`
+`,n("span",{style:"color:green",children:"Feature complete (October 2024)"}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
-`,n("span",{style:"color: blue",children:"POC Stuff / Prototyping"}),`
+`,n("span",{style:"color: green",children:"POC Stuff / Prototyping"}),`
 `]}),`
 `,n(e.li,{children:[`
-`,n("span",{style:"color:green",children:"First 10 scenes migrated (excluding mini games)"}),`
+`,n("span",{style:"color: green",children:"First 10 scenes migrated (excluding mini games)"}),`
 `]}),`
 `,n(e.li,{children:[`
 `,n("span",{style:"color: green",children:"Architecture stabilized"}),`
@@ -137,7 +137,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `]}),`
 `,n(e.li,{children:[`
-`,n("span",{style:"color:blue",children:"POC stuff + "}),`
+`,n("span",{style:"color:green",children:"POC stuff + "}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color: green",children:"Compile and run as iOS app"}),`
@@ -146,12 +146,14 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n("span",{style:"color: green",children:"Compile and run as Android app"}),`
 `]}),`
 `,n(e.li,{children:[`
-`,n("span",{style:"color: orange",children:"Accelerometer/Gyroscope testing"}),`
+`,n("span",{style:"color: green",children:"Accelerometer/Gyroscope testing"}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color: green",children:"iOS"}),`
 `]}),`
-`,n(e.li,{children:"Android"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: green",children:"Android"}),`
+`]}),`
 `]}),`
 `]}),`
 `]}),`
