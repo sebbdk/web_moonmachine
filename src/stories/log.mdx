@@ -4,7 +4,42 @@ import { Meta } from '@storybook/blocks';
 
 # Dev Logs
 
-### <hr /> Seb, Monday 29. October 2024
+### <hr /> Seb, Wednesday 30. October 2024
+
+ - Tested Gyroscope and Accelerometer code on Android tablet
+ - **Finished major October milestone - huzzah!**
+
+The POC code on Android worked without any issue and seemingly gave the same numbers as my iPhone did.
+
+This completes the October milestone, so time for a short retrospective.
+
+So far everything has gone as expected, but some highlights/noteworthy things are:
+
+ - Migration of scene scripts better than expected
+ - Performance seems more than adequate and this is without looking into performance optimization.
+ - Animations that use guides seem to have broken on export
+	- It's probably a CreateJS issue, might be fixable, since i have the source
+	- If it's not fixable, then the animations can probably be recreated without the guides
+		- This is time consuming busywork, but i hope could be done in ~1 week if the bug cannot be fixed.
+ - Gyroscope and Accelerometer were easy to access
+ - The original Actionscript API's are mostly consistent with CrateJS making code migrations pretty easy
+ - Storybook creates some performance issues that will not occur outside of storybook
+	- Mitigation has been implemented but it's still not perfect
+ - Future support concerns
+ 	- CreateJS is kinda old and not really maintained anymore from what i can see
+ 	- We cannot rely on Adobe Animate forever
+	- Optimally we would find a way to get the scenes in a data format instead of the generated javascript that Adobe Animate produces
+		- The exported scene scripts include a bunch of variables describing the scene and animations for CreateJS
+			- A tool could be made that converts this into a more generic data format
+			- Alterntively, an extension ofr Adobe Animate could be made
+	- Given how stable JS has been the past 10 years
+		- I expect the current build would be able to run for the next 10 years without much modification
+		- The risky/change-susceptible features are mainly related to
+			- canvas drawing API (fixable since we have the CreateJS source)
+			- Gyroscope/Accelerometer related code (API's are stil relatively new, fixes should be easy)
+	- All in all, my oppinion is that the game is stable for the next 10 years after completion
+
+### <hr /> Seb, Tuesday 29. October 2024
 
 Working on Gyroscope and Accelerometer demoing today.
 
