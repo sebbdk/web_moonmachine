@@ -1,5 +1,49 @@
-import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-xo-dYbtn.js";import{useMDXComponents as l}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-BW77MChf.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function r(i){const n=Object.assign({h1:"h1",h3:"h3",ul:"ul",li:"li",strong:"strong",p:"p"},l(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-DBubIq99.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-jwHWhEEr.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-wednesday-31-october-2024",children:[e("hr",{})," Seb, Wednesday 31. October 2024"]}),`
+`,e(n.p,{children:"Spooky scary skeletons, send shivers down your spine."}),`
+`,e(n.p,{children:"Halloween is here, time to plan November."}),`
+`,e(n.p,{children:"From the milestones but detailed a bit more:"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:["Content complete (November 2024)",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:["All scenes complete (with no larger bugs)",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Scene 11-20 should be migrated"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["All mini games complete",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Scene 11-20 minigames should be implemented"}),`
+`,e(n.li,{children:"Scene 7 (rocket game) should be implemented"}),`
+`,e(n.li,{children:"Scene 9 (shake part down) should be implemented"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"All UI should be implemented"}),`
+`,e(n.li,{children:["i18n / basic English language version working",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Locate missing audio files in archives"}),`
+`,e(n.li,{children:"Setup a language switcher"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["Closed alpha release to Android and iOS (moved from October, requires some administrative work from)",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Solve the app registration with AppStore Connect"}),`
+`,e(n.li,{children:"Solve the app registration with Google Play"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:["The game should be completable",`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"basically be able to next through to scene 20 and loop back to intro scene 0"}),`
+`]}),`
+`]}),`
+`,e(n.li,{children:"Fix the broken animation guides"}),`
+`]}),`
+`]}),`
+`]}),`
+`,e(n.p,{children:"The scope is mostly the same as originally planned, however i added a goal of fixing the animation guide bug, since it potentially is a time sink."}),`
+`,e(n.p,{children:"I updated the milestones in the readme to reflect this."}),`
+`,e(n.p,{children:"For this week, which is basically just today and tomorrow the focus will be to finish work on the rocket game and part shape."}),`
 `,e(n.h3,{id:"-seb-wednesday-30-october-2024",children:[e("hr",{})," Seb, Wednesday 30. October 2024"]}),`
 `,e(n.ul,{children:[`
 `,e(n.li,{children:"Tested Gyroscope and Accelerometer code on Android tablet"}),`
@@ -364,4 +408,4 @@ Maybe i can/should generalize this into the injectable class.`}),`
 `,e(n.li,{children:"Migrate first 10 scenes badly (they just need to load basically)"}),`
 `,e(n.li,{children:"Implement none POC/hacked sound manager for SFX, scene music and Voice."}),`
 `,e(n.li,{children:"Fix/generalize how scenes are loaded more better"}),`
-`]})]})}function y(i={}){const{wrapper:n}=Object.assign({},l(),i.components);return n?e(n,Object.assign({},i,{children:e(r,i)})):r(i)}export{y as default};
+`]})]})}function y(i={}){const{wrapper:n}=Object.assign({},r(),i.components);return n?e(n,Object.assign({},i,{children:e(l,i)})):l(i)}export{y as default};

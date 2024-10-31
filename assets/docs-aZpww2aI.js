@@ -1,4 +1,4 @@
-import"./compat.module-406MNTy2.js";import{u as n}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-xo-dYbtn.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as c}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-BW77MChf.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function i(l){const e=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",strong:"strong",ul:"ul",li:"li",h3:"h3"},r(),l.components);return n(c,{children:[n(o,{title:"Readme"}),`
+import"./compat.module-406MNTy2.js";import{u as n}from"./jsxRuntime.module-ByLYBOty.js";import{M as c}from"./index-DBubIq99.js";import{useMDXComponents as i}from"./index-CCzSbuHY.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-jwHWhEEr.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function r(l){const e=Object.assign({h1:"h1",p:"p",h2:"h2",a:"a",strong:"strong",ul:"ul",li:"li",h3:"h3"},i(),l.components);return n(o,{children:[n(c,{title:"Readme"}),`
 `,n(e.h1,{id:"sofus--the-moonmachine",children:"Sofus & the Moonmachine"}),`
 `,n(e.p,{children:"If you found this then congrats, you are currently looking at the restoration project for Sofus & the Moonmachine!"}),`
 `,n(e.p,{children:`The project is still in the early phases, but a contact email for feedback will be added later.
@@ -28,14 +28,30 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `]}),`
 `]}),`
-`,n(e.li,{children:["Content complete (November 2024)",`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Content complete (November 2024)"}),`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:"All scenes complete"}),`
-`,n(e.li,{children:"All mini games complete"}),`
-`,n(e.li,{children:"The game should be completable"}),`
-`,n(e.li,{children:"All UI should be implemented"}),`
-`,n(e.li,{children:"i18n / basic English language version working"}),`
-`,n(e.li,{children:"Closed alpha release to Android and iOS (moved from October, requires some administrative work from)"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"All scenes complete"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"All mini games complete"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"All UI should be implemented"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"i18n / basic English language version working"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Closed alpha release to Android and iOS (moved from October, requires some administrative work from)"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"The game should be completable"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Fix the broken animation guides"}),`
+`]}),`
 `]}),`
 `]}),`
 `,n(e.li,{children:["Interaction complete (December 2024)",`
@@ -70,7 +86,7 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.p,{children:n(e.strong,{children:"Architecture:"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
-`,n("span",{style:"color:blue",children:"Basics +"}),`
+`,n("span",{style:"color:blue",children:"Basics"}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color: green",children:"Sound"}),`
@@ -93,15 +109,24 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n("span",{style:"color: green",children:" Load scenes in a consistent way"}),`
 `]}),`
 `,n(e.li,{children:"Simplify scene configuration"}),`
-`,n(e.li,{children:"Proceed to next scene when scene is done"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Proceed to next scene when scene is done"}),`
+`]}),`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"Mock missing general actions"}),`
 `]}),`
-`,n(e.li,{children:["UI / Menu's",`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"UI / Menu's"}),`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:"Animated loading screen"}),`
-`,n(e.li,{children:"Scroll up Menu"}),`
-`,n(e.li,{children:"Scene menu (back/forward etc.)"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Animated loading screen"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Scroll up Menu"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Scene menu (back/forward etc.)"}),`
+`]}),`
 `]}),`
 `]}),`
 `]}),`
@@ -114,7 +139,9 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"Swipe logic"}),`
 `]}),`
-`,n(e.li,{children:"Screen shake"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Screen shake"}),`
+`]}),`
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"Click"}),`
 `]}),`
@@ -130,14 +157,19 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `,n(e.p,{children:n(e.strong,{children:"Misc:"})}),`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:["i18n",`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"i18n"}),`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:"Find english language files"}),`
-`,n(e.li,{children:"Implement language selector"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Find english language files"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Implement language selector"}),`
+`]}),`
 `]}),`
 `]}),`
 `,n(e.li,{children:[`
-`,n("span",{style:"color:green",children:"POC stuff + "}),`
+`,n("span",{style:"color:green",children:"POC stuff"}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color: green",children:"Compile and run as iOS app"}),`
@@ -160,12 +192,21 @@ The aim of this project is to build a web port that can run as a native app on i
 `]}),`
 `,n(e.li,{children:["Test release",`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:"Setup iOS store app"}),`
-`,n(e.li,{children:"Setup Android store app"}),`
-`,n(e.li,{children:["Release for test",`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Setup iOS store app"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Setup Android store app"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Release for test"}),`
 `,n(e.ul,{children:[`
-`,n(e.li,{children:"iOS"}),`
-`,n(e.li,{children:"Android"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"iOS"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Android"}),`
+`]}),`
 `]}),`
 `]}),`
 `]}),`
@@ -209,9 +250,11 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.li,{children:"Scene music does not loop"}),`
 `,n(e.li,{children:"What is up with playSound2? (second channel to avoid overlap??)"}),`
 `,n(e.li,{children:"In scene 6 it looks like Sofus is falling out of the rocket when it is launched (probably a broken tween)"}),`
-`,n(e.li,{children:"Multiple scenes seem to have problem with animation paths once exported to canvas (probably a createjs issue...)"}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color:blue",children:"Multiple scenes seem to have problem with animation paths once exported to canvas (probably a createjs issue...)"}),`
 `]}),`
-`,n(e.p,{children:n(e.strong,{children:"Scene 1-10 status:"})}),`
+`]}),`
+`,n(e.p,{children:n(e.strong,{children:"Scene status:"})}),`
 `,n(e.ul,{children:[`
 `,n(e.li,{children:[`
 `,n("span",{style:"color: green",children:"Scene 0 - Done"}),`
@@ -279,6 +322,36 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.li,{children:"Animation Error, the hat transfer animation towards the end freezes"}),`
 `]}),`
 `]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 11 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 12 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 13 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 14 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 15 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 16 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 17 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 18 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 19 - Untouched"}),`
+`]}),`
+`,n(e.li,{children:[`
+`,n("span",{style:"color: blue",children:"Scene 20 - Untouched"}),`
+`]}),`
 `]}),`
 `,n(e.h3,{id:"early-completed-milestones-stuff-from-before-proper-planning",children:"Early completed Milestones (stuff from before proper planning):"}),`
 `,n(e.ul,{children:[`
@@ -297,4 +370,4 @@ The aim of this project is to build a web port that can run as a native app on i
 `,n(e.li,{children:[`
 `,n("span",{style:"color:green",children:"POC, is this even possible???"}),`
 `]}),`
-`]})]})}function f(l={}){const{wrapper:e}=Object.assign({},r(),l.components);return e?n(e,Object.assign({},l,{children:n(i,l)})):i(l)}export{f as default};
+`]})]})}function b(l={}){const{wrapper:e}=Object.assign({},i(),l.components);return e?n(e,Object.assign({},l,{children:n(r,l)})):r(l)}export{b as default};
