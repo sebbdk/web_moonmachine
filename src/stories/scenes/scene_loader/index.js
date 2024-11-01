@@ -19,6 +19,7 @@ const SCENE_STATES = {
 export function AppStage(sceneConfig) {
 	const [sceneState, setSceneState] = useState(SCENE_STATES.INIT);
 	const [storytellerText, setStorytellerText] = useState("");
+	let [sceneInstance, setSceneInstance] = useState({});
 	let [sound, setSound] = useState();
 
 	const canvasRef = useRef(null);
@@ -64,9 +65,10 @@ export function AppStage(sceneConfig) {
 
 		// Add scene methods
 		// look for the sceneInstance child, otherwise default to the root as the scene
-		const sceneInstance = sceneClip.sceneInstance !== undefined ? sceneClip.sceneInstance : sceneClip;
+		sceneInstance = sceneClip.sceneInstance !== undefined ? sceneClip.sceneInstance : sceneClip;
 		injectStandardSceneMethods(sceneInstance, sceneConfig, onStep, sound);
 		sceneInstance.playTheme();
+		setSceneInstance(sceneInstance);
 
 
 		// Add sceneClip and start listen for updates in order to render them
@@ -83,6 +85,14 @@ export function AppStage(sceneConfig) {
 	function onStep(step) {
 		sound.playVoice(step.voice);
 		setStorytellerText(step.text);
+	}
+
+	function onNext(){
+		sceneInstance.continue();
+	}
+
+	function onPrev(){
+		sceneInstance.back();
 	}
 
 	// Component initialize
@@ -111,7 +121,7 @@ export function AppStage(sceneConfig) {
 				</${StartButtonOverLay}>
 
 				<div class="footer">
-					${sceneState === SCENE_STATES.STARTED && html`<${StoryTeller} text=${storytellerText} />`}
+					${sceneState === SCENE_STATES.STARTED && html`<${StoryTeller} text=${storytellerText} onNext=${() => onNext()} onPrev=${() => onPrev()} />`}
 				</div>
 			</${AppStageWrapper}>
 		</${AppStageGUIWrapper}>
