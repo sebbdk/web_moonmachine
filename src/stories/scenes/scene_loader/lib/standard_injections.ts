@@ -10,6 +10,8 @@ interface step {
 }
 
 export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, onStep = (step: Step) => console.error('Missing next function'), sound) {
+	const createjs = (window as any).createjs;
+
 	/**
 	 * Add repeat functions
 	 *
@@ -121,6 +123,31 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		console.info("Next step is:", this.currentStep)
 	}
 
+	sceneClip.back = function() {
+		console.log('prev!!')
+
+		if (sceneClip.currentStep <= 0) {
+			return;
+		}
+
+		sceneClip.currentStep = sceneClip.currentStep-2;
+		//sceneClip.steps.pop();
+
+		// Something be wrong here.....
+
+		// Might be the auto continue coded into the scene
+		// I go back and some of the steps immediately sends us forward again
+		// It desynchronizes the voice lines
+		// Might be why the method auto next existed in the old code
+
+		const step = sceneClip.steps[sceneClip.currentStep];
+		console.log(sceneClip.currentStep)
+		console.log("step", step)
+
+		this.gotoAndPlay(step.frame);
+		this.playVoice();
+	}
+
 	sceneClip.stepsExistsAtFrame = function(frame) {
 		return this.steps.find(step => step.frame === frame) !== undefined;
 	}
@@ -143,7 +170,11 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 			return;
 		}
 
-		onStep(sceneConfig.actions[sceneClip.currentStep]);
+		const leStep = sceneConfig.actions[sceneClip.currentStep];
+
+		console.log('speak:', leStep)
+
+		onStep(leStep);
 
 		// @TODO Get offset from sceneConfig... maybe code this into the scene fla instead.
 		// remember to handle voice offset
