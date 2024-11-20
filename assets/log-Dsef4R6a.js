@@ -1,5 +1,17 @@
-import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-DXgGSC3k.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-C8g4q4EJ.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-CXRBVc3j.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-DBcJ4JOH.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-wednesday-20-november-2024",children:[e("hr",{})," Seb, Wednesday 20. November 2024"]}),`
+`,e(n.p,{children:"Bit of a long break, real life came up, i got my 2 wisdom teeth removed and some payed worked showed up that i needed to take care of."}),`
+`,e(n.p,{children:"We back."}),`
+`,e(n.p,{children:"This week i'm gonna finish the back functionality, i discovered it might mean some rework for the step related code."}),`
+`,e(n.p,{children:`Also our game designer came back to me and we now have access to the iOS App Store.
+So after fixing the back functionality, i intend to create the first TestFlight built.`}),`
+`,e(n.p,{children:"Todo:"}),`
+`,e(n.ul,{children:[`
+`,e(n.li,{children:"Back functionality"}),`
+`,e(n.li,{children:"Scene advance logic"}),`
+`,e(n.li,{children:"Release a TestFlight build"}),`
+`]}),`
 `,e(n.h3,{id:"-seb-thursday-31-october-2024",children:[e("hr",{})," Seb, Thursday 31. October 2024"]}),`
 `,e(n.p,{children:"Spooky scary skeletons, send shivers down your spine."}),`
 `,e(n.p,{children:"Halloween is here, time to plan November."}),`
