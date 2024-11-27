@@ -9,7 +9,7 @@ interface step {
 	index: number;
 }
 
-export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, onStep = (step: Step) => console.error('Missing next function'), sound) {
+export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, onStep = (step: Step) => console.error('Missing next function'), onGotoNextScene = (sceneConfig: SceneConfig) => console.error('Missing onSceneComplete function'), sound) {
 	const createjs = (window as any).createjs;
 
 	/**
@@ -183,9 +183,14 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 	// Add misc methods
 	sceneClip.screenShake = function() {}
-	sceneClip.sceneEnd = function() {} // NEW, make sure we stop and wait for the user to press the next button
+	sceneClip.sceneEnd = function() {// NEW, make sure we stop and wait for the user to press the next button
+		console.log('scene end was called, lets proceed!!!')
+	}
 	sceneClip.sceneStart = function() {
 		this.currentStep = 0;
+	}
+	sceneClip.gotoNextScene = function() {
+		onGotoNextScene(sceneConfig);
 	}
 
 	// Click helper methods

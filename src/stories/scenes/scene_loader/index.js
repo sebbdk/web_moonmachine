@@ -66,10 +66,9 @@ export function AppStage(sceneConfig) {
 		// Add scene methods
 		// look for the sceneInstance child, otherwise default to the root as the scene
 		sceneInstance = sceneClip.sceneInstance !== undefined ? sceneClip.sceneInstance : sceneClip;
-		injectStandardSceneMethods(sceneInstance, sceneConfig, onStep, sound);
+		injectStandardSceneMethods(sceneInstance, sceneConfig, onStep, onGotoNextScene, sound);
 		sceneInstance.playTheme();
 		setSceneInstance(sceneInstance);
-
 
 		// Add sceneClip and start listen for updates in order to render them
 		stage.addChild(sceneClip);
@@ -85,6 +84,10 @@ export function AppStage(sceneConfig) {
 	function onStep(step) {
 		sound.playVoice(step.voice);
 		setStorytellerText(step.text);
+	}
+
+	function onGotoNextScene() {
+		console.log('YES; NOW LOAD THE NEXT SCENE')
 	}
 
 	function onNext(){
