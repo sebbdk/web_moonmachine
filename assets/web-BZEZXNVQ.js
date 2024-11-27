@@ -1,0 +1,1 @@
+import{W as e}from"./index-DDmD82i1.js";import"./iframe-B0x0V-IK.js";import"../sb-preview/runtime.js";class n extends e{constructor(){super(),this.registerWindowListener("devicemotion","accel"),this.registerWindowListener("deviceorientation","orientation")}}export{n as MotionWeb};

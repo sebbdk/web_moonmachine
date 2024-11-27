@@ -1,5 +1,8 @@
-import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as o}from"./index-D4sRZhpa.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as t}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-iel7pNc-.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(t,{children:[e(o,{title:"Readme/Logs"}),`
+import"./compat.module-406MNTy2.js";import{u as e}from"./jsxRuntime.module-ByLYBOty.js";import{M as t}from"./index-DO2XyM4V.js";import{useMDXComponents as r}from"./index-CCzSbuHY.js";import{b as o}from"./preact.module-CMRueUcp.js";import"./hooks.module-34yJetoY.js";import"./iframe-B0x0V-IK.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-C4iS2aBk.js";import"./index-DrFu-skq.js";function l(i){const n=Object.assign({h1:"h1",h3:"h3",p:"p",ul:"ul",li:"li",strong:"strong"},r(),i.components);return e(o,{children:[e(t,{title:"Readme/Logs"}),`
 `,e(n.h1,{id:"dev-logs",children:"Dev Logs"}),`
+`,e(n.h3,{id:"-seb-wednesday-27-november-2024",children:[e("hr",{})," Seb, Wednesday 27. November 2024"]}),`
+`,e(n.p,{children:"More delays unfortunately, i prepared scenes 0-4 to test the generalized scene transition logic that will be implemented next."}),`
+`,e(n.p,{children:"Following that i will finally be able to released playable testflight release. :)"}),`
 `,e(n.h3,{id:"-seb-wednesday-20-november-2024",children:[e("hr",{})," Seb, Wednesday 20. November 2024"]}),`
 `,e(n.p,{children:"Bit of a long break, real life came up, i got my 2 wisdom teeth removed and some payed worked showed up that i needed to take care of."}),`
 `,e(n.p,{children:"We back."}),`
