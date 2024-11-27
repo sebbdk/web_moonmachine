@@ -5,7 +5,7 @@ var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"Sc01_HTML5_Canvas_atlas_1", frames: [[1068,496,106,88],[1176,496,106,88],[877,0,518,494],[672,496,394,499],[0,0,875,338],[1397,0,364,588],[672,340,153,145],[392,1160,153,145],[1281,878,210,183],[0,954,210,183],[1636,769,211,208],[1068,878,211,208],[1763,536,260,231],[0,721,260,231],[262,721,202,253],[466,721,202,253],[771,1181,82,35],[1465,1163,85,85],[653,1181,53,95],[1608,878,22,87],[827,340,44,139],[2033,0,15,73],[1677,979,153,165],[1849,769,180,196],[580,976,24,19],[1552,1163,39,172],[1593,1163,22,292],[1617,1163,37,167],[547,1160,29,284],[1068,590,566,286],[184,1160,206,140],[855,1181,50,57],[948,997,112,75],[1161,1239,66,25],[771,1218,61,35],[1215,1193,57,38],[1161,1193,52,44],[2025,536,23,71],[1636,590,122,108],[1284,496,96,86],[708,1181,31,108],[1132,1193,27,94],[741,1181,28,110],[907,1181,33,80],[0,340,670,379],[1849,967,182,182],[212,976,182,182],[396,976,182,182],[1493,979,182,182],[580,997,182,182],[764,997,182,182],[1281,1063,182,182],[948,1088,182,182],[0,1139,182,182],[1677,1151,182,182],[1861,1151,182,182],[212,954,42,20],[1636,700,67,51],[1493,878,113,96],[1132,1088,124,103],[1763,0,268,534],[1705,700,50,64],[578,1181,73,72],[1229,1233,31,36],[834,1240,27,29]]},
 		{name:"Sc01_HTML5_Canvas_atlas_2", frames: [[975,660,677,648],[975,0,786,658],[0,0,973,948],[868,1310,607,607],[0,950,866,835]]},
-		{name:"Sc01_HTML5_Canvas_atlas_3", frames: [[0,0,2048,1152]]},
+		{name:"Sc01_HTML5_Canvas_atlas_3", frames: [[915745844,1,-1040187284,-788529043],[0,0,2048,1152]]},
 		{name:"Sc01_HTML5_Canvas_atlas_4", frames: [[0,0,2048,1152]]},
 		{name:"Sc01_HTML5_Canvas_atlas_5", frames: [[0,0,2048,1152]]},
 		{name:"Sc01_HTML5_Canvas_atlas_6", frames: [[0,0,2048,1152]]}
@@ -538,7 +538,7 @@ lib.ssMetadata = [
 
 (lib.Texture = function() {
 	this.initialize(ss["Sc01_HTML5_Canvas_atlas_3"]);
-	this.gotoAndStop(0);
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -2151,6 +2151,29 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(-335,-189.5,670,379);
 
 
+(lib.NextSceneBtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("rgba(0,255,0,0.388)").s().p("EglWAlNMAAAhKZMBKsAAAMAAABKZg");
+	this.shape.setTransform(239.05,238.075);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.NextSceneBtn, new cjs.Rectangle(0,0,478.1,476.2), null);
+
+
 (lib.Moon_06 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -2414,29 +2437,6 @@ if (reversed == null) { reversed = false; }
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,2048,1152);
-
-
-(lib.btnbtn = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("rgba(0,153,255,0.388)").s().p("EglWAlNMAAAhKZMBKsAAAMAAABKZg");
-	this.shape.setTransform(239.05,238.075);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = getMCSymbolPrototype(lib.btnbtn, new cjs.Rectangle(0,0,478.1,476.2), null);
 
 
 (lib.Smoke = function(mode,startPosition,loop,reversed) {
@@ -2977,6 +2977,48 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(0,-31,1151.7,780.1);
 
 
+(lib.btnbtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	this.isSingleFrame = false;
+	// timeline functions:
+	this.frame_0 = function() {
+		if(this.isSingleFrame) {
+			return;
+		}
+		if(this.totalFrames == 1) {
+			this.isSingleFrame = true;
+		}
+		this.stop();
+		
+		this.parent.addClick(this.getChildByName("nextSceneBtn"), () => {
+			this.parent.gotoNextScene();
+		});
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
+	// Layer_1
+	this.nextSceneBtn = new lib.NextSceneBtn();
+	this.nextSceneBtn.name = "nextSceneBtn";
+	this.nextSceneBtn.setTransform(239.1,238.1,1,1,0,0,0,239.1,238.1);
+
+	this.timeline.addTween(cjs.Tween.get(this.nextSceneBtn).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.btnbtn, new cjs.Rectangle(0,0,478.1,476.2), null);
+
+
 (lib.Sofus_Front_Rig_turn_wave = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -3238,7 +3280,7 @@ if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
 	props.startPosition = startPosition;
-	props.labels = {"PUSH HOUSE":824,"PUSH HOUSE":954};
+	props.labels = {"PUSH HOUSE":824,"PUSH HOUSE":955};
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
@@ -3296,14 +3338,17 @@ if (reversed == null) { reversed = false; }
 		
 		*/
 	}
-	this.frame_953 = function() {
+	this.frame_954 = function() {
 		/* import flash.events.MouseEvent;
 		stop();
 		getChildByName('doorBtn').addEventListener(MouseEvent.CLICK, autoNext);*/
+		
+		this.stop();
+		this.sceneEnd();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(387).call(this.frame_387).wait(1).call(this.frame_388).wait(346).call(this.frame_734).wait(1).call(this.frame_735).wait(16).call(this.frame_751).wait(1).call(this.frame_752).wait(27).call(this.frame_779).wait(1).call(this.frame_780).wait(21).call(this.frame_801).wait(22).call(this.frame_823).wait(130).call(this.frame_953).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(387).call(this.frame_387).wait(1).call(this.frame_388).wait(346).call(this.frame_734).wait(1).call(this.frame_735).wait(16).call(this.frame_751).wait(1).call(this.frame_752).wait(27).call(this.frame_779).wait(1).call(this.frame_780).wait(21).call(this.frame_801).wait(22).call(this.frame_823).wait(131).call(this.frame_954).wait(17));
 
 	// GUIDES
 	this.instance = new lib.pushsc1();
@@ -3319,7 +3364,7 @@ if (reversed == null) { reversed = false; }
 	this.doorBtn.alpha = 0;
 	this.doorBtn._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.doorBtn).wait(823).to({_off:false},0).to({_off:true},3).wait(128).to({_off:false},0).to({_off:true},5).wait(12));
+	this.timeline.addTween(cjs.Tween.get(this.doorBtn).wait(823).to({_off:false},0).to({_off:true},3).wait(128).to({_off:false,alpha:0.4219},0).to({_off:true},5).wait(12));
 
 	// Sofus_front_talk
 	this.instance_1 = new lib.Sofus_Front_Rig_front_talk("synched",0);

@@ -19,6 +19,7 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	 */
 	sceneClip.repeatStart = 0;
 	sceneClip.repeatCount = 0;
+	sceneClip.sceneEnded = false;
 
 	sceneClip.repeat = function(nFrames) {
 		if(this.repeatStart !== this.currentFrame) {
@@ -96,8 +97,13 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	sceneClip.loopEnd = sceneClip.loopingStepBoundary;
 
 	sceneClip.continue = function() {
+		if(this.sceneEnded) {
+			this.gotoNextScene(sceneConfig);
+			return;
+		}
+
 		// Prevent continuing before the step has been added
-		if(sceneClip.steps[sceneClip.currentStep] == undefined) {
+		if(this.steps[this.currentStep] == undefined) {
 			console.info('blocked input!')
 			return;
 		}
@@ -106,13 +112,13 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 		// @TODO, we should be able to skip steps we encountered once
 		// the behavior here is also inconsistent with the looping step type
 		// one way could be to wait for the dialog to finish?
-		if(sceneClip.steps[sceneClip.currentStep].frame > this.currentFrame) {
+		if(this.steps[this.currentStep].frame > this.currentFrame) {
 			console.info('blocked input! waiting to arrive at new step first')
 			return;
 		}
 
-		if(sceneClip.steps[sceneClip.currentStep].frame !== this.currentFrame) {
-			this.gotoAndPlay(sceneClip.steps[sceneClip.currentStep].frame);
+		if(this.steps[this.currentStep].frame !== this.currentFrame) {
+			this.gotoAndPlay(this.steps[this.currentStep].frame);
 		}
 
 		this.playVoice();
@@ -125,6 +131,9 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 
 	sceneClip.back = function() {
 		console.log('prev!!')
+
+		// If we are on the last step we need to reset the next button state
+		this.sceneEnded = false;
 
 		if (sceneClip.currentStep <= 0) {
 			return;
@@ -184,7 +193,8 @@ export function injectStandardSceneMethods(sceneClip, sceneConfig:SceneConfig, o
 	// Add misc methods
 	sceneClip.screenShake = function() {}
 	sceneClip.sceneEnd = function() {// NEW, make sure we stop and wait for the user to press the next button
-		console.log('scene end was called, lets proceed!!!')
+		console.info('scene end was called, lets proceed!!!')
+		this.sceneEnded = true
 	}
 	sceneClip.sceneStart = function() {
 		this.currentStep = 0;

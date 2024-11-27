@@ -57,7 +57,7 @@ export function injectScene4CollectGame(sceneClip, sceneConfig:SceneConfig) {
 										this.collectCount++;
 
 										if (this.collectCount == 4) {
-											console.error('insert the scene transition here!!');
+											sceneClip.sceneEnd();
 										}
 									})
 							})
